@@ -1,0 +1,42 @@
+html {
+	line-height: 1.15;
+	font-size: 16px;
+	font-family: $base-font;
+	color: $black;
+}
+
+h1,
+h5 {
+	font-family: $base-font;
+}
+
+h2,
+h3,
+h4 {
+	font-family: $accent-font;
+}
+
+h1 {
+	@include style-text(700, 2.25rem, 0.00278em, 3.75rem);
+}
+
+h2 {
+	@include style-text(700, 2rem, 0, 2.5rem);
+}
+
+h3 {
+	@include style-text(600, 1.5rem, 0, 1.875rem);
+}
+
+h4 {
+	@include style-text(600, 1.125rem, 0, 1.375rem);
+}
+
+h5 {
+	@include style-text(700, 0.875rem, 0.02857em, 1.5rem);
+}
+
+p {
+	@include style-text(300, 0.875rem, 0.02857em, 1.5rem);
+	font-family: $base-font;
+}

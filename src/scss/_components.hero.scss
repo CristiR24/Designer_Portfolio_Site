@@ -1,0 +1,22 @@
+.c-hero {
+	border-width: 20px 30px;
+	border-style: solid;
+	border-color: white;
+	background: $snow-white;
+	height: 85vh;
+
+	&__mail {
+		@extend p;
+		color: $black;
+	}
+
+	&__social {
+		@extend h5;
+		color: $black;
+	}
+
+	&__info {
+		margin-top: 85px;
+		margin-bottom: 80px;
+	}
+}

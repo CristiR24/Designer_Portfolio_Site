@@ -1,0 +1,55 @@
+.o-divider {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+
+	&--left {
+		display: inline-block;
+		margin-left: 0;
+	}
+
+	&--right {
+		display: inline-block;
+		margin-left: auto;
+	}
+}
+
+.o-isolator {
+	position: relative;
+	padding: 20px;
+	height: 100%;
+}
+
+.o-list {
+	& li {
+		display: inline-block;
+	}
+
+	& li + li {
+		margin-left: 40px;
+	}
+}
+
+.o-block {
+	margin-bottom: 19px;
+
+	&--md {
+		margin-bottom: 16px;
+	}
+
+	&--sm {
+		margin-bottom: 9px;
+	}
+}
+
+.o-justify {
+	display: flex;
+
+	&--v {
+		flex-direction: column;
+
+		.o-justify__element {
+			margin-top: auto;
+		}
+	}
+}
