@@ -1,9 +1,9 @@
+@import "generic.reset";
+@import "generic.grid";
+
 @import "settings.variables";
 
 @import "tools.mixins";
-
-@import "generic.reset";
-@import "generic.grid";
 
 @import "elements.typography";
 
@@ -11,5 +11,11 @@
 
 @import "components.hero";
 @import "components.quick-info";
+@import "components.heading";
+@import "components.work";
+@import "components.portfolio-post";
+@import "components.card";
+@import "components.about";
+@import "components.job";
 
 @import "trump.utilities";

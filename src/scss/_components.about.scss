@@ -1,0 +1,16 @@
+.c-about {
+	&__heading {
+		left: 15px;
+	}
+
+	&__description {
+		margin-top: 60px;
+		margin-bottom: 55px;
+	}
+
+	&__image {
+		position: relative;
+		max-width: 100%;
+		top: 20px;
+	}
+}

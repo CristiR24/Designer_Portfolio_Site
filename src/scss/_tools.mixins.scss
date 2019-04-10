@@ -1,6 +1,23 @@
-@mixin style-text($weight, $size, $letter, $line) {
+@mixin style-text($weight, $size, $letter, $line, $color: $black) {
 	font-weight: $weight;
 	font-size: $size;
 	letter-spacing: $letter;
 	line-height: $line;
+	color: $color;
+}
+
+@mixin position-card(
+	$max-widths: $container-max-widths,
+	$breakpoints: $grid-breakpoints
+) {
+	@each $breakpoint, $container-max-width in $max-widths {
+		@include media-breakpoint-up($breakpoint, $breakpoints) {
+			// Visually it's 20px. 10px get added from the container padding.
+			$card-offset: 10px;
+			$half-container: $container-max-width / 2;
+			// translate the card 50% to the right(it's width is 100vw)
+			// then translate it to the left by half of the container width + card offset
+			right: calc(50% - #{$half-container} - #{$card-offset});
+		}
+	}
 }

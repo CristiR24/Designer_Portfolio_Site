@@ -1,0 +1,59 @@
+.c-portfolio-post {
+	&__image {
+		max-width: 100%;
+		box-shadow: 0 2px 27pt #00000015;
+	}
+
+	&__job {
+		@extend h5;
+		color: $smoke-gray;
+	}
+
+	&__link {
+		@extend h4;
+		position: relative;
+		margin-right: 50px;
+
+		&:hover .c-arrow {
+			width: calc(100% + 50px);
+			background: $smoke-gray;
+
+			&::before,
+			&::after {
+				background: $smoke-gray;
+			}
+		}
+
+		& .c-arrow {
+			display: block;
+			height: 2px;
+			width: 40px;
+			background: $black;
+			position: absolute;
+			top: 50%;
+			right: -50px;
+			transition: 0.3s ease;
+
+			&::before,
+			&::after {
+				content: "";
+				display: block;
+				height: 2px;
+				width: 10px;
+				background: $black;
+				position: absolute;
+				right: -1px;
+			}
+
+			&::before {
+				bottom: 2px;
+				transform: rotate(30deg) translateY(-25%);
+			}
+
+			&::after {
+				top: 2px;
+				transform: rotate(-30deg) translateY(25%);
+			}
+		}
+	}
+}

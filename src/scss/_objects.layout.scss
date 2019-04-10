@@ -53,3 +53,24 @@
 		}
 	}
 }
+
+.o-section {
+	padding-bottom: 80px;
+	padding-top: 80px;
+
+	&__about {
+		padding-top: 20px;
+		margin-bottom: -20px;
+	}
+}
+
+.o-line {
+	position: relative;
+}
+
+.o-heading--pushed {
+	position: absolute;
+	z-index: 5;
+	transform: rotate(-90deg) translateY(-150%);
+	left: -60px;
+}

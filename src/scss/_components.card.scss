@@ -1,0 +1,8 @@
+.c-card {
+	width: 100vw;
+	position: relative;
+	background: $snow-white;
+
+	// sets the "right" property for all screen sizes
+	@include position-card();
+}

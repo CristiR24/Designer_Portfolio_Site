@@ -1,18 +1,15 @@
 .c-hero {
-	border-width: 20px 30px;
-	border-style: solid;
-	border-color: white;
+	border: 20px solid white;
 	background: $snow-white;
-	height: 85vh;
+	height: 840px;
 
 	&__mail {
 		@extend p;
 		color: $black;
 	}
 
-	&__social {
+	&__link {
 		@extend h5;
-		color: $black;
 	}
 
 	&__info {

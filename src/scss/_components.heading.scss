@@ -1,0 +1,14 @@
+.c-heading {
+	position: relative;
+
+	&::before {
+		content: "";
+		display: block;
+		width: 55px;
+		height: 1px;
+		background: $black;
+		position: absolute;
+		right: calc(100% + 30px);
+		top: 50%;
+	}
+}
