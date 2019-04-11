@@ -1310,9 +1310,15 @@ p,
 
 .c-footer {
   padding-bottom: 80px; }
-  .c-footer__icon {
+  .c-footer__icon--dribbble {
     width: 18px;
     height: 18px; }
+  .c-footer__icon--behance {
+    width: 22px;
+    height: 15px; }
+  .c-footer__icon--twitter {
+    width: 18px;
+    height: 15px; }
 
 .u-full-height {
   height: 100%; }

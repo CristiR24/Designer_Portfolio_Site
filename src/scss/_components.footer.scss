@@ -2,7 +2,20 @@
     padding-bottom: 80px;
 
     &__icon {
-        width: 18px;
-        height: 18px;
+
+        &--dribbble {
+            width: 18px;
+            height: 18px;
+        }
+        
+        &--behance {
+            width: 22px;
+            height: 15px;
+        }
+
+        &--twitter {
+            width: 18px;
+            height: 15px;
+        }
     }
 }
