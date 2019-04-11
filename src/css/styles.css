@@ -1,3 +1,23 @@
+/*=================================
+  =            Variables            =
+  =================================*/
+/*=====  End of Variables  ======*/
+/*=================================
+  =            Functions            =
+  =================================*/
+/*=====  End of Functions  ======*/
+/*===================================
+  =            Breakpoints            =
+  ===================================*/
+/*=====  End of Breakpoints  ======*/
+/*=================================
+  =            Framework            =
+  =================================*/
+/*=====  End of Framework  ======*/
+/*===================================
+  =            mixins Grid            =
+  ===================================*/
+/*=====  End of mixins Grid  ======*/
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
@@ -15,12 +35,15 @@ h3,
 h4,
 .c-portfolio-post__link,
 .c-job__agency,
+.c-contact__adress,
 h5,
 .c-hero__link,
 .c-portfolio-post__job,
+.c-testimonials__reviewer,
 h6,
 p,
 .c-hero__mail,
+.c-testimonials__company,
 blockquote,
 pre,
 a,
@@ -431,54 +454,34 @@ html {
 *::after {
   box-sizing: inherit; }
 
-/*=================================
-  =            Functions            =
-  =================================*/
-/*=====  End of Functions  ======*/
-/*=================================
-  =            Variables            =
-  =================================*/
-/*=====  End of Variables  ======*/
-/*===================================
-  =            Breakpoints            =
-  ===================================*/
-/*=====  End of Breakpoints  ======*/
-/*=================================
-  =            Framework            =
-  =================================*/
-/*=====  End of Framework  ======*/
-/*===================================
-  =            mixins Grid            =
-  ===================================*/
-/*=====  End of mixins Grid  ======*/
 /*============================
   =            Grid            =
   ============================*/
 .container {
   width: 100%;
   position: relative;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
   margin-right: auto;
   margin-left: auto; }
   @media (min-width: 576px) {
     .container {
-      max-width: 540px; } }
+      max-width: 560px; } }
   @media (min-width: 768px) {
     .container {
-      max-width: 720px; } }
+      max-width: 740px; } }
   @media (min-width: 992px) {
     .container {
-      max-width: 810px; } }
+      max-width: 830px; } }
   @media (min-width: 1200px) {
     .container {
-      max-width: 960px; } }
+      max-width: 980px; } }
 
 .container-fluid {
   width: 100%;
   position: relative;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
   margin-right: auto;
   margin-left: auto; }
 
@@ -1054,14 +1057,16 @@ html {
 h1,
 h5,
 .c-hero__link,
-.c-portfolio-post__job {
+.c-portfolio-post__job,
+.c-testimonials__reviewer {
   font-family: "Lato"; }
 
 h2,
 h3,
 h4,
 .c-portfolio-post__link,
-.c-job__agency {
+.c-job__agency,
+.c-contact__adress {
   font-family: "Montserrat"; }
 
 h1 {
@@ -1088,7 +1093,8 @@ h3 {
 
 h4,
 .c-portfolio-post__link,
-.c-job__agency {
+.c-job__agency,
+.c-contact__adress {
   font-weight: 600;
   font-size: 1.125rem;
   letter-spacing: 0;
@@ -1098,7 +1104,8 @@ h4,
 
 h5,
 .c-hero__link,
-.c-portfolio-post__job {
+.c-portfolio-post__job,
+.c-testimonials__reviewer {
   font-weight: 700;
   font-size: 0.875rem;
   letter-spacing: 0.029em;
@@ -1107,7 +1114,8 @@ h5,
 
 
 p,
-.c-hero__mail {
+.c-hero__mail,
+.c-testimonials__company {
   font-weight: 300;
   font-size: 0.875rem;
   letter-spacing: 0.02857em;
@@ -1154,9 +1162,6 @@ p,
 .o-section {
   padding-bottom: 80px;
   padding-top: 80px; }
-  .o-section__about {
-    padding-top: 20px;
-    margin-bottom: -20px; }
 
 .o-line {
   position: relative; }
@@ -1183,6 +1188,7 @@ p,
   margin-bottom: 16px; }
 
 .c-heading {
+  line-height: 1;
   position: relative; }
   .c-heading::before {
     content: "";
@@ -1198,7 +1204,7 @@ p,
   margin-top: 70px; }
 
 .c-work__heading {
-  left: 35px; }
+  left: 30px; }
 
 .c-portfolio-post__image {
   max-width: 100%;
@@ -1223,7 +1229,7 @@ p,
     position: absolute;
     top: 50%;
     right: -50px;
-    transition: 0.3s ease; }
+    transition: 0.3s ease-out; }
     .c-portfolio-post__link .c-arrow::before, .c-portfolio-post__link .c-arrow::after {
       content: "";
       display: block;
@@ -1245,19 +1251,19 @@ p,
   background: #fafafa; }
   @media (min-width: 576px) {
     .c-card {
-      right: calc(50% - 270px - 10px); } }
+      right: calc(50% - 280px); } }
   @media (min-width: 768px) {
     .c-card {
-      right: calc(50% - 360px - 10px); } }
+      right: calc(50% - 370px); } }
   @media (min-width: 992px) {
     .c-card {
-      right: calc(50% - 405px - 10px); } }
+      right: calc(50% - 415px); } }
   @media (min-width: 1200px) {
     .c-card {
-      right: calc(50% - 480px - 10px); } }
+      right: calc(50% - 490px); } }
 
 .c-about__heading {
-  left: 15px; }
+  left: 10px; }
 
 .c-about__description {
   margin-top: 60px;
@@ -1268,8 +1274,42 @@ p,
   max-width: 100%;
   top: 20px; }
 
-.c-job {
-  margin-bottom: 20px; }
+.c-job + .c-job {
+  margin-top: 20px; }
+
+.c-testimonials {
+  padding-top: 190px; }
+  .c-testimonials__reviewer {
+    line-height: 1; }
+  .c-testimonials__company {
+    line-height: 1;
+    color: #cacaca;
+    padding-left: 10px; }
+  .c-testimonials__review {
+    margin-top: 20px; }
+
+.c-contact {
+  padding: 330px 0;
+  text-align: center; }
+  .c-contact__title {
+    margin-bottom: 9px; }
+  .c-contact__adress {
+    position: relative;
+    transition: .3s; }
+    .c-contact__adress:hover {
+      color: #cacaca; }
+    .c-contact__adress::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: calc(100% + 4px);
+      background: #2e2e2e;
+      position: absolute;
+      left: -2px;
+      bottom: -6px; }
+
+.c-footer {
+  padding-bottom: 80px; }
 
 .u-full-height {
   height: 100%; }
@@ -1331,5 +1371,5 @@ p,
 .u-margin-b__80 {
   margin-bottom: 80px; }
 
-.u-margin-r__10 {
-  margin-right: 10px; }
+.u-margin-r__zero {
+  margin-right: 0; }
