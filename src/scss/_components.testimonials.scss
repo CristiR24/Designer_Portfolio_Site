@@ -1,0 +1,19 @@
+.c-testimonials {
+    padding-top: 190px;
+
+    &__reviewer {
+        @extend h5;
+        line-height: 1;
+    }
+
+    &__company {
+        @extend p;
+        line-height: 1;
+        color: $smoke-gray;
+        padding-left: 10px;
+    }
+
+    &__review {
+        margin-top: 20px;
+    }
+}

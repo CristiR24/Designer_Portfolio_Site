@@ -1,5 +1,7 @@
 .c-job {
-	margin-bottom: 20px;
+	& + & {
+		margin-top: 20px;
+	}
 
 	&__agency {
 		@extend h4;

@@ -1,9 +1,12 @@
-@import "generic.reset";
-@import "generic.grid";
-
+@import "settings.grid";
 @import "settings.variables";
 
+@import "tools.grid-functions";
+@import "tools.grid-mixins";
 @import "tools.mixins";
+
+@import "generic.reset";
+@import "generic.grid-generate";
 
 @import "elements.typography";
 
@@ -17,5 +20,8 @@
 @import "components.card";
 @import "components.about";
 @import "components.job";
+@import "components.testimonials";
+@import "components.contact";
+@import "components.footer";
 
 @import "trump.utilities";
