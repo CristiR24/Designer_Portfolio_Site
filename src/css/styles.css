@@ -1272,7 +1272,8 @@ p,
 .c-about__image {
   position: relative;
   max-width: 100%;
-  top: 20px; }
+  top: 20px;
+  box-shadow: 0 2px 27pt #00000015; }
 
 .c-job + .c-job {
   margin-top: 20px; }

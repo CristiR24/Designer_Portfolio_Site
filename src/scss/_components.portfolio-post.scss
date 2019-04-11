@@ -1,7 +1,7 @@
 .c-portfolio-post {
 	&__image {
 		max-width: 100%;
-		box-shadow: 0 2px 27pt #00000015;
+		box-shadow: $default-shadow;
 	}
 
 	&__job {
