@@ -2,6 +2,11 @@
 	&__image {
 		max-width: 100%;
 		box-shadow: $default-shadow;
+		margin-bottom: 40px;
+	}
+
+	&__title {
+		margin-bottom: 20px;
 	}
 
 	&__job {
@@ -21,38 +26,6 @@
 			&::before,
 			&::after {
 				background: $smoke-gray;
-			}
-		}
-
-		& .c-arrow {
-			display: block;
-			height: 2px;
-			width: 40px;
-			background: $black;
-			position: absolute;
-			top: 50%;
-			right: -50px;
-			transition: 0.3s ease-out;
-
-			&::before,
-			&::after {
-				content: "";
-				display: block;
-				height: 2px;
-				width: 10px;
-				background: $black;
-				position: absolute;
-				right: -1px;
-			}
-
-			&::before {
-				bottom: 2px;
-				transform: rotate(30deg) translateY(-25%);
-			}
-
-			&::after {
-				top: 2px;
-				transform: rotate(-30deg) translateY(25%);
 			}
 		}
 	}
