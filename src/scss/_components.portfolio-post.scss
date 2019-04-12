@@ -2,6 +2,11 @@
 	&__image {
 		max-width: 100%;
 		box-shadow: $default-shadow;
+		margin-bottom: 40px;
+	}
+
+	&__title {
+		margin-bottom: 20px;
 	}
 
 	&__job {

@@ -1,4 +1,7 @@
 .c-work {
+	padding-top: 60px;
+	padding-bottom: 80px;
+
 	// every portfolio post preceding another one
 	&__portfolio-post + &__portfolio-post {
 		margin-top: 70px;
