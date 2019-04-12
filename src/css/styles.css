@@ -35,7 +35,7 @@ h3,
 h4,
 .c-portfolio-post__link,
 .c-job__agency,
-.c-contact__adress,
+.c-contact__address,
 h5,
 .c-hero__link,
 .c-portfolio-post__job,
@@ -1066,7 +1066,7 @@ h3,
 h4,
 .c-portfolio-post__link,
 .c-job__agency,
-.c-contact__adress {
+.c-contact__address {
   font-family: "Montserrat"; }
 
 h1 {
@@ -1094,7 +1094,7 @@ h3 {
 h4,
 .c-portfolio-post__link,
 .c-job__agency,
-.c-contact__adress {
+.c-contact__address {
   font-weight: 600;
   font-size: 1.125rem;
   letter-spacing: 0;
@@ -1123,17 +1123,6 @@ p,
   color: #2e2e2e;
   font-family: "Lato"; }
 
-.o-divider {
-  width: 100%;
-  display: flex;
-  flex-direction: row; }
-  .o-divider--left {
-    display: inline-block;
-    margin-left: 0; }
-  .o-divider--right {
-    display: inline-block;
-    margin-left: auto; }
-
 .o-isolator {
   position: relative;
   padding: 20px;
@@ -1158,10 +1147,6 @@ p,
     flex-direction: column; }
     .o-justify--v .o-justify__element {
       margin-top: auto; }
-
-.o-section {
-  padding-bottom: 80px;
-  padding-top: 80px; }
 
 .o-line {
   position: relative; }
@@ -1200,15 +1185,21 @@ p,
     right: calc(100% + 30px);
     top: 50%; }
 
-.c-work__portfolio-post + .c-work__portfolio-post {
-  margin-top: 70px; }
-
-.c-work__heading {
-  left: 35px; }
+.c-work {
+  padding-top: 60px;
+  padding-bottom: 80px; }
+  .c-work__portfolio-post + .c-work__portfolio-post {
+    margin-top: 70px; }
+  .c-work__heading {
+    left: 35px; }
 
 .c-portfolio-post__image {
   max-width: 100%;
-  box-shadow: 0 2px 27pt #00000015; }
+  box-shadow: 0 2px 27pt #00000015;
+  margin-bottom: 40px; }
+
+.c-portfolio-post__title {
+  margin-bottom: 20px; }
 
 .c-portfolio-post__job {
   color: #cacaca; }
@@ -1266,8 +1257,8 @@ p,
   left: 10px; }
 
 .c-about__description {
-  margin-top: 60px;
-  margin-bottom: 55px; }
+  margin-top: 65px;
+  margin-bottom: 60px; }
 
 .c-about__image {
   position: relative;
@@ -1294,12 +1285,12 @@ p,
   text-align: center; }
   .c-contact__title {
     margin-bottom: 9px; }
-  .c-contact__adress {
+  .c-contact__address {
     position: relative;
     transition: .3s; }
-    .c-contact__adress:hover {
+    .c-contact__address:hover {
       color: #cacaca; }
-    .c-contact__adress::after {
+    .c-contact__address::after {
       content: "";
       display: block;
       height: 2px;
