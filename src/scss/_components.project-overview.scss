@@ -1,22 +1,21 @@
-.c-portfolio-post {
+.c-project-overview {
+
 	&__image {
 		box-shadow: $default-shadow;
-		margin-bottom: 40px;
 	}
 
 	&__title {
+		margin-top: 30px;
 		margin-bottom: 20px;
 	}
 
-	&__job {
-		@extend h5;
-		color: $smoke-gray;
-	}
-
 	&__link {
-		@extend h4;
+		font-family: Montserrat-Bold;
+		font-size: 16px;
+		color: #2E2E2E;
+		letter-spacing: 1.33px;
 		position: relative;
-		margin-right: 50px;
+		margin-right: 60px;
 
 		&:hover .c-arrow {
 			width: calc(100% + 50px);

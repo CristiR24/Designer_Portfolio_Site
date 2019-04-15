@@ -1,8 +1,20 @@
 .c-card {
-	width: 100vw;
 	position: relative;
 	background: $snow-white;
 
-	// sets the "right" property for all screen sizes
-	@include position-card();
+
+	&__left {
+		width: 100vw;
+
+		// sets the "right" property for all screen sizes
+		@include position-card-left();
+	}
+
+	&__center {
+		margin-left: auto;
+		margin-right: auto;
+
+		// sets the "width" property for all screen sizes
+		@include card-center-grid-offset(80px);
+	}
 }

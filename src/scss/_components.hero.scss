@@ -3,17 +3,7 @@
 	background: $snow-white;
 	height: 840px;
 
-	&__mail {
-		@extend p;
-		color: $black;
-	}
-
-	&__link {
-		@extend h5;
-	}
-
 	&__info {
 		margin-top: 85px;
-		margin-bottom: 80px;
 	}
 }

@@ -1,0 +1,20 @@
+.c-quote {
+	padding-top: 160px;
+
+	&__text {
+		font-family: Lato-Light;
+		font-size: 36px;
+		color: #000000;
+		letter-spacing: 0.2px;
+		text-align: center;
+		line-height: 60px;
+	}
+
+	&__symbol {
+		font-family: Lato-Black;
+		font-size: 36px;
+		color: #000000;
+		text-align: center;
+		line-height: 44px;
+	}
+}

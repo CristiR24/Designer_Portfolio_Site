@@ -64,6 +64,13 @@
 	}
 }
 
+.u-flex-space {
+	&__between {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
 .u-flex-dir {
 	&__col {
 		flex-direction: column;
@@ -71,16 +78,9 @@
 }
 
 .u-margin {
-	&-b {
-		&__20 {
-			margin-bottom: 20px;
-		}
-
-		&__40 {
-			margin-bottom: 40px;
-		}
-		&__80 {
-			margin-bottom: 80px;
+	&-t {
+		&__60 {
+			margin-top: 60px;
 		}
 	}
 

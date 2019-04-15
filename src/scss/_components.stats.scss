@@ -1,0 +1,11 @@
+.c-stats {
+	text-align: center;
+
+	&__element + &__element {
+		margin-top: 20px;
+	}
+
+	&__name {
+		line-height: 1;
+	}
+}

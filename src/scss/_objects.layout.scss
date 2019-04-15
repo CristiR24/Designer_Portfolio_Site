@@ -1,9 +1,3 @@
-.o-isolator {
-	position: relative;
-	padding: 20px;
-	height: 100%;
-}
-
 .o-list {
 	& li {
 		display: inline-block;
@@ -26,18 +20,6 @@
 	}
 }
 
-.o-justify {
-	display: flex;
-
-	&--v {
-		flex-direction: column;
-
-		.o-justify__element {
-			margin-top: auto;
-		}
-	}
-}
-
 .o-line {
 	position: relative;
 }
@@ -47,4 +29,25 @@
 	z-index: 5;
 	transform: rotate(-90deg) translateY(-150%);
 	left: -60px;
+}
+
+.o-section {
+	position: relative;
+	padding-bottom: 80px;
+	padding-top: 80px;
+
+
+	&--first {
+		padding-top: 20px;
+		height: 100%;
+	}
+
+	&--bottom {
+		padding-top: 0;
+	}
+
+	&--big {
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
 }

@@ -1,0 +1,16 @@
+.c-nav {
+
+	&--big {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
+	&__mail {
+		@extend p;
+		color: $black;
+	}
+
+	&__link {
+		@extend h5;
+	}
+}
