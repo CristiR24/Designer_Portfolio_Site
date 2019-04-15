@@ -1,0 +1,14 @@
+.c-underline {
+	position: relative;
+
+	&::after {
+		content: "";
+		display: block;
+		height: 2px;
+		width: 100%;
+		background: $black;
+		position: absolute;
+		left: 0;
+		bottom: -6px;
+	}
+}

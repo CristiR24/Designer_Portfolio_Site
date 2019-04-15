@@ -38,7 +38,7 @@ h3,
 h4,
 .c-portfolio-post__link,
 .c-job__agency,
-.c-contact__address,
+.c-contact__mail,
 h5,
 .c-nav__link,
 .c-portfolio-post__job,
@@ -46,7 +46,10 @@ h5,
 h6,
 p,
 .c-nav__mail,
+.c-job__title,
+.c-job__time-span,
 .c-testimonials__company,
+.c-footer__copyright,
 blockquote,
 pre,
 a,
@@ -1069,7 +1072,7 @@ h3,
 h4,
 .c-portfolio-post__link,
 .c-job__agency,
-.c-contact__address {
+.c-contact__mail {
   font-family: "Montserrat"; }
 
 h1 {
@@ -1097,7 +1100,7 @@ h3 {
 h4,
 .c-portfolio-post__link,
 .c-job__agency,
-.c-contact__address {
+.c-contact__mail {
   font-weight: 600;
   font-size: 1.125rem;
   letter-spacing: 0;
@@ -1118,7 +1121,10 @@ h5,
 
 p,
 .c-nav__mail,
-.c-testimonials__company {
+.c-job__title,
+.c-job__time-span,
+.c-testimonials__company,
+.c-footer__copyright {
   font-weight: 300;
   font-size: 0.875rem;
   letter-spacing: 0.02857em;
@@ -1133,11 +1139,7 @@ p,
   margin-left: 40px; }
 
 .o-block {
-  margin-bottom: 19px; }
-  .o-block--md {
-    margin-bottom: 16px; }
-  .o-block--sm {
-    margin-bottom: 9px; }
+  position: relative; }
 
 .o-line {
   position: relative; }
@@ -1186,6 +1188,18 @@ p,
     top: 2px;
     transform: rotate(-30deg) translateY(25%); }
 
+.c-underline {
+  position: relative; }
+  .c-underline::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #2e2e2e;
+    position: absolute;
+    left: 0;
+    bottom: -6px; }
+
 .c-nav--big {
   padding-top: 40px;
   padding-bottom: 40px; }
@@ -1201,6 +1215,7 @@ p,
 
 .c-hero {
   border: 20px solid white;
+  border-bottom: none;
   background: #fafafa;
   height: 840px; }
   .c-hero__info {
@@ -1314,20 +1329,11 @@ p,
   text-align: center; }
   .c-contact__title {
     margin-bottom: 9px; }
-  .c-contact__address {
-    position: relative;
-    transition: .3s; }
-    .c-contact__address:hover {
-      color: #cacaca; }
-    .c-contact__address::after {
-      content: "";
-      display: block;
-      height: 2px;
-      width: calc(100% + 4px);
-      background: #2e2e2e;
-      position: absolute;
-      left: -2px;
-      bottom: -6px; }
+  .c-contact__mail {
+    transition: .3s;
+    color: #cacaca; }
+    .c-contact__mail:hover {
+      color: #2e2e2e; }
 
 .c-footer__icon--dribbble {
   width: 18px;
@@ -1398,9 +1404,6 @@ p,
 
 .u-margin-t__60 {
   margin-top: 60px; }
-
-.u-margin-t__neg20 {
-  margin-top: -20px; }
 
 .u-margin-r__zero {
   margin-right: 0; }

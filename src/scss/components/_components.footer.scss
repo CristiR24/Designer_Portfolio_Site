@@ -1,5 +1,9 @@
 .c-footer {
 
+	&__copyright {
+		@extend p;
+	}
+
     &__icon {
 
         &--dribbble {

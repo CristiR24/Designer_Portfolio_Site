@@ -41,6 +41,7 @@ h5,
 h6,
 p,
 .c-nav__mail,
+.c-footer__copyright,
 blockquote,
 pre,
 a,
@@ -1100,7 +1101,8 @@ h5,
 
 
 p,
-.c-nav__mail {
+.c-nav__mail,
+.c-footer__copyright {
   font-weight: 300;
   font-size: 0.875rem;
   letter-spacing: 0.02857em;
@@ -1115,11 +1117,7 @@ p,
   margin-left: 40px; }
 
 .o-block {
-  margin-bottom: 19px; }
-  .o-block--md {
-    margin-bottom: 16px; }
-  .o-block--sm {
-    margin-bottom: 9px; }
+  position: relative; }
 
 .o-line {
   position: relative; }
@@ -1246,18 +1244,6 @@ p,
   position: relative;
   top: -60px; }
 
-.c-footer__icon--dribbble {
-  width: 18px;
-  height: 18px; }
-
-.c-footer__icon--behance {
-  width: 22px;
-  height: 15px; }
-
-.c-footer__icon--twitter {
-  width: 18px;
-  height: 15px; }
-
 .c-quote {
   padding-top: 160px; }
   .c-quote__text {
@@ -1273,6 +1259,18 @@ p,
     color: #000000;
     text-align: center;
     line-height: 44px; }
+
+.c-footer__icon--dribbble {
+  width: 18px;
+  height: 18px; }
+
+.c-footer__icon--behance {
+  width: 22px;
+  height: 15px; }
+
+.c-footer__icon--twitter {
+  width: 18px;
+  height: 15px; }
 
 .u-full-height {
   height: 100%; }
@@ -1331,9 +1329,6 @@ p,
 
 .u-margin-t__60 {
   margin-top: 60px; }
-
-.u-margin-t__neg20 {
-  margin-top: -20px; }
 
 .u-margin-r__zero {
   margin-right: 0; }

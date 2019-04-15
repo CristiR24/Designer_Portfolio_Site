@@ -6,4 +6,9 @@
 	&__agency {
 		@extend h4;
 	}
+
+	&__title,
+	&__time-span {
+		@extend p;
+	}
 }
