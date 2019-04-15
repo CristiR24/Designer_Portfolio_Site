@@ -3,22 +3,4 @@
 	&__copyright {
 		@extend p;
 	}
-
-    &__icon {
-
-        &--dribbble {
-            width: 18px;
-            height: 18px;
-        }
-        
-        &--behance {
-            width: 22px;
-            height: 15px;
-        }
-
-        &--twitter {
-            width: 18px;
-            height: 15px;
-        }
-    }
 }

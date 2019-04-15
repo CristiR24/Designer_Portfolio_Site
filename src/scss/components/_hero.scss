@@ -2,9 +2,21 @@
 	border: 20px solid white;
 	border-bottom: none;
 	background: $snow-white;
-	height: 840px;
+	min-height: 820px;
+
+	&__introduction {
+		margin-top: 60px;
+	}
 
 	&__info {
 		margin-top: 85px;
+
+		@include media-breakpoint-down(xs) {
+			margin-top: 60px;
+
+			.col-12 + .col-12 {
+				margin-top: 40px;
+			}
+		}
 	}
 }

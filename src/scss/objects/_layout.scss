@@ -1,10 +1,41 @@
+.o-full-height {
+	display: flex;
+	flex-direction: column;
+
+	&__elem {
+		flex: 1;
+	}
+}
+
 .o-list {
+	@include media-breakpoint-down(xs) {
+		display: none;
+	}
+
 	& li {
 		display: inline-block;
 	}
 
 	& li + li {
 		margin-left: 40px;
+	}
+}
+
+.o-mobile-list {
+	@include media-breakpoint-up(sm) {
+		display: none;
+	}
+
+	& li + li {
+		margin-top: 40px;
+	}
+}
+
+.o-mobile-nav-poz {
+	@include media-breakpoint-down(xs) {
+		position: absolute;
+		right: 10px;
+		top: 3px;
 	}
 }
 
@@ -32,6 +63,10 @@
 	&--first {
 		padding-top: 20px;
 		height: 100%;
+
+		@include media-breakpoint-down(xs) {
+			padding-bottom: 60px;
+		}
 	}
 
 	&--bottom {
@@ -41,5 +76,23 @@
 	&--big {
 		padding-top: 120px;
 		padding-bottom: 120px;
+	}
+}
+
+.o-icon {
+
+	&--dribbble {
+		width: 18px;
+		height: 18px;
+	}
+
+	&--behance {
+		width: 22px;
+		height: 15px;
+	}
+
+	&--twitter {
+		width: 18px;
+		height: 15px;
 	}
 }

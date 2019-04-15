@@ -1132,11 +1132,34 @@ p,
   color: #2e2e2e;
   font-family: "Lato"; }
 
+.o-full-height {
+  display: flex;
+  flex-direction: column; }
+  .o-full-height__elem {
+    flex: 1; }
+
+@media (max-width: 575.98px) {
+  .o-list {
+    display: none; } }
+
 .o-list li {
   display: inline-block; }
 
 .o-list li + li {
   margin-left: 40px; }
+
+@media (min-width: 576px) {
+  .o-mobile-list {
+    display: none; } }
+
+.o-mobile-list li + li {
+  margin-top: 40px; }
+
+@media (max-width: 575.98px) {
+  .o-mobile-nav-poz {
+    position: absolute;
+    right: 10px;
+    top: 3px; } }
 
 .o-block {
   position: relative; }
@@ -1157,11 +1180,26 @@ p,
   .o-section--first {
     padding-top: 20px;
     height: 100%; }
+    @media (max-width: 575.98px) {
+      .o-section--first {
+        padding-bottom: 60px; } }
   .o-section--bottom {
     padding-top: 0; }
   .o-section--big {
     padding-top: 120px;
     padding-bottom: 120px; }
+
+.o-icon--dribbble {
+  width: 18px;
+  height: 18px; }
+
+.o-icon--behance {
+  width: 22px;
+  height: 15px; }
+
+.o-icon--twitter {
+  width: 18px;
+  height: 15px; }
 
 .c-arrow {
   display: block;
@@ -1217,14 +1255,22 @@ p,
   border: 20px solid white;
   border-bottom: none;
   background: #fafafa;
-  height: 840px; }
+  min-height: 820px; }
+  .c-hero__introduction {
+    margin-top: 60px; }
   .c-hero__info {
     margin-top: 85px; }
+    @media (max-width: 575.98px) {
+      .c-hero__info {
+        margin-top: 60px; }
+        .c-hero__info .col-12 + .col-12 {
+          margin-top: 40px; } }
 
 .c-quick-info__title {
   text-transform: uppercase;
   letter-spacing: 0.2858em;
-  margin-bottom: 16px; }
+  margin-bottom: 16px;
+  line-height: 1; }
 
 .c-heading {
   line-height: 1;
@@ -1249,8 +1295,8 @@ p,
   box-shadow: 0 2px 27pt #00000015;
   margin-bottom: 40px; }
 
-.c-portfolio-post__title {
-  margin-bottom: 20px; }
+.c-portfolio-post__description {
+  margin-top: 20px; }
 
 .c-portfolio-post__job {
   color: #cacaca; }
@@ -1334,21 +1380,6 @@ p,
     color: #cacaca; }
     .c-contact__mail:hover {
       color: #2e2e2e; }
-
-.c-footer__icon--dribbble {
-  width: 18px;
-  height: 18px; }
-
-.c-footer__icon--behance {
-  width: 22px;
-  height: 15px; }
-
-.c-footer__icon--twitter {
-  width: 18px;
-  height: 15px; }
-
-.u-full-height {
-  height: 100%; }
 
 .u-flex-align__lt {
   display: flex;
