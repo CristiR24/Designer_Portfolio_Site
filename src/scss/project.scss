@@ -1,24 +1,24 @@
-@import "settings/settings.grid";
-@import "settings/settings.variables";
+@import "settings/grid";
+@import "settings/variables";
 
-@import "tools/tools.grid-functions";
-@import "tools/tools.grid-mixins";
-@import "tools/tools.mixins";
+@import "tools/grid-functions";
+@import "tools/grid-mixins";
+@import "tools/mixins";
 
-@import "generic/generic.reset";
-@import "generic/generic.grid-generate";
+@import "generic/reset";
+@import "generic/grid-generate";
 
-@import "elements/elements.typography";
+@import "elements/typography";
 
-@import "objects/objects.layout";
+@import "objects/layout";
 
-@import "components/components.arrow";
-@import "components/components.nav";
-@import "components/components.project-overview";
-@import "components/components.card";
-@import "components/components.stats";
-@import "components/components.description";
-@import "components/components.quote";
-@import "components/components.footer";
+@import "components/arrow";
+@import "components/nav";
+@import "components/project-overview";
+@import "components/card";
+@import "components/stats";
+@import "components/description";
+@import "components/quote";
+@import "components/footer";
 
-@import "trump/trump.utilities";
+@import "trump/utilities";
