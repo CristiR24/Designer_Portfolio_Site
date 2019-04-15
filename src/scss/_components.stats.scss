@@ -1,7 +1,7 @@
 .c-stats {
 	text-align: center;
 
-	&__element + &__element {
+	&__block + &__block {
 		margin-top: 20px;
 	}
 

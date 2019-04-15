@@ -1175,6 +1175,12 @@ p,
 .c-nav__mail {
   color: #2e2e2e; }
 
+.c-nav__link:last-child {
+  margin-right: 50px; }
+
+.c-nav__link a {
+  color: inherit; }
+
 .c-project-overview__image {
   box-shadow: 0 2px 27pt #00000015; }
 
@@ -1230,7 +1236,7 @@ p,
 
 .c-stats {
   text-align: center; }
-  .c-stats__element + .c-stats__element {
+  .c-stats__block + .c-stats__block {
     margin-top: 20px; }
   .c-stats__name {
     line-height: 1; }

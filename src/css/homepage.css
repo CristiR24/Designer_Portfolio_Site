@@ -1193,6 +1193,12 @@ p,
 .c-nav__mail {
   color: #2e2e2e; }
 
+.c-nav__link:last-child {
+  margin-right: 50px; }
+
+.c-nav__link a {
+  color: inherit; }
+
 .c-hero {
   border: 20px solid white;
   background: #fafafa;
