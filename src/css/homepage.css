@@ -1218,13 +1218,11 @@ p,
     right: calc(100% + 30px);
     top: 50%; }
 
-.c-work {
-  padding-top: 60px;
-  padding-bottom: 80px; }
-  .c-work__portfolio-post + .c-work__portfolio-post {
-    margin-top: 70px; }
-  .c-work__heading {
-    left: 93px; }
+.c-work__portfolio-post + .c-work__portfolio-post {
+  margin-top: 70px; }
+
+.c-work__heading {
+  left: 15px; }
 
 .c-portfolio-post__image {
   box-shadow: 0 2px 27pt #00000015;
@@ -1394,6 +1392,9 @@ p,
 
 .u-margin-t__60 {
   margin-top: 60px; }
+
+.u-margin-t__neg20 {
+  margin-top: -20px; }
 
 .u-margin-r__zero {
   margin-right: 0; }
