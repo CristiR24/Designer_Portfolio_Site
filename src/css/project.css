@@ -1071,6 +1071,9 @@ h1 {
   letter-spacing: 0.00278em;
   line-height: 3.75rem;
   color: #2e2e2e; }
+  @media (max-width: 575.98px) {
+    h1 {
+      line-height: 3.5rem; } }
 
 h2 {
   font-weight: 700;
@@ -1078,6 +1081,9 @@ h2 {
   letter-spacing: 0;
   line-height: 2.5rem;
   color: #2e2e2e; }
+  @media (max-width: 575.98px) {
+    h2 {
+      font-size: 1.5rem; } }
 
 h3 {
   font-weight: 600;

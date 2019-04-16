@@ -1084,6 +1084,9 @@ h1 {
   letter-spacing: 0.00278em;
   line-height: 3.75rem;
   color: #2e2e2e; }
+  @media (max-width: 575.98px) {
+    h1 {
+      line-height: 3.5rem; } }
 
 h2 {
   font-weight: 700;
@@ -1091,6 +1094,9 @@ h2 {
   letter-spacing: 0;
   line-height: 2.5rem;
   color: #2e2e2e; }
+  @media (max-width: 575.98px) {
+    h2 {
+      font-size: 1.5rem; } }
 
 h3 {
   font-weight: 600;
@@ -1317,7 +1323,7 @@ p,
       margin-top: 40px; } }
 
 .c-work__heading {
-  bottom: 15px; }
+  bottom: 11px; }
   @media (min-width: 576px) {
     .c-work__heading {
       left: 13px;
@@ -1382,7 +1388,7 @@ p,
         max-width: 1103.33333px; } }
 
 .c-about__heading {
-  bottom: 62px; }
+  bottom: 58px; }
   @media (min-width: 576px) {
     .c-about__heading {
       left: 9px;
@@ -1447,7 +1453,7 @@ p,
   @media (max-width: 575.98px) {
     .c-contact {
       padding-top: 140px;
-      padding-bottom: 108px; } }
+      padding-bottom: 148px; } }
   .c-contact__title {
     margin-bottom: 9px; }
   .c-contact__mail {

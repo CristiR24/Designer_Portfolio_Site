@@ -18,10 +18,18 @@ h4 {
 
 h1 {
 	@include style-text(700, 2.25rem, 0.00278em, 3.75rem);
+
+	@include media-breakpoint-down(xs) {
+		line-height: 3.5rem;
+	}
 }
 
 h2 {
 	@include style-text(700, 2rem, 0, 2.5rem);
+
+	@include media-breakpoint-down(xs) {
+		font-size: 1.5rem;
+	}
 }
 
 h3 {
