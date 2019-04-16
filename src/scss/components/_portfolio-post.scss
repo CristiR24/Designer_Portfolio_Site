@@ -1,7 +1,11 @@
 .c-portfolio-post {
 	&__image {
-		box-shadow: $default-shadow;
+		@include box-shadow-up-sm();
 		margin-bottom: 40px;
+
+		@include media-breakpoint-down(xs) {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__description {
@@ -17,6 +21,7 @@
 		@extend h4;
 		position: relative;
 		margin-right: 50px;
+		margin-top: 20px;
 
 		&:hover .c-arrow {
 			width: calc(100% + 50px);

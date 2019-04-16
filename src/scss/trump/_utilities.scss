@@ -86,3 +86,15 @@
 		}
 	}
 }
+
+.u-padding {
+	&-clr {
+		padding: 0;
+
+		&\@down-xs {
+			@include media-breakpoint-down(xs) {
+				padding: 0;
+			}
+		}
+	}
+}

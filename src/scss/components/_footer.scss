@@ -2,5 +2,11 @@
 
 	&__copyright {
 		@extend p;
+		text-align: left;
+
+		@include media-breakpoint-down(xs) {
+			text-align: center;
+			margin-bottom: 20px;
+		}
 	}
 }

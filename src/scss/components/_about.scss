@@ -1,17 +1,30 @@
 .c-about {
 	&__heading {
-		left: 10px;
+		bottom: 62px;
+
+		@include media-breakpoint-up(sm) {
+			left: 9px;
+			bottom: 0;
+		}
 	}
 
 	&__description {
 		margin-top: 65px;
 		margin-bottom: 60px;
+
+		@include media-breakpoint-down(xs) {
+			margin: 40px 0;
+		}
 	}
 
 	&__image {
 		position: relative;
-		max-width: 100%;
 		top: 20px;
-		box-shadow: $default-shadow;
+		@include box-shadow-up-sm();
+
+		@include media-breakpoint-down(xs) {
+			position: static;
+			margin-top: 20px;
+		}
 	}
 }

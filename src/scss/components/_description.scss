@@ -1,7 +1,7 @@
 .c-description {
 
 	&__image {
-		box-shadow: $default-shadow;
+		@include box-shadow-up-sm();
 		position: relative;
 		top: -60px;
 	}

@@ -18,6 +18,9 @@
   =            mixins Grid            =
   ===================================*/
 /*=====  End of mixins Grid  ======*/
+/**
+ * @param $grid-offset-columns {number} - the number of columns the card offsets the grid
+ */
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
@@ -1147,14 +1150,26 @@ p,
 
 .o-heading--pushed {
   position: absolute;
-  z-index: 5;
-  transform: rotate(-90deg) translateY(-150%);
-  left: -60px; }
+  z-index: 5; }
+  @media (min-width: 576px) {
+    .o-heading--pushed {
+      transform: rotate(-90deg) translateY(-150%);
+      left: -60px; } }
+
+@media (max-width: 575.98px) {
+  .o-full-vw\@down-xs {
+    width: 100vw;
+    margin: 0;
+    position: relative;
+    left: calc(-50vw + 50%); } }
 
 .o-section {
   position: relative;
   padding-bottom: 80px;
   padding-top: 80px; }
+  @media (max-width: 575.98px) {
+    .o-section {
+      padding-top: 45px; } }
   .o-section--first {
     padding-top: 20px;
     height: 100%; }
@@ -1163,19 +1178,24 @@ p,
         padding-bottom: 60px; } }
   .o-section--bottom {
     padding-top: 0; }
+    .o-section--bottom-big {
+      padding-bottom: 120px; }
+      @media (max-width: 575.98px) {
+        .o-section--bottom-big\@down-xs {
+          padding-bottom: 120px; } }
   .o-section--big {
     padding-top: 120px;
     padding-bottom: 120px; }
 
-.o-icon--dribbble {
+.o-icon__dribbble {
   width: 18px;
   height: 18px; }
 
-.o-icon--behance {
+.o-icon__behance {
   width: 22px;
   height: 15px; }
 
-.o-icon--twitter {
+.o-icon__twitter {
   width: 18px;
   height: 15px; }
 
@@ -1217,8 +1237,9 @@ p,
 .c-nav__link a {
   color: inherit; }
 
-.c-project-overview__image {
-  box-shadow: 0 2px 27pt #00000015; }
+@media (min-width: 576px) {
+  .c-project-overview__image {
+    box-shadow: 0 2px 27pt #00000015; } }
 
 .c-project-overview__title {
   margin-top: 30px;
@@ -1259,16 +1280,16 @@ p,
     margin-right: auto; }
     @media (min-width: 576px) {
       .c-card__center {
-        width: 720px; } }
+        max-width: 613.33333px; } }
     @media (min-width: 768px) {
       .c-card__center {
-        width: 900px; } }
+        max-width: 823.33333px; } }
     @media (min-width: 992px) {
       .c-card__center {
-        width: 990px; } }
+        max-width: 928.33333px; } }
     @media (min-width: 1200px) {
       .c-card__center {
-        width: 1140px; } }
+        max-width: 1103.33333px; } }
 
 .c-stats {
   text-align: center; }
@@ -1278,9 +1299,11 @@ p,
     line-height: 1; }
 
 .c-description__image {
-  box-shadow: 0 2px 27pt #00000015;
   position: relative;
   top: -60px; }
+  @media (min-width: 576px) {
+    .c-description__image {
+      box-shadow: 0 2px 27pt #00000015; } }
 
 .c-quote {
   padding-top: 160px; }
@@ -1297,6 +1320,13 @@ p,
     color: #000000;
     text-align: center;
     line-height: 44px; }
+
+.c-footer__copyright {
+  text-align: left; }
+  @media (max-width: 575.98px) {
+    .c-footer__copyright {
+      text-align: center;
+      margin-bottom: 20px; } }
 
 .u-flex-align__lt {
   display: flex;
@@ -1355,3 +1385,9 @@ p,
 
 .u-margin-r__zero {
   margin-right: 0; }
+
+.u-padding-clr {
+  padding: 0; }
+  @media (max-width: 575.98px) {
+    .u-padding-clr\@down-xs {
+      padding: 0; } }

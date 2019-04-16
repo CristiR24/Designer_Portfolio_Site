@@ -15,6 +15,6 @@
 		margin-right: auto;
 
 		// sets the "width" property for all screen sizes
-		@include card-center-grid-offset(80px);
+		@include card-center-grid-offset(1);
 	}
 }

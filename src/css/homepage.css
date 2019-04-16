@@ -18,6 +18,9 @@
   =            mixins Grid            =
   ===================================*/
 /*=====  End of mixins Grid  ======*/
+/**
+ * @param $grid-offset-columns {number} - the number of columns the card offsets the grid
+ */
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
@@ -1169,14 +1172,26 @@ p,
 
 .o-heading--pushed {
   position: absolute;
-  z-index: 5;
-  transform: rotate(-90deg) translateY(-150%);
-  left: -60px; }
+  z-index: 5; }
+  @media (min-width: 576px) {
+    .o-heading--pushed {
+      transform: rotate(-90deg) translateY(-150%);
+      left: -60px; } }
+
+@media (max-width: 575.98px) {
+  .o-full-vw\@down-xs {
+    width: 100vw;
+    margin: 0;
+    position: relative;
+    left: calc(-50vw + 50%); } }
 
 .o-section {
   position: relative;
   padding-bottom: 80px;
   padding-top: 80px; }
+  @media (max-width: 575.98px) {
+    .o-section {
+      padding-top: 45px; } }
   .o-section--first {
     padding-top: 20px;
     height: 100%; }
@@ -1185,19 +1200,24 @@ p,
         padding-bottom: 60px; } }
   .o-section--bottom {
     padding-top: 0; }
+    .o-section--bottom-big {
+      padding-bottom: 120px; }
+      @media (max-width: 575.98px) {
+        .o-section--bottom-big\@down-xs {
+          padding-bottom: 120px; } }
   .o-section--big {
     padding-top: 120px;
     padding-bottom: 120px; }
 
-.o-icon--dribbble {
+.o-icon__dribbble {
   width: 18px;
   height: 18px; }
 
-.o-icon--behance {
+.o-icon__behance {
   width: 22px;
   height: 15px; }
 
-.o-icon--twitter {
+.o-icon__twitter {
   width: 18px;
   height: 15px; }
 
@@ -1274,26 +1294,43 @@ p,
 
 .c-heading {
   line-height: 1;
-  position: relative; }
+  position: relative;
+  left: 24px; }
   .c-heading::before {
     content: "";
     display: block;
-    width: 55px;
+    width: 50px;
     height: 1px;
     background: #2e2e2e;
     position: absolute;
     right: calc(100% + 30px);
     top: 50%; }
+  @media (max-width: 575.98px) {
+    .c-heading::before {
+      right: calc(100% - 4px);
+      transform: rotate(90deg); } }
 
 .c-work__portfolio-post + .c-work__portfolio-post {
   margin-top: 70px; }
+  @media (max-width: 575.98px) {
+    .c-work__portfolio-post + .c-work__portfolio-post {
+      margin-top: 40px; } }
 
 .c-work__heading {
-  left: 15px; }
+  bottom: 15px; }
+  @media (min-width: 576px) {
+    .c-work__heading {
+      left: 13px;
+      bottom: 0; } }
 
 .c-portfolio-post__image {
-  box-shadow: 0 2px 27pt #00000015;
   margin-bottom: 40px; }
+  @media (min-width: 576px) {
+    .c-portfolio-post__image {
+      box-shadow: 0 2px 27pt #00000015; } }
+  @media (max-width: 575.98px) {
+    .c-portfolio-post__image {
+      margin-bottom: 20px; } }
 
 .c-portfolio-post__description {
   margin-top: 20px; }
@@ -1303,7 +1340,8 @@ p,
 
 .c-portfolio-post__link {
   position: relative;
-  margin-right: 50px; }
+  margin-right: 50px;
+  margin-top: 20px; }
   .c-portfolio-post__link:hover .c-arrow {
     width: calc(100% + 50px);
     background: #cacaca; }
@@ -1332,35 +1370,67 @@ p,
     margin-right: auto; }
     @media (min-width: 576px) {
       .c-card__center {
-        width: 720px; } }
+        max-width: 613.33333px; } }
     @media (min-width: 768px) {
       .c-card__center {
-        width: 900px; } }
+        max-width: 823.33333px; } }
     @media (min-width: 992px) {
       .c-card__center {
-        width: 990px; } }
+        max-width: 928.33333px; } }
     @media (min-width: 1200px) {
       .c-card__center {
-        width: 1140px; } }
+        max-width: 1103.33333px; } }
 
 .c-about__heading {
-  left: 10px; }
+  bottom: 62px; }
+  @media (min-width: 576px) {
+    .c-about__heading {
+      left: 9px;
+      bottom: 0; } }
 
 .c-about__description {
   margin-top: 65px;
   margin-bottom: 60px; }
+  @media (max-width: 575.98px) {
+    .c-about__description {
+      margin: 40px 0; } }
 
 .c-about__image {
   position: relative;
-  max-width: 100%;
-  top: 20px;
-  box-shadow: 0 2px 27pt #00000015; }
+  top: 20px; }
+  @media (min-width: 576px) {
+    .c-about__image {
+      box-shadow: 0 2px 27pt #00000015; } }
+  @media (max-width: 575.98px) {
+    .c-about__image {
+      position: static;
+      margin-top: 20px; } }
 
 .c-job + .c-job {
   margin-top: 20px; }
 
+.c-job:last-child {
+  margin-bottom: 40px; }
+
+.c-job__agency {
+  line-height: 24px; }
+
+.c-job__time-span {
+  text-align: right; }
+  @media (min-width: 576px) {
+    .c-job__time-span {
+      display: inline-block; }
+      .c-job__time-span:last-child::before {
+        content: "- "; } }
+
 .c-testimonials {
   padding-top: 190px; }
+  @media (max-width: 575.98px) {
+    .c-testimonials {
+      padding-top: 60px; } }
+  @media (max-width: 575.98px) {
+    .c-testimonials__block + .c-testimonials__block {
+      margin-top: 40px; } }
   .c-testimonials__reviewer {
     line-height: 1; }
   .c-testimonials__company {
@@ -1371,8 +1441,13 @@ p,
     margin-top: 20px; }
 
 .c-contact {
-  padding: 330px 0;
+  padding-top: 330px;
+  padding-bottom: 338px;
   text-align: center; }
+  @media (max-width: 575.98px) {
+    .c-contact {
+      padding-top: 140px;
+      padding-bottom: 108px; } }
   .c-contact__title {
     margin-bottom: 9px; }
   .c-contact__mail {
@@ -1380,6 +1455,13 @@ p,
     color: #cacaca; }
     .c-contact__mail:hover {
       color: #2e2e2e; }
+
+.c-footer__copyright {
+  text-align: left; }
+  @media (max-width: 575.98px) {
+    .c-footer__copyright {
+      text-align: center;
+      margin-bottom: 20px; } }
 
 .u-flex-align__lt {
   display: flex;
@@ -1438,3 +1520,9 @@ p,
 
 .u-margin-r__zero {
   margin-right: 0; }
+
+.u-padding-clr {
+  padding: 0; }
+  @media (max-width: 575.98px) {
+    .u-padding-clr\@down-xs {
+      padding: 0; } }

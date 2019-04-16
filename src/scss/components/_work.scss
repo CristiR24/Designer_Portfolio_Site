@@ -3,9 +3,18 @@
 	// every portfolio post preceding another one
 	&__portfolio-post + &__portfolio-post {
 		margin-top: 70px;
+
+		@include media-breakpoint-down(xs) {
+			margin-top: 40px;
+		}
 	}
 
 	&__heading {
-		left: 15px;
+		bottom: 15px;
+
+		@include media-breakpoint-up(sm) {
+			left: 13px;
+			bottom: 0;
+		}
 	}
 }

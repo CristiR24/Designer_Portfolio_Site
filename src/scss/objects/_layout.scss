@@ -50,14 +50,30 @@
 .o-heading--pushed {
 	position: absolute;
 	z-index: 5;
-	transform: rotate(-90deg) translateY(-150%);
-	left: -60px;
+
+	@include media-breakpoint-up(sm) {
+		transform: rotate(-90deg) translateY(-150%);
+		left: -60px;
+	}
+}
+
+.o-full-vw\@down-xs {
+	@include media-breakpoint-down(xs) {
+		width: 100vw;
+		margin: 0;
+		position: relative;
+		left: calc(-50vw + 50%);
+	}
 }
 
 .o-section {
 	position: relative;
 	padding-bottom: 80px;
 	padding-top: 80px;
+
+	@include media-breakpoint-down(xs) {
+		padding-top: 45px;
+	}
 
 
 	&--first {
@@ -71,6 +87,16 @@
 
 	&--bottom {
 		padding-top: 0;
+
+		&-big {
+			padding-bottom: 120px;
+
+			&\@down-xs {
+				@include media-breakpoint-down(xs) {
+					padding-bottom: 120px;
+				}
+			}
+		}
 	}
 
 	&--big {
@@ -81,17 +107,17 @@
 
 .o-icon {
 
-	&--dribbble {
+	&__dribbble {
 		width: 18px;
 		height: 18px;
 	}
 
-	&--behance {
+	&__behance {
 		width: 22px;
 		height: 15px;
 	}
 
-	&--twitter {
+	&__twitter {
 		width: 18px;
 		height: 15px;
 	}

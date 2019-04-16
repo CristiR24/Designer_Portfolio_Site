@@ -3,12 +3,29 @@
 		margin-top: 20px;
 	}
 
+	&:last-child {
+		margin-bottom: 40px;
+	}
+
 	&__agency {
 		@extend h4;
+		line-height: 24px;
 	}
 
 	&__title,
 	&__time-span {
 		@extend p;
+	}
+
+	&__time-span {
+		text-align: right;
+
+		@include media-breakpoint-up(sm) {
+			display: inline-block;
+
+			&:last-child::before {
+				content: "- ";
+			}
+		}
 	}
 }

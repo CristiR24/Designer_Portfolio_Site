@@ -1,7 +1,7 @@
 .c-project-overview {
 
 	&__image {
-		box-shadow: $default-shadow;
+		@include box-shadow-up-sm();
 	}
 
 	&__title {
