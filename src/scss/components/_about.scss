@@ -20,7 +20,7 @@
 	&__image {
 		position: relative;
 		top: 20px;
-		@include box-shadow-up-sm();
+		box-shadow: $default-shadow;
 
 		@include media-breakpoint-down(xs) {
 			position: static;

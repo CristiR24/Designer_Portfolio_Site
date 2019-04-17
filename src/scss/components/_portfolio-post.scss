@@ -1,6 +1,6 @@
 .c-portfolio-post {
 	&__image {
-		@include box-shadow-up-sm();
+		box-shadow: $default-shadow;
 		margin-bottom: 40px;
 
 		@include media-breakpoint-down(xs) {

@@ -4,7 +4,7 @@
 
 
 	&__left {
-		width: 100vw;
+		width: 100%;
 
 		// sets the "right" property for all screen sizes
 		@include position-card-left();

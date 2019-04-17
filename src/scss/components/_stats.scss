@@ -1,8 +1,18 @@
 .c-stats {
 	text-align: center;
 
-	&__block + &__block {
-		margin-top: 20px;
+	&__block {
+
+		& + & {
+			margin-top: 20px;
+		}
+
+		@include media-breakpoint-down(xs) {
+
+			& + & {
+				margin-top: 40px;
+			}
+		}
 	}
 
 	&__name {

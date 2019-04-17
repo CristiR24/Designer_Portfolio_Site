@@ -1,17 +1,29 @@
 .c-quote {
 	padding-top: 160px;
 
+	@include media-breakpoint-down(xs) {
+		padding-top: 120px;
+	}
+
 	&__text {
-		font-family: Lato-Light;
+		font-family: $base-font;
+		font-weight: 300;
 		font-size: 36px;
-		color: #000000;
+		color: $black;
 		letter-spacing: 0.2px;
 		text-align: center;
 		line-height: 60px;
+
+		@include media-breakpoint-down(xs) {
+			font-size: 24px;
+			letter-spacing: 0.13px;
+			line-height: 40px;
+		}
 	}
 
 	&__symbol {
-		font-family: Lato-Black;
+		font-family: $base-font;
+		font-weight: 900;
 		font-size: 36px;
 		color: #000000;
 		text-align: center;

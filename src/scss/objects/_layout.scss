@@ -72,7 +72,8 @@
 	padding-top: 80px;
 
 	@include media-breakpoint-down(xs) {
-		padding-top: 45px;
+		padding-top: 40px;
+		padding-bottom: 40px;
 	}
 
 
@@ -87,6 +88,11 @@
 
 	&--bottom {
 		padding-top: 0;
+		padding-bottom: 80px;
+
+		@include media-breakpoint-down(xs) {
+			padding-bottom: 60px;
+		}
 
 		&-big {
 			padding-bottom: 120px;

@@ -6,12 +6,6 @@
 	color: $color;
 }
 
-@mixin box-shadow-up-sm($shadow: $default-shadow) {
-	@include media-breakpoint-up(sm) {
-		box-shadow: $shadow;
-	}
-}
-
 @mixin position-card-left(
 	$max-widths: $container-max-widths,
 	$breakpoints: $grid-breakpoints

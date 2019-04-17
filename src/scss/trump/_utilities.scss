@@ -78,6 +78,16 @@
 		&__60 {
 			margin-top: 60px;
 		}
+
+		&__zero {
+			margin-top: 0;
+
+			&\@down-xs {
+				@include media-breakpoint-down(xs) {
+					margin-top: 0 !important;
+				}
+			}
+		}
 	}
 
 	&-r {
@@ -94,6 +104,18 @@
 		&\@down-xs {
 			@include media-breakpoint-down(xs) {
 				padding: 0;
+			}
+		}
+	}
+}
+
+.u-display {
+	&-none {
+		display: none;
+
+		&\@down-xs {
+			@include media-breakpoint-down(xs) {
+				display: none;
 			}
 		}
 	}

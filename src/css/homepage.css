@@ -1197,7 +1197,8 @@ p,
   padding-top: 80px; }
   @media (max-width: 575.98px) {
     .o-section {
-      padding-top: 45px; } }
+      padding-top: 40px;
+      padding-bottom: 40px; } }
   .o-section--first {
     padding-top: 20px;
     height: 100%; }
@@ -1205,7 +1206,11 @@ p,
       .o-section--first {
         padding-bottom: 60px; } }
   .o-section--bottom {
-    padding-top: 0; }
+    padding-top: 0;
+    padding-bottom: 80px; }
+    @media (max-width: 575.98px) {
+      .o-section--bottom {
+        padding-bottom: 60px; } }
     .o-section--bottom-big {
       padding-bottom: 120px; }
       @media (max-width: 575.98px) {
@@ -1330,10 +1335,8 @@ p,
       bottom: 0; } }
 
 .c-portfolio-post__image {
+  box-shadow: 0 2px 27pt #00000015;
   margin-bottom: 40px; }
-  @media (min-width: 576px) {
-    .c-portfolio-post__image {
-      box-shadow: 0 2px 27pt #00000015; } }
   @media (max-width: 575.98px) {
     .c-portfolio-post__image {
       margin-bottom: 20px; } }
@@ -1358,7 +1361,7 @@ p,
   position: relative;
   background: #fafafa; }
   .c-card__left {
-    width: 100vw; }
+    width: 100%; }
     @media (min-width: 576px) {
       .c-card__left {
         right: calc(50% - 280px); } }
@@ -1403,10 +1406,8 @@ p,
 
 .c-about__image {
   position: relative;
-  top: 20px; }
-  @media (min-width: 576px) {
-    .c-about__image {
-      box-shadow: 0 2px 27pt #00000015; } }
+  top: 20px;
+  box-shadow: 0 2px 27pt #00000015; }
   @media (max-width: 575.98px) {
     .c-about__image {
       position: static;
@@ -1452,7 +1453,7 @@ p,
   text-align: center; }
   @media (max-width: 575.98px) {
     .c-contact {
-      padding-top: 140px;
+      padding-top: 120px;
       padding-bottom: 148px; } }
   .c-contact__title {
     margin-bottom: 9px; }
@@ -1524,6 +1525,12 @@ p,
 .u-margin-t__60 {
   margin-top: 60px; }
 
+.u-margin-t__zero {
+  margin-top: 0; }
+  @media (max-width: 575.98px) {
+    .u-margin-t__zero\@down-xs {
+      margin-top: 0 !important; } }
+
 .u-margin-r__zero {
   margin-right: 0; }
 
@@ -1532,3 +1539,9 @@ p,
   @media (max-width: 575.98px) {
     .u-padding-clr\@down-xs {
       padding: 0; } }
+
+.u-display-none {
+  display: none; }
+  @media (max-width: 575.98px) {
+    .u-display-none\@down-xs {
+      display: none; } }

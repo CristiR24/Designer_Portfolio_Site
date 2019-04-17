@@ -5,7 +5,7 @@
     text-align: center;
 
 	@include media-breakpoint-down(xs) {
-		padding-top: 140px;
+		padding-top: 120px;
 		// + 8px from the underline after element
 		padding-bottom: 148px;
 	}

@@ -1,21 +1,53 @@
 .c-project-overview {
 
+	@include media-breakpoint-down(xs) {
+		margin-top: 20px;
+		margin-right: 20px;
+	}
+
+	&__mail {
+		@extend p;
+		color: $black;
+		margin-bottom: 20px;
+		display: none;
+
+		@include media-breakpoint-down(xs) {
+			display: block;
+		}
+	}
+
 	&__image {
-		@include box-shadow-up-sm();
+		box-shadow: $default-shadow;
+	}
+
+	&__stats {
+		@include media-breakpoint-down(xs) {
+			margin-top: 20px;
+			margin-bottom: 60px;
+		}
 	}
 
 	&__title {
 		margin-top: 30px;
 		margin-bottom: 20px;
+
+		@include media-breakpoint-down(xs) {
+			margin-top: 20px;
+		}
 	}
 
 	&__link {
-		font-family: Montserrat-Bold;
+		font-family: $accent-font;
+		font-weight: 700;
 		font-size: 16px;
 		color: #2E2E2E;
 		letter-spacing: 1.33px;
 		position: relative;
 		margin-right: 60px;
+
+		@include media-breakpoint-up(sm) {
+			margin-left: auto;
+		}
 
 		&:hover .c-arrow {
 			width: calc(100% + 50px);

@@ -1,8 +1,22 @@
 .c-description {
 
+	&__paragraph {
+
+		@include media-breakpoint-down(xs) {
+			& + & {
+				margin-top: 20px;
+			}
+		}
+	}
+
 	&__image {
-		@include box-shadow-up-sm();
+		box-shadow: $default-shadow;
 		position: relative;
 		top: -60px;
+
+		@include media-breakpoint-down(xs) {
+			top: -20px;
+			margin-bottom: 20px;
+		}
 	}
 }
