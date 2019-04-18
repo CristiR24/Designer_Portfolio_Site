@@ -1545,3 +1545,6 @@ p,
   @media (max-width: 575.98px) {
     .u-display-none\@down-xs {
       display: none; } }
+
+.u-transitions-on-load * {
+  transition: none !important; }

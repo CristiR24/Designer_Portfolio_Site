@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/project.css" />
 </head>
 
-<body>
+<body class="u-transitions-on-load">
     <div class="c-nav c-nav--big u-display-none@down-xs">
         <div class="container">
             <div class="row">
@@ -136,5 +136,12 @@
         </div>
     </div>
 </body>
+
+<script>
+    window.onload = function () {
+        const body = document.querySelector("body");
+        body.classList.remove("u-transitions-on-load");
+    }
+</script>
 
 </html>
