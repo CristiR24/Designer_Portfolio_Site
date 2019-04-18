@@ -1287,6 +1287,9 @@ p,
   border-bottom: none;
   background: #fafafa;
   min-height: 820px; }
+  @media (max-width: 575.98px) {
+    .c-hero {
+      margin-bottom: 4px; } }
   .c-hero__introduction {
     margin-top: 60px; }
   .c-hero__info {
@@ -1328,7 +1331,7 @@ p,
       margin-top: 40px; } }
 
 .c-work__heading {
-  bottom: 11px; }
+  bottom: 16px; }
   @media (min-width: 576px) {
     .c-work__heading {
       left: 13px;
@@ -1525,11 +1528,11 @@ p,
 .u-margin-t__60 {
   margin-top: 60px; }
 
-.u-margin-t__zero {
-  margin-top: 0; }
-  @media (max-width: 575.98px) {
-    .u-margin-t__zero\@down-xs {
-      margin-top: 0 !important; } }
+.u-margin-t__20 {
+  margin-top: 20px; }
+  @media (min-width: 576px) {
+    .u-margin-t__20\@up-sm {
+      margin-top: 20px; } }
 
 .u-margin-r__zero {
   margin-right: 0; }

@@ -4,6 +4,10 @@
 	background: $snow-white;
 	min-height: 820px;
 
+	@include media-breakpoint-down(xs) {
+		margin-bottom: 4px;
+	}
+
 	&__introduction {
 		margin-top: 60px;
 	}

@@ -1285,10 +1285,11 @@ p,
   color: #2E2E2E;
   letter-spacing: 1.33px;
   position: relative;
-  margin-right: 60px; }
+  margin-right: 50px; }
   @media (min-width: 576px) {
     .c-project-overview__link {
-      margin-left: auto; } }
+      margin-left: auto;
+      margin-right: 60px; } }
   .c-project-overview__link:hover .c-arrow {
     width: calc(100% + 50px);
     background: #cacaca; }
@@ -1439,11 +1440,11 @@ p,
 .u-margin-t__60 {
   margin-top: 60px; }
 
-.u-margin-t__zero {
-  margin-top: 0; }
-  @media (max-width: 575.98px) {
-    .u-margin-t__zero\@down-xs {
-      margin-top: 0 !important; } }
+.u-margin-t__20 {
+  margin-top: 20px; }
+  @media (min-width: 576px) {
+    .u-margin-t__20\@up-sm {
+      margin-top: 20px; } }
 
 .u-margin-r__zero {
   margin-right: 0; }

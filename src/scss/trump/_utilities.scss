@@ -79,12 +79,12 @@
 			margin-top: 60px;
 		}
 
-		&__zero {
-			margin-top: 0;
+		&__20 {
+			margin-top: 20px;
 
-			&\@down-xs {
-				@include media-breakpoint-down(xs) {
-					margin-top: 0 !important;
+			&\@up-sm {
+				@include media-breakpoint-up(sm) {
+					margin-top: 20px;
 				}
 			}
 		}
