@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/homepage.css" />
 </head>
 
-<body>
+<body class="u-transitions-on-load">
     <div class="o-full-height c-hero">
         <div class="o-full-height o-full-height__elem o-section o-section--first">
             <div class="container o-full-height__elem u-flex-space__between u-flex-dir__col">
@@ -256,5 +256,12 @@
         </div>
     </div>
 </body>
+
+<script>
+    window.onload = function () {
+        const body = document.querySelector("body");
+        body.classList.remove("u-transitions-on-load");
+    }
+</script>
 
 </html>
