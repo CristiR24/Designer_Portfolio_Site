@@ -23,7 +23,12 @@ block content
                                 br
                                 | My name is Dragos Sargu.
                                 br
-                                | I’m a freelance product designer from Moldova.
+                                span.typed-text
+                                    | I'm&nbsp;
+                                    span.typed
+                                    br
+                                span.typed-placeholder
+                                    | I'm a freelance product designer from Moldova.
                     .c-hero__info
                         .row
                             .col-12.col-sm-4
@@ -117,3 +122,47 @@ block content
                         a.c-contact__mail(href='mailto:business@dragossargu.com') business@dragossargu.com
 
     include partials/_footer
+
+    style.
+        .typed-text {
+            position: absolute;
+            padding-right: 10px;
+        }
+
+        .typed-placeholder {
+            visibility: hidden;
+        }
+
+        .typed {
+            position: relative;
+        }
+
+        .typed::after {
+            position: absolute;
+            content: '';
+            background-color: #B4D5FE;
+            height: 100%;
+            width: 0;
+            right: 0;
+            opacity: .35;
+            transform: translateY(.2em);
+        }
+
+        .faded::after {
+            transition: width .3s;
+            width: 100%;
+        }
+
+append scripts
+    script(src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9")
+
+    script.
+        var options = {
+            strings: ["a freelance product designer from Moldova.", "a freelance entepreneour thinker.", "a cynical thinker."],
+            typeSpeed: 40,
+            backSpeed: 30,
+            loop: true,
+            smartBackspace: true
+        }
+
+        var typed = new Typed(".typed", options)
