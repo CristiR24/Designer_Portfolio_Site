@@ -1,4 +1,4 @@
-.c-portfolio-post {
+.c-post {
 	&__image {
 		box-shadow: $default-shadow;
 		margin-bottom: 40px;
@@ -13,7 +13,6 @@
 	}
 
 	&__job {
-		@extend h5;
 		color: $smoke-gray;
 	}
 

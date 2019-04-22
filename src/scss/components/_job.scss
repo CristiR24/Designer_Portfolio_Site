@@ -8,13 +8,8 @@
 	}
 
 	&__agency {
-		@extend h4;
+		color: $black;
 		line-height: 24px;
-	}
-
-	&__title,
-	&__time-span {
-		@extend p;
 	}
 
 	&__time-span {

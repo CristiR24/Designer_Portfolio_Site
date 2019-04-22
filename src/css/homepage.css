@@ -39,20 +39,13 @@ h1,
 h2,
 h3,
 h4,
-.c-portfolio-post__link,
-.c-job__agency,
+.c-post__link,
 .c-contact__mail,
 h5,
 .c-nav__link,
-.c-portfolio-post__job,
-.c-testimonials__reviewer,
 h6,
 p,
 .c-nav__mail,
-.c-job__title,
-.c-job__time-span,
-.c-testimonials__company,
-.c-footer__copyright,
 blockquote,
 pre,
 a,
@@ -1065,16 +1058,13 @@ html {
 
 h1,
 h5,
-.c-nav__link,
-.c-portfolio-post__job,
-.c-testimonials__reviewer {
+.c-nav__link {
   font-family: "Lato"; }
 
 h2,
 h3,
 h4,
-.c-portfolio-post__link,
-.c-job__agency,
+.c-post__link,
 .c-contact__mail {
   font-family: "Montserrat"; }
 
@@ -1107,8 +1097,7 @@ h3 {
 
 
 h4,
-.c-portfolio-post__link,
-.c-job__agency,
+.c-post__link,
 .c-contact__mail {
   font-weight: 600;
   font-size: 1.125rem;
@@ -1118,9 +1107,7 @@ h4,
 
 
 h5,
-.c-nav__link,
-.c-portfolio-post__job,
-.c-testimonials__reviewer {
+.c-nav__link {
   font-weight: 700;
   font-size: 0.875rem;
   letter-spacing: 0.029em;
@@ -1129,11 +1116,7 @@ h5,
 
 
 p,
-.c-nav__mail,
-.c-job__title,
-.c-job__time-span,
-.c-testimonials__company,
-.c-footer__copyright {
+.c-nav__mail {
   font-weight: 300;
   font-size: 0.875rem;
   letter-spacing: 0.02857em;
@@ -1286,7 +1269,8 @@ p,
   border: 20px solid white;
   border-bottom: none;
   background: #fafafa;
-  min-height: 820px; }
+  height: fit-content;
+  min-height: 85vh; }
   @media (max-width: 575.98px) {
     .c-hero {
       margin-bottom: 4px; } }
@@ -1300,7 +1284,7 @@ p,
         .c-hero__info .col-12 + .col-12 {
           margin-top: 40px; } }
 
-.c-quick-info__title {
+.c-info__title {
   text-transform: uppercase;
   letter-spacing: 0.2858em;
   margin-bottom: 16px;
@@ -1324,10 +1308,10 @@ p,
       right: calc(100% - 4px);
       transform: rotate(90deg); } }
 
-.c-work__portfolio-post + .c-work__portfolio-post {
+.c-work__post + .c-work__post {
   margin-top: 70px; }
   @media (max-width: 575.98px) {
-    .c-work__portfolio-post + .c-work__portfolio-post {
+    .c-work__post + .c-work__post {
       margin-top: 40px; } }
 
 .c-work__heading {
@@ -1337,27 +1321,27 @@ p,
       left: 13px;
       bottom: 0; } }
 
-.c-portfolio-post__image {
+.c-post__image {
   box-shadow: 0 2px 27pt #00000015;
   margin-bottom: 40px; }
   @media (max-width: 575.98px) {
-    .c-portfolio-post__image {
+    .c-post__image {
       margin-bottom: 20px; } }
 
-.c-portfolio-post__description {
+.c-post__description {
   margin-top: 20px; }
 
-.c-portfolio-post__job {
+.c-post__job {
   color: #cacaca; }
 
-.c-portfolio-post__link {
+.c-post__link {
   position: relative;
   margin-right: 50px;
   margin-top: 20px; }
-  .c-portfolio-post__link:hover .c-arrow {
+  .c-post__link:hover .c-arrow {
     width: calc(100% + 50px);
     background: #cacaca; }
-    .c-portfolio-post__link:hover .c-arrow::before, .c-portfolio-post__link:hover .c-arrow::after {
+    .c-post__link:hover .c-arrow::before, .c-post__link:hover .c-arrow::after {
       background: #cacaca; }
 
 .c-card {
@@ -1423,6 +1407,7 @@ p,
   margin-bottom: 40px; }
 
 .c-job__agency {
+  color: #2e2e2e;
   line-height: 24px; }
 
 .c-job__time-span {
@@ -1442,8 +1427,10 @@ p,
     .c-testimonials__block + .c-testimonials__block {
       margin-top: 40px; } }
   .c-testimonials__reviewer {
+    display: inline;
     line-height: 1; }
   .c-testimonials__company {
+    display: inline;
     line-height: 1;
     color: #cacaca;
     padding-left: 10px; }
@@ -1525,16 +1512,16 @@ p,
 .u-flex-dir__col {
   flex-direction: column; }
 
-.u-margin-t__60 {
+.u-mg-t__60 {
   margin-top: 60px; }
 
-.u-margin-t__20 {
+.u-mg-t__20 {
   margin-top: 20px; }
   @media (min-width: 576px) {
-    .u-margin-t__20\@up-sm {
+    .u-mg-t__20\@up-sm {
       margin-top: 20px; } }
 
-.u-margin-r__zero {
+.u-mg-r__zero {
   margin-right: 0; }
 
 .u-padding-clr {

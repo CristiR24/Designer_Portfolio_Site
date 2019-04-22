@@ -14,7 +14,7 @@
 		@include media-breakpoint-up($breakpoint, $breakpoints) {
 			$half-container: $container-max-width / 2;
 			$container-padding: $grid-gutter-width;
-			// translate the card 50% to the right(it's width is 100vw)
+			// translate the card 50% to the right(it's width is 100%)
 			// then translate it to the left by half of the container width
 			right: calc(50% - #{$half-container});
 		}

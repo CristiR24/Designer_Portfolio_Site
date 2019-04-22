@@ -14,12 +14,12 @@
 	}
 
     &__reviewer {
-        @extend h5;
+	    display: inline;
         line-height: 1;
     }
 
     &__company {
-        @extend p;
+	    display: inline;
         line-height: 1;
         color: $smoke-gray;
         padding-left: 10px;

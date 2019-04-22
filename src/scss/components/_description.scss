@@ -9,6 +9,14 @@
 		}
 	}
 
+	&__block {
+		margin-top: 60px;
+
+		@include media-breakpoint-down(xs) {
+			margin-top: 20px;
+		}
+	}
+
 	&__image {
 		box-shadow: $default-shadow;
 		position: relative;

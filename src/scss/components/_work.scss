@@ -1,7 +1,7 @@
 .c-work {
 
 	// every portfolio post preceding another one
-	&__portfolio-post + &__portfolio-post {
+	&__post + &__post {
 		margin-top: 70px;
 
 		@include media-breakpoint-down(xs) {

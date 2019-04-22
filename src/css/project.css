@@ -44,8 +44,7 @@ h5,
 h6,
 p,
 .c-nav__mail,
-.c-project-overview__mail,
-.c-footer__copyright,
+.c-overview__mail,
 blockquote,
 pre,
 a,
@@ -1112,8 +1111,7 @@ h5,
 
 p,
 .c-nav__mail,
-.c-project-overview__mail,
-.c-footer__copyright {
+.c-overview__mail {
   font-weight: 300;
   font-size: 0.875rem;
   letter-spacing: 0.02857em;
@@ -1251,34 +1249,34 @@ p,
   color: inherit; }
 
 @media (max-width: 575.98px) {
-  .c-project-overview {
+  .c-overview {
     margin-top: 20px;
     margin-right: 20px; } }
 
-.c-project-overview__mail {
+.c-overview__mail {
   color: #2e2e2e;
   margin-bottom: 20px;
   display: none; }
   @media (max-width: 575.98px) {
-    .c-project-overview__mail {
+    .c-overview__mail {
       display: block; } }
 
-.c-project-overview__image {
+.c-overview__image {
   box-shadow: 0 2px 27pt #00000015; }
 
 @media (max-width: 575.98px) {
-  .c-project-overview__stats {
+  .c-overview__stats {
     margin-top: 20px;
     margin-bottom: 60px; } }
 
-.c-project-overview__title {
+.c-overview__title {
   margin-top: 30px;
   margin-bottom: 20px; }
   @media (max-width: 575.98px) {
-    .c-project-overview__title {
+    .c-overview__title {
       margin-top: 20px; } }
 
-.c-project-overview__link {
+.c-overview__link {
   font-family: "Montserrat";
   font-weight: 700;
   font-size: 16px;
@@ -1287,13 +1285,13 @@ p,
   position: relative;
   margin-right: 50px; }
   @media (min-width: 576px) {
-    .c-project-overview__link {
+    .c-overview__link {
       margin-left: auto;
       margin-right: 60px; } }
-  .c-project-overview__link:hover .c-arrow {
+  .c-overview__link:hover .c-arrow {
     width: calc(100% + 50px);
     background: #cacaca; }
-    .c-project-overview__link:hover .c-arrow::before, .c-project-overview__link:hover .c-arrow::after {
+    .c-overview__link:hover .c-arrow::before, .c-overview__link:hover .c-arrow::after {
       background: #cacaca; }
 
 .c-card {
@@ -1342,6 +1340,12 @@ p,
 @media (max-width: 575.98px) {
   .c-description__paragraph + .c-description__paragraph {
     margin-top: 20px; } }
+
+.c-description__block {
+  margin-top: 60px; }
+  @media (max-width: 575.98px) {
+    .c-description__block {
+      margin-top: 20px; } }
 
 .c-description__image {
   box-shadow: 0 2px 27pt #00000015;
@@ -1437,16 +1441,16 @@ p,
 .u-flex-dir__col {
   flex-direction: column; }
 
-.u-margin-t__60 {
+.u-mg-t__60 {
   margin-top: 60px; }
 
-.u-margin-t__20 {
+.u-mg-t__20 {
   margin-top: 20px; }
   @media (min-width: 576px) {
-    .u-margin-t__20\@up-sm {
+    .u-mg-t__20\@up-sm {
       margin-top: 20px; } }
 
-.u-margin-r__zero {
+.u-mg-r__zero {
   margin-right: 0; }
 
 .u-padding-clr {

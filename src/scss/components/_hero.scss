@@ -2,7 +2,8 @@
 	border: 20px solid white;
 	border-bottom: none;
 	background: $snow-white;
-	min-height: 820px;
+	height: fit-content;
+	min-height: 85vh;
 
 	@include media-breakpoint-down(xs) {
 		margin-bottom: 4px;

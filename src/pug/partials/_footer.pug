@@ -1,0 +1,27 @@
+//- Variables
+//-
+//- var bigFooter = true : false
+
+mixin footerContent
+    .row
+        .col-12.col-sm
+            p.c-footer__copyright ©2018 Dragos Sargu
+        .col-12.col-sm-auto.u-flex-align__cc
+            ul.o-list.u-flex-align__rc
+                li.c-footer__link
+                    a(target='_blank', href='https://dribbble.com/dragos_sargu')
+                        img.o-icon.o-icon__dribbble(src='images/icon/dribbble.svg', alt='')
+                li.c-footer__link
+                    a(target='_blank', href='https://www.behance.net/dragos_sargu?fbclid=IwAR1T7mY5uI0hyMioCgI-bkggJFNc1HRHWi1pLz1CHRBNYNB9dc3Q5s1gMD0')
+                        img.o-icon.o-icon__behance(src='images/icon/behance.svg', alt='')
+                li.c-footer__link
+                    a(target='_blank', href='https://twitter.com/dragos_sargu')
+                        img.o-icon.o-icon__twitter(src='images/icon/twitter.svg', alt='')
+
+.c-footer
+    .o-section(
+        class = bigFooter ?
+            'o-section--big':
+            'o-section--bottom o-section--bottom-big@down-xs')
+        .container
+            +footerContent
