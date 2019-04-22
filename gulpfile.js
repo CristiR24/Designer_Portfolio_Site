@@ -12,7 +12,7 @@ const {src, dest, watch, parallel, series} = require("gulp");
 
 const dir = {
     html: "src/*.html",
-    pug: "src/pug/**/*.pug",
+    pug: "src/pug/*.pug",
     fonts: "src/fonts/**/*.otf",
     images: "src/images/**/*.+(png|jpg|jpeg|gif|svg)",
     scss: "src/scss/**/*.scss",

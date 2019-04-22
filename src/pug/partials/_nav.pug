@@ -9,7 +9,9 @@ mixin navContent
         .col
             a.c-nav__mail(href='mailto:business@dragossargu.com').
                 business@dragossargu.com
-        .col-auto.o-mobile-nav-poz
+        .col-auto(
+            class = mobileNav ?
+                'o-mobile-nav-poz': '')
             ul.o-list
                 li.c-nav__link
                     a(target='_blank', href='https://twitter.com/dragos_sargu').

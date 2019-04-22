@@ -1,4 +1,4 @@
-extends _layouts/_layout
+extends layouts/_layout
 
 block variables
     - var outerNav = false
@@ -159,11 +159,12 @@ append scripts
 
     script.
         var options = {
-            strings: ["a freelance product designer from Moldova.", "a freelance entepreneour thinker.", "a cynical thinker."],
+            strings: ["a freelance product designer from Moldova.", "a freelance entrepreneur thinker.", "a cynical thinker."],
             typeSpeed: 40,
             backSpeed: 30,
             loop: true,
-            smartBackspace: true
+            smartBackspace: true,
+            backDelay: 3000
         }
 
         var typed = new Typed(".typed", options)
