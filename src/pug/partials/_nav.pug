@@ -1,6 +1,7 @@
 //- Variables
 //-
-//- var bigNav = true : false
+//- var outerNav = true : false
+//- var hideNavMobile = true : false
 //- var mobileNav = true : false
 
 mixin navContent
@@ -30,10 +31,14 @@ mixin navContent
                         a(target='_blank', href='https://twitter.com/dragos_sargu')
                             img.o-icon.o-icon__twitter(src='images/icon/twitter.svg', alt='')
 
-if bigNav
-    .c-nav.c-nav--big(class='u-display-none@down-xs')
+if outerNav
+    .c-nav.c-nav--big(
+        class= hideNavMobile ?
+            'u-display-none@down-xs':'')
         .container
             +navContent
 else
-    .c-nav
+    .c-nav(
+        class= hideNavMobile ?
+            'u-display-none@down-xs': '')
         +navContent
