@@ -33,12 +33,12 @@ mixin navContent
 
 if outerNav
     .c-nav.c-nav--big(
-        class= hideNavMobile ?
-            'u-display-none@down-xs':'')
+        class = hideNavMobile ?
+            'u-display-none@down-xs': '')
         .container
             +navContent
 else
     .c-nav(
-        class= hideNavMobile ?
+        class = hideNavMobile ?
             'u-display-none@down-xs': '')
         +navContent
