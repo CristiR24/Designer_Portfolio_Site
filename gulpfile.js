@@ -12,7 +12,8 @@ const {src, dest, watch, parallel, series} = require("gulp");
 
 const dir = {
     html: "src/*.html",
-    pug: "src/pug/*.pug",
+    pugPages: "src/pug/*.pug",
+    pugTemplates: "src/pug/**/*.pug",
     fonts: "src/fonts/**/*.otf",
     images: "src/images/**/*.+(png|jpg|jpeg|gif|svg)",
     scss: "src/scss/**/*.scss",
@@ -44,7 +45,7 @@ function html() {
 }
 
 function pugCompile() {
-    return src(dir.pug)
+    return src(dir.pugPages)
         .pipe(pug())
         .pipe(dest("src"));
 }
@@ -76,7 +77,7 @@ function script() {
 }
 
 function watchFiles() {
-    watch(dir.pug, pugCompile);
+    watch(dir.pugTemplates, pugCompile);
     watch(dir.html, parallel(html, browserSyncReload));
     watch(dir.fonts, parallel(fonts, browserSyncReload));
     watch(dir.images, parallel(images, browserSyncReload));
