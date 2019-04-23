@@ -1,0 +1,77 @@
+//- Variables
+        i - number
+        0 <= i < project.length
+        "i" is used to generate the page based on the index from the "projects" array
+
+extends ../layouts/_layout
+
+block variables
+    - var outerNav = true
+    - var hideNavMobile = true
+    - var mobileNav = false
+    - var bigFooter = true
+
+    include ../variables/_projects-content
+
+append styles
+    link(rel="stylesheet", href="css/project.css")
+
+block content
+
+    include ../partials/_nav
+
+    .c-overview
+        .c-card.c-card__left
+            .o-section.o-section--first
+                .container.u-mg-r__zero
+                    a.c-overview__mail(href='mailto:business@dragossargu.com') business@dragossargu.com
+                    .row
+                        .col-12.col-sm-10.order-sm-1
+                            img.c-overview__image(src = 'images/' + projects[i].image1, alt='')
+                        .col-12.col-sm-10.order-sm-3
+                            h3.c-overview__title #{projects[i].title}
+                        .col-12.col-sm-6.order-sm-4
+                            p #{projects[i].description}
+                        .col-12.col-sm-2.order-sm-2
+                            .row.c-stats.c-overview__stats
+                                .col-6.col-sm-12
+                                    .c-stats__block
+                                        p #{projects[i].stats.client}
+                                        h5.c-stats__name Client
+                                    .c-stats__block
+                                        p #{projects[i].stats.proj}
+                                        h5.c-stats__name Project
+                                .col-6.col-sm-12(class='u-mg-t__20@up-sm')
+                                    .c-stats__block
+                                        p #{projects[i].stats.time}
+                                        h5.c-stats__name Time
+                                    .c-stats__block
+                                        p #{projects[i].stats.role}
+                                        h5.c-stats__name My role
+                        .col-12.col-sm-4.order-sm-5.u-flex-align__cc
+                            a.c-overview__link(href = projects[i].live)
+                                span See Live
+                                span.c-arrow
+    .c-description
+        .o-section
+            .container
+                .row
+                    p.col-12.col-sm-6.c-description__paragraph #{projects[i].parag1}
+                    p.col-12.col-sm-6.c-description__paragraph #{projects[i].parag2}
+        .c-card.c-card__center
+            .o-section.o-section--bottom
+                .container.c-description__block
+                    img.c-description__image(src='images/' + projects[i].image2, alt='')
+                    .row
+                        p.col-12.col-sm-6.c-description__paragraph #{projects[i].parag3}
+                        p.col-12.col-sm-6.c-description__paragraph #{projects[i].parag4}
+    .c-quote
+        .container
+            .row
+                .col-12.col-sm-10.offset-sm-1
+                    p.c-quote__text
+                        span.c-quote__symbol “
+                        br
+                        | #{projects[i].quote}
+
+    include ../partials/_footer

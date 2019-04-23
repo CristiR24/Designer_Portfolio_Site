@@ -6,6 +6,8 @@ block variables
     - var mobileNav = true
     - var bigFooter = false
 
+    include variables/_projects-content
+
 append styles
     link(rel="stylesheet", href="css/homepage.css")
 
@@ -29,8 +31,9 @@ block content
                                     span.typed
                                     |  designer from Moldova.
                                     br
+                                // the placeholder is used prevent the page from jumping on animation
                                 span.typed-placeholder
-                                    | I'm a freelance product designer from Moldova.
+                                    | I'm a freelance User Experience designer from Moldova.
                     .c-hero__info
                         .row
                             .col-12.col-sm-4
@@ -42,7 +45,7 @@ block content
                                 .c-info
                                     h5.c-info__title Availability
                                     p.c-info__content.
-                                        I am currently available to work with you. I am taking fixed rate projects. Flexible schedule is a preference. With my current life rhythm, I am not able to attend a fulltime post.
+                                        I am currently available to work with you. I am taking fixed rate projects. Flexible schedule is a preference. With my current life rhythm, I am not able to attend a full time post.
                             .col-12.col-sm-4
                                 .c-info
                                     h5.c-info__title Process
@@ -55,9 +58,9 @@ block content
                     Work
             .o-section(class='o-section--bottom-big@down-xs')
 
-                include partials/_post.pug
+                each project, i in projects
+                    include partials/_post
 
-                include partials/_post.pug
     .c-about
         .c-card.c-card__left
             .container.u-mg-r__zero
@@ -168,9 +171,9 @@ append scripts
 
     script.
         var options = {
-            strings: ["product", "UI", "UX"],
-            typeSpeed: 120,
-            backSpeed: 70,
+            strings: ["product", "User Interface", "User Experience"],
+            typeSpeed: 100,
+            backSpeed: 50,
             backDelay: 5000,
             loop: true
         }
