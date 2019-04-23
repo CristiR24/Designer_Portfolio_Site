@@ -6,6 +6,25 @@
 	color: $color;
 }
 
+@mixin position-heading(
+	$max-widths: $container-max-widths,
+	$breakpoints: $grid-breakpoints
+) {
+	@each $breakpoint, $container-max-width in $max-widths {
+		@include media-breakpoint-up($breakpoint, $breakpoints) {
+			transform: rotate(-90deg) translateY(-125%);
+
+			// width of the outer grid section
+			$container-aside-width: 100vw - #{$container-max-width};
+
+			// translate to the left(because it's multiplied by -1)
+			left: calc( -1 * (#{$container-aside-width}) / 4 );
+			// divide by 4 to position the heading in the middle of
+			// the container-aside space
+		}
+	}
+}
+
 @mixin position-card-left(
 	$max-widths: $container-max-widths,
 	$breakpoints: $grid-breakpoints
@@ -13,7 +32,6 @@
 	@each $breakpoint, $container-max-width in $max-widths {
 		@include media-breakpoint-up($breakpoint, $breakpoints) {
 			$half-container: $container-max-width / 2;
-			$container-padding: $grid-gutter-width;
 			// translate the card 50% to the right(it's width is 100%)
 			// then translate it to the left by half of the container width
 			right: calc(50% - #{$half-container});

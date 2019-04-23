@@ -25,8 +25,9 @@ block content
                                 | My name is Dragos Sargu.
                                 br
                                 span.typed-text
-                                    | I'm&nbsp;
+                                    | I'm a freelance&nbsp;
                                     span.typed
+                                    |  designer from Moldova.
                                     br
                                 span.typed-placeholder
                                     | I'm a freelance product designer from Moldova.
@@ -136,6 +137,8 @@ block content
 
         .typed {
             position: relative;
+            display: inline-block;
+            margin-right: -2px;
         }
 
         .typed::after {
@@ -149,6 +152,12 @@ block content
             transform: translateY(.2em);
         }
 
+        .typed-cursor--blink {
+            animation: typedjsBlink 1s infinite !important
+            -webkit-animation: typedjsBlink 1s infinite !important;
+            animation: typedjsBlink 1s infinite !important;
+        }
+
         .faded::after {
             transition: width .3s;
             width: 100%;
@@ -159,12 +168,11 @@ append scripts
 
     script.
         var options = {
-            strings: ["a freelance product designer from Moldova.", "a freelance entrepreneur thinker.", "a cynical thinker."],
-            typeSpeed: 40,
-            backSpeed: 30,
-            loop: true,
-            smartBackspace: true,
-            backDelay: 3000
+            strings: ["product", "UI/UX"],
+            typeSpeed: 120,
+            backSpeed: 70,
+            backDelay: 5000,
+            loop: true
         }
 
         var typed = new Typed(".typed", options)

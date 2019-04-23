@@ -13,10 +13,6 @@
 	&__link {
 		@extend h5;
 
-		&:last-child {
-			margin-right: 50px;
-		}
-
 		& a {
 			color: inherit;
 		}

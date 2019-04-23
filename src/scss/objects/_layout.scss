@@ -19,6 +19,15 @@
 	& li + li {
 		margin-left: 40px;
 	}
+
+	&--small {
+
+		& li + li {
+			@include media-breakpoint-down(lg) {
+				margin-left: 20px;
+			}
+		}
+	}
 }
 
 .o-mobile-list {
@@ -51,10 +60,10 @@
 	position: absolute;
 	z-index: 5;
 
-	@include media-breakpoint-up(sm) {
-		transform: rotate(-90deg) translateY(-150%);
-		left: -60px;
-	}
+	// rotates the heading 90 deg
+	// and positions it to the left in the middle of
+	// the blank space near the section
+	@include position-heading();
 }
 
 .o-full-vw\@down-xs {
