@@ -26,14 +26,10 @@ block content
                                 br
                                 | My name is Dragos Sargu.
                                 br
-                                span.typed-text
-                                    | I'm a freelance&nbsp;
-                                    span.typed
-                                    |  designer from Moldova.
-                                    br
-                                // the placeholder is used prevent the page from jumping on animation
-                                span.typed-placeholder
-                                    | I'm a freelance User Experience designer from Moldova.
+                                = "I'm a freelance "
+                                span.type-write(data-period="3000", data-type='["product", "User Interface", "User Experience"]')
+                                span.type-cursor |
+                                |  designer from Moldova.
                     .c-hero__info
                         .row
                             .col-12.col-sm-4
@@ -129,53 +125,10 @@ block content
     include partials/_footer
 
     style.
-        .typed-text {
-            position: absolute;
-            padding-right: 10px;
-        }
-
-        .typed-placeholder {
-            visibility: hidden;
-        }
-
-        .typed {
-            position: relative;
-            display: inline-block;
-            margin-right: -2px;
-        }
-
-        .typed::after {
-            position: absolute;
-            content: '';
-            background-color: #B4D5FE;
-            height: 100%;
-            width: 0;
-            right: 0;
-            opacity: .35;
-            transform: translateY(.2em);
-        }
-
-        .typed-cursor--blink {
-            animation: typedjsBlink 1s infinite !important;
-            -webkit-animation: typedjsBlink 1s infinite !important;
-            animation: typedjsBlink 1s infinite !important;
-        }
-
-        .faded::after {
-            transition: width .3s;
-            width: 100%;
+        @keyframes blink{
+            0% { opacity: 1 }
+            100% { opacity: 0 }
         }
 
 append scripts
-    script(src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9")
-
-    script.
-        var options = {
-            strings: ["product", "User Interface", "User Experience"],
-            typeSpeed: 100,
-            backSpeed: 50,
-            backDelay: 5000,
-            loop: true
-        }
-
-        var typed = new Typed(".typed", options)
+    script(src="js/type.js")
