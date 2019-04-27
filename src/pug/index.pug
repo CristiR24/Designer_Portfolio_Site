@@ -25,8 +25,11 @@ block content
                                 | Hey.
                                 br
                                 | My name is Dragos Sargu.
-                                br
-                                span.type-container
+                        .col-11.col-sm-12
+                            h1.type-placeholder= "I'm a freelance "
+                                span.u-hyphen User Experience|
+                                = " designer from Moldova."
+                            h1.type-container
                                     = "I'm a freelance "
                                     span.type-write(data-period="3000", data-type='["product", "User Interface", "User Experience"]')
                                     span.type-cursor |
@@ -129,6 +132,20 @@ block content
         @keyframes blink{
             0% { opacity: 1 }
             100% { opacity: 0 }
+        }
+
+        .type-placeholder {
+            visibility: hidden;
+        }
+
+        .type-container {
+            position: absolute;
+            padding-right: 10px;
+            top: 0;
+        }
+
+        .type-wrap {
+            hyphens: auto;
         }
 
         .type-cursor {

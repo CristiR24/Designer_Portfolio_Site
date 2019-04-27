@@ -1354,7 +1354,8 @@ p,
   margin-top: 20px; }
   .c-post__link:hover .c-arrow {
     width: calc(100% + 50px);
-    background: #cacaca; }
+    background: #cacaca;
+    transition: .3s ease-out; }
     .c-post__link:hover .c-arrow::before, .c-post__link:hover .c-arrow::after {
       background: #cacaca; }
 
@@ -1552,3 +1553,6 @@ p,
 
 .u-transitions-on-load * {
   transition: none !important; }
+
+.u-hyphen {
+  hyphens: auto; }

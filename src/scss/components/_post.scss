@@ -25,6 +25,7 @@
 		&:hover .c-arrow {
 			width: calc(100% + 50px);
 			background: $smoke-gray;
+			transition: .3s ease-out;
 
 			&::before,
 			&::after {

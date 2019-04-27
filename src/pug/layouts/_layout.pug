@@ -18,8 +18,4 @@ html(lang='en')
         block content
 
         block scripts
-            script.
-                window.onload = function () {
-                    const body = document.querySelector("body");
-                    body.classList.remove("u-transitions-on-load");
-                }
+            script(src="js/main.js")

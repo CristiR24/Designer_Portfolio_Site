@@ -1481,3 +1481,6 @@ p,
 
 .u-transitions-on-load * {
   transition: none !important; }
+
+.u-hyphen {
+  hyphens: auto; }
