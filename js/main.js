@@ -1,0 +1,1 @@
+function addOnload(n){window.addEventListener?window.addEventListener("load",n,!1):window.attachEvent&&window.attachEvent("onload",n)}addOnload(function(){document.querySelector("body").classList.remove("u-transitions-on-load")});
