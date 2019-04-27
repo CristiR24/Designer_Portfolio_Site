@@ -1179,11 +1179,12 @@ p,
       left: calc( -1 * (100vw - 980px) / 4); } }
 
 @media (max-width: 799.98px) {
-  .o-full-vw\@down-xs {
-    width: 100vw;
-    margin: 0;
-    position: relative;
-    left: calc(-50vw + 50%); } }
+  .o-full-width\@down-xs {
+    margin-left: -20px;
+    margin-right: -20px; }
+    .o-full-width\@down-xs [class^="col"] {
+      padding-right: 0;
+      padding-left: 0; } }
 
 .o-section {
   position: relative;

@@ -66,12 +66,17 @@
 	@include position-heading();
 }
 
-.o-full-vw\@down-xs {
+// this class should be applied on a .row
+// to reach the desirable result
+.o-full-width\@down-xs {
 	@include media-breakpoint-down(xs) {
-		width: 100vw;
-		margin: 0;
-		position: relative;
-		left: calc(-50vw + 50%);
+		margin-left: -20px;
+		margin-right: -20px;
+
+		[class ^= "col"] {
+			padding-right: 0;
+			padding-left: 0;
+		}
 	}
 }
 
