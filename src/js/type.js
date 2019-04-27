@@ -13,9 +13,21 @@ TxtType.prototype.tick = function() {
     var fullTxt = this.toRotate[i];
 
     if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        // on delete the ';' signals the '&shy;' escape symbol in html
+        // if it is met, delete directly past it's opening '&'
+        if (fullTxt[ this.txt.length ] !== ';') {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+            this.txt = fullTxt.substring(0, this.txt.length - 6);
+        }
     } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        // when typing the '&' signals the '&shy;' escape symbol in html
+        // if it is met, type directly after it's closing ';'
+        if (fullTxt[ this.txt.length ] !== '&') {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+        } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 6);
+        }
     }
 
     this.el.innerHTML = '<span class="type-wrap">' + this.txt + '</span>';

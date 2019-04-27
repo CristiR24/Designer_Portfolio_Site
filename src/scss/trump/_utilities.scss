@@ -127,4 +127,8 @@
 
 .u-hyphen {
 	hyphens: auto;
+
+	&--manual {
+		hyphens: manual;
+	}
 }

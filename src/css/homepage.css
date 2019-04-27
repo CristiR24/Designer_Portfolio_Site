@@ -1556,3 +1556,5 @@ p,
 
 .u-hyphen {
   hyphens: auto; }
+  .u-hyphen--manual {
+    hyphens: manual; }
