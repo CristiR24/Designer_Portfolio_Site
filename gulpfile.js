@@ -72,6 +72,9 @@ function styles() {
 
 function script() {
     return src(dir.js)
+        .pipe(babel({
+            presets: ['@babel/preset-env']
+        }))
         .pipe(terser())
         .pipe(dest("app/js"));
 }
