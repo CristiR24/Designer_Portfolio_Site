@@ -1,4 +1,4 @@
-var TxtType = function(el, toRotate, period) {
+let TxtType = function(el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
     this.loopNum = 0;
@@ -9,8 +9,8 @@ var TxtType = function(el, toRotate, period) {
 };
 
 TxtType.prototype.tick = function() {
-    var i = this.loopNum % this.toRotate.length;
-    var fullTxt = this.toRotate[i];
+    let i = this.loopNum % this.toRotate.length;
+    let fullTxt = this.toRotate[i];
 
     if (this.isDeleting) {
         // on delete the ';' signals the '&shy;' escape symbol in html
@@ -32,19 +32,20 @@ TxtType.prototype.tick = function() {
 
     this.el.innerHTML = '<span class="type-wrap">' + this.txt + '</span>';
 
-    var that = this;
-    var delta = 180 - Math.random() * 100;
+    let that = this;
+    let delta = 180 - Math.random() * 100;
 
     if (this.isDeleting) { delta /= 1.6; }
 
     if (!this.isDeleting && this.txt === fullTxt) {
         delta = this.period * 2;
         this.isDeleting = true;
-        var siblings = this.el.parentNode.childNodes;
+        // animate the cursor when not typing nor deleting
+        let siblings = this.el.parentNode.childNodes;
         for (let i = 0; i < siblings.length; i++) {
             if (siblings[i].className === 'type-cursor') {
                 siblings[i].style.animation = 'blink .7s infinite linear alternate';
-                setTimeout(function () {
+                setTimeout(() => {
                     siblings[i].style.animation = '';
                 }, delta)
             }
@@ -55,18 +56,18 @@ TxtType.prototype.tick = function() {
         delta = 500;
     }
 
-    setTimeout(function() {
+    setTimeout(() => {
         that.tick();
     }, delta);
 };
 
-addOnload(function() {
-    var elements = document.getElementsByClassName('type-write');
-    for (var i = 0; i < elements.length; i++) {
-        var toRotate = elements[i].getAttribute('data-type');
-        var period = elements[i].getAttribute('data-period');
+addOnload(() => {
+    const elements = document.getElementsByClassName('type-write');
+    for (let i = 0; i < elements.length; i++) {
+        let toRotate = elements[i].getAttribute('data-type');
+        let typePeriod = elements[i].getAttribute('data-period');
         if (toRotate) {
-            new TxtType(elements[i], JSON.parse(toRotate), period);
+            new TxtType(elements[i], JSON.parse(toRotate), typePeriod);
         }
     }
 });

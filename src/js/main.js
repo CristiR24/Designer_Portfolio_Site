@@ -6,7 +6,7 @@ function addOnload(myfunc) {
         window.attachEvent('onload', myfunc);
 }
 
-addOnload(function () {
+addOnload(() => {
     const body = document.querySelector("body");
     body.classList.remove("u-transitions-on-load");
 });
