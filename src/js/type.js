@@ -42,14 +42,14 @@ TxtType.prototype.tick = function() {
         this.isDeleting = true;
         // animate the cursor when not typing nor deleting
         let siblings = this.el.parentNode.childNodes;
-        for (let i = 0; i < siblings.length; i++) {
-            if (siblings[i].className === 'type-cursor') {
-                siblings[i].style.animation = 'blink .7s infinite linear alternate';
+        [].forEach.call( siblings, sibling => {
+            if (sibling.className === 'type-cursor') {
+                sibling.style.animation = 'blink .7s infinite linear alternate';
                 setTimeout(() => {
-                    siblings[i].style.animation = '';
+                    sibling.style.animation = '';
                 }, delta)
             }
-        }
+        });
     } else if (this.isDeleting && this.txt === '') {
         this.isDeleting = false;
         this.loopNum++;
@@ -62,12 +62,12 @@ TxtType.prototype.tick = function() {
 };
 
 addOnload(() => {
-    const elements = document.getElementsByClassName('type-write');
-    for (let i = 0; i < elements.length; i++) {
-        let toRotate = elements[i].getAttribute('data-type');
-        let typePeriod = elements[i].getAttribute('data-period');
+    const typeElements = document.getElementsByClassName('type-write');
+    [].forEach.call( typeElements, typeElement => {
+        let toRotate = typeElement.getAttribute('data-type');
+        let typePeriod = typeElement.getAttribute('data-period');
         if (toRotate) {
-            new TxtType(elements[i], JSON.parse(toRotate), typePeriod);
+            new TxtType(typeElement, JSON.parse(toRotate), typePeriod);
         }
-    }
+    })
 });
