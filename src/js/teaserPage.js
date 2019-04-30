@@ -1,0 +1,3 @@
+addOnLoad(() => {
+    initTypeAnimation(150);
+});

@@ -110,11 +110,17 @@
 }
 
 .u-display {
-	&-none {
+	&__none {
 		display: none;
 
 		&\@down-xs {
 			@include media-breakpoint-down(xs) {
+				display: none;
+			}
+		}
+
+		&\@up-xs {
+			@include media-breakpoint-up(sm) {
 				display: none;
 			}
 		}

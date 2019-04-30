@@ -1,0 +1,39 @@
+extends layouts/_layout
+
+block variables
+    - var outerNav = true
+    - var hideNavMobile = false
+    - var mobileNav = false
+    - var bigFooter = false
+    - var hideFooterLinksUpMobile = true
+
+block mixins
+    include mixins/_nav-links
+
+append styles
+    link(rel="stylesheet", href="css/teaser-page.css")
+
+block content
+    .o-full-screen
+        .c-nav.c-nav--big
+            .container
+                .row
+                    .col-12.col-sm-auto.u-flex-align__cc
+                        a.c-nav__mail(href='mailto:business@dragossargu.com').
+                            business@dragossargu.com
+
+        .c-teaser
+            .container
+                .row
+                    .col-12
+                        .c-teaser__text
+                                span.o-type__write(data-period="3000", data-type=`["We are opening soon.", "We are still in development.", "It won't take more than a week."]`)
+                                span.o-type__cursor |
+                        .c-teaser__links
+                            +horizontal-nav-icons
+
+        include partials/_footer
+
+append scripts
+    script(src="js/type.js")
+    script(src="js/teaserPage.js")

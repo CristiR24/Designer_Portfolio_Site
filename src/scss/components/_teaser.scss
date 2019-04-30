@@ -1,0 +1,26 @@
+.c-teaser {
+    margin: 160px 0;
+
+    &__text {
+        font-family: $accent-font;
+        font-weight: 300;
+        font-size: 3rem;
+        line-height: 3.875rem;
+        letter-spacing: 0.029em;
+        color: $black;
+
+        @include media-breakpoint-down(xs) {
+            font-size: 2.25rem;
+            line-height: 3.375rem;
+            text-align: center;
+        }
+    }
+
+    &__links {
+        margin-top: 20px;
+
+        @include media-breakpoint-down(xs) {
+            display: none;
+        }
+    }
+}

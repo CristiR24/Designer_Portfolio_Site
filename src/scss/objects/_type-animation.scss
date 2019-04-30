@@ -1,0 +1,25 @@
+@keyframes blink{
+    0% { opacity: 1 }
+    100% { opacity: 0 }
+}
+
+.o-type {
+
+    &__placeholder {
+        visibility: hidden;
+    }
+
+    &__container {
+        position: absolute;
+        padding-right: 10px;
+        top: 0;
+    }
+
+    &__wrap {
+        hyphens: manual;
+    }
+
+    &__cursor {
+        display: inline;
+    }
+}

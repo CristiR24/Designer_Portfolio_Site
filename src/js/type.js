@@ -1,8 +1,9 @@
-let TxtType = function(el, toRotate, period) {
+let TxtType = function(el, toRotate, period, speed = 180) {
     this.toRotate = toRotate;
     this.el = el;
     this.loopNum = 0;
     this.period = parseInt(period, 10) || 2000;
+    this.speed = speed;
     this.txt = '';
     this.tick();
     this.isDeleting = false;
@@ -15,7 +16,8 @@ TxtType.prototype.tick = function() {
     if (this.isDeleting) {
         // on delete the ';' signals the '&shy;' escape symbol in html
         // if it is met, delete directly past it's opening '&'
-        if (fullTxt[ this.txt.length ] !== ';') {
+        // it means: if the previous character is different from ';'
+        if (fullTxt[ this.txt.length - 2 ] !== ';') {
             this.txt = fullTxt.substring(0, this.txt.length - 1);
         } else {
             this.txt = fullTxt.substring(0, this.txt.length - 6);
@@ -23,6 +25,7 @@ TxtType.prototype.tick = function() {
     } else {
         // when typing the '&' signals the '&shy;' escape symbol in html
         // if it is met, type directly after it's closing ';'
+        // it means: if the next character is different from '&'
         if (fullTxt[ this.txt.length ] !== '&') {
             this.txt = fullTxt.substring(0, this.txt.length + 1);
         } else {
@@ -30,10 +33,10 @@ TxtType.prototype.tick = function() {
         }
     }
 
-    this.el.innerHTML = '<span class="type-wrap">' + this.txt + '</span>';
+    this.el.innerHTML = '<span class="o-type__wrap">' + this.txt + '</span>';
 
     let that = this;
-    let delta = 180 - Math.random() * 100;
+    let delta = this.speed - Math.random() * 100;
 
     if (this.isDeleting) { delta /= 1.6; }
 
@@ -43,7 +46,7 @@ TxtType.prototype.tick = function() {
         // animate the cursor when not typing nor deleting
         let siblings = this.el.parentNode.childNodes;
         [].forEach.call( siblings, sibling => {
-            if (sibling.className === 'type-cursor') {
+            if (sibling.className === 'o-type__cursor') {
                 sibling.style.animation = 'blink .7s infinite linear alternate';
                 setTimeout(() => {
                     sibling.style.animation = '';
@@ -61,13 +64,13 @@ TxtType.prototype.tick = function() {
     }, delta);
 };
 
-addOnload(() => {
-    const typeElements = document.getElementsByClassName('type-write');
+const initTypeAnimation = (typeSpeed) => {
+    const typeElements = document.getElementsByClassName('o-type__write');
     [].forEach.call( typeElements, typeElement => {
         let toRotate = typeElement.getAttribute('data-type');
         let typePeriod = typeElement.getAttribute('data-period');
         if (toRotate) {
-            new TxtType(typeElement, JSON.parse(toRotate), typePeriod);
+            new TxtType(typeElement, JSON.parse(toRotate), typePeriod, typeSpeed);
         }
     })
-});
+};
