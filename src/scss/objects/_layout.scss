@@ -29,7 +29,7 @@
 		}
 
 		& li + li {
-			@include media-breakpoint-down(lg) {
+			@include media-breakpoint-down(md) {
 				margin-left: 20px;
 			}
 		}
@@ -63,13 +63,15 @@
 }
 
 .o-heading--pushed {
-	position: absolute;
-	z-index: 5;
+	@include media-breakpoint-up(xl) {
+		position: absolute;
+		z-index: 5;
 
-	// rotates the heading 90 deg
-	// and positions it to the left in the middle of
-	// the blank space near the section
-	@include position-heading();
+		// rotates the heading 90 deg
+		// and positions it to the left in the middle of
+		// the blank space near the section
+		@include position-heading(xl);
+	}
 }
 
 // this class should be applied on a .row
@@ -96,29 +98,22 @@
 		padding-bottom: 40px;
 	}
 
-
-	&--first {
-		padding-top: 20px;
-		height: 100%;
-
-		@include media-breakpoint-down(xs) {
-			padding-bottom: 60px;
-		}
-	}
-
 	&--bottom {
 		padding-top: 0;
 		padding-bottom: 80px;
 
 		@include media-breakpoint-down(xs) {
 			padding-bottom: 60px;
+			padding-top: 0;
 		}
 
 		&-big {
 			padding-bottom: 120px;
+			padding-top: 0;
 
 			&\@down-xs {
 				@include media-breakpoint-down(xs) {
+					padding-top: 0;
 					padding-bottom: 120px;
 				}
 			}

@@ -97,15 +97,10 @@
 	}
 }
 
-.u-padding {
-	&-clr {
-		padding: 0;
+.u-pd {
 
-		&\@down-xs {
-			@include media-breakpoint-down(xs) {
-				padding: 0;
-			}
-		}
+	&-t__20 {
+		padding-top: 20px;
 	}
 }
 

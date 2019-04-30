@@ -22,8 +22,7 @@ block content
 
     .c-overview
         .c-card.c-card__left
-            .o-section.o-section--first
-                .container.u-mg-r__zero
+                .container.u-mg-r__zero.u-pd-t__20
                     a.c-overview__mail(href='mailto:business@dragossargu.com') business@dragossargu.com
                     .row
                         .col-12.col-sm-10.order-sm-1
@@ -56,15 +55,14 @@ block content
         .o-section
             .container
                 .row
-                    p.col-12.col-sm-6.c-description__paragraph #{projects[i].parag1}
-                    p.col-12.col-sm-6.c-description__paragraph #{projects[i].parag2}
-        .c-card.c-card__center
-            .o-section.o-section--bottom
+                    p.col-12.col-sm-6.c-description__parag #{projects[i].parag1}
+                    p.col-12.col-sm-6.c-description__parag #{projects[i].parag2}
+        .c-card.c-card__ce
                 .container.c-description__block
                     img.c-description__image(src='images/' + projects[i].image2, alt='')
                     .row
-                        p.col-12.col-sm-6.c-description__paragraph #{projects[i].parag3}
-                        p.col-12.col-sm-6.c-description__paragraph #{projects[i].parag4}
+                        p.col-12.col-sm-6.c-description__parag #{projects[i].parag3}
+                        p.col-12.col-sm-6.c-description__parag #{projects[i].parag4}
     .c-quote
         .container
             .row

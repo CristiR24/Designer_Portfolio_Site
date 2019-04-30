@@ -4,10 +4,15 @@
 	padding-bottom: 338px;
     text-align: center;
 
+    @include media-breakpoint-down(md) {
+        padding-top: 240px;
+        padding-bottom: 248px;
+    }
+
 	@include media-breakpoint-down(xs) {
-		padding-top: 120px;
+		padding-top: 300px;
 		// + 8px from the underline after element
-		padding-bottom: 148px;
+		padding-bottom: 308px;
 	}
 
     &__title {

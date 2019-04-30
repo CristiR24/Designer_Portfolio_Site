@@ -39,9 +39,9 @@
 
 $grid-breakpoints: (
 	xs: 0,
-	sm: 800px,
-	md: 960px,
-	lg: 1050px,
+	sm: 700px,
+	md: 770px,
+	lg: 1020px,
 	xl: 1240px
 ) !default;
 
@@ -53,9 +53,9 @@ $grid-breakpoints: (
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-	sm: 660px,
-	md: 740px,
-	lg: 830px,
+	//sm: 660px,
+	//md: 730px,
+	lg: 979px,
 	xl: 980px
 ) !default;
 

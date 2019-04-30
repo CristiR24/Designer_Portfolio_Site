@@ -9,8 +9,7 @@
 	}
 
 	&__description {
-		margin-top: 65px;
-		margin-bottom: 60px;
+		margin: 60px 0;
 
 		@include media-breakpoint-down(xs) {
 			margin: 40px 0;

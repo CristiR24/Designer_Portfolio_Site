@@ -2,7 +2,8 @@
 	padding-top: 160px;
 
 	@include media-breakpoint-down(xs) {
-		padding-top: 120px;
+		padding-top: 80px;
+		padding-bottom: 80px;
 	}
 
 	&__text {

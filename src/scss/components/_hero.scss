@@ -4,20 +4,33 @@
 	background: $snow-white;
 	height: fit-content;
 	min-height: 85vh;
+	padding-top: 20px;
 
-	@include media-breakpoint-down(xs) {
-		margin-bottom: 4px;
+	@include media-breakpoint-up(xl) {
+		margin-bottom: 80px;
 	}
 
-	&__introduction {
-		margin-top: 60px;
+	&__heading {
+		margin-top: 120px;
+		margin-bottom: 100px;
+
+		@include media-breakpoint-down(lg) {
+			margin: 140px 0;
+		}
+
+		@include media-breakpoint-down(xs) {
+			margin: 120px 0;
+		}
 	}
 
 	&__info {
-		margin-top: 85px;
+		margin-bottom: 80px;
+
+		@include media-breakpoint-down(lg) {
+			margin-bottom: 40px;
+		}
 
 		@include media-breakpoint-down(xs) {
-			margin-top: 60px;
 
 			.col-12 + .col-12 {
 				margin-top: 40px;

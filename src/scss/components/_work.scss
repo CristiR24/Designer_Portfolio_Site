@@ -1,8 +1,9 @@
 .c-work {
+	margin-bottom: 160px;
 
 	// every portfolio project preceding another one
 	&__post + &__post {
-		margin-top: 70px;
+		margin-top: 80px;
 
 		@include media-breakpoint-down(xs) {
 			margin-top: 40px;
@@ -10,10 +11,9 @@
 	}
 
 	&__heading {
-		bottom: 17px;
 
-		@include media-breakpoint-up(sm) {
-			left: 13px;
+		@include media-breakpoint-up(xl) {
+			left: 93px;
 			bottom: 0;
 		}
 	}

@@ -13,27 +13,28 @@ append styles
 
 block content
     .o-full-height.c-hero
-        .o-full-height.o-full-height__elem.o-section.o-section--first
+        .o-full-height.o-full-height__elem
             .container.o-full-height__elem.u-flex-space__between.u-flex-dir__col
 
                 include partials/_nav
 
                 .c-hero__introduction
-                    .row
-                        .col-11.col-sm-12
-                            h1
-                                | Hey.
-                                br
-                                | My name is Dragos Sargu.
-                        .col-11.col-sm-12
-                            h1.o-type__placeholder= "I'm a freelance "
-                                span.u-hyphen--manual User Experi&shy;ence|
-                                = " designer from Moldova."
-                            h1.o-type__container
-                                    = "I'm a freelance "
-                                    span.o-type__write(data-period="3000", data-type=`["product", "user inter&shy;face", "user experi&shy;ence"]`)
-                                    span.o-type__cursor |
+                    .c-hero__heading
+                        .row
+                            .col-11.col-lg-7.col-xl-12
+                                h1
+                                    | Hey.
+                                    br
+                                    | My name is Dragos Sargu.
+                            .col-11.col-lg-7.col-xl-12
+                                h1.o-type__placeholder= "I'm a freelance "
+                                    span.u-hyphen--manual User Experi&shy;ence|
                                     = " designer from Moldova."
+                                h1.o-type__container
+                                        = "I'm a freelance "
+                                        span.o-type__write(data-period="3000", data-type=`["product", "user inter&shy;face", "user experi&shy;ence"]`)
+                                        span.o-type__cursor |
+                                        = " designer from Moldova."
                     .c-hero__info
                         .row
                             .col-12.col-sm-4
@@ -52,21 +53,20 @@ block content
                                     p.c-info__content.
                                         I always start with some research, then dip in to sketching. The next step is wire framing, and after we set up the feel of the product, I move on to the User Interface.
     .c-work
+        .o-heading--pushed
+            h2.c-heading.c-work__heading.
+                Work
         .container
-            .o-heading--pushed
-                h2.c-heading.c-work__heading.
-                    Work
-            .o-section(class='o-section--bottom-big@down-xs')
 
                 each project, i in projects
                     include partials/_post
 
     .c-about
+        .o-heading--pushed
+            h2.c-heading.c-about__heading.
+                About
         .c-card.c-card__left
             .container.u-mg-r__zero
-                .o-heading--pushed
-                    h2.c-heading.c-about__heading.
-                        About
                 .row
                     .col-sm-6
                         p.c-about__description.
