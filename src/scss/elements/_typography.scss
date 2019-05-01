@@ -19,7 +19,7 @@ h4 {
 h1 {
 	@include style-text(700, 2.25rem, 0.00278em, 3.75rem);
 
-	@include media-breakpoint-down(md) {
+	@include media-breakpoint-down(lg) {
 		line-height: 3.9375rem
 	}
 

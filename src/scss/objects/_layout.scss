@@ -98,6 +98,11 @@
 		padding-bottom: 40px;
 	}
 
+	&__big {
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
+
 	&__bottom {
 		padding-top: 0;
 		padding-bottom: 80px;
@@ -113,11 +118,6 @@
 				}
 			}
 		}
-	}
-
-	&__big {
-		padding-top: 120px;
-		padding-bottom: 120px;
 	}
 }
 

@@ -1,32 +1,16 @@
 .c-arrow {
-	display: block;
-	height: 2px;
-	width: 40px;
-	background: $black;
+	width: 164px;
+	height: 12px;
 	position: absolute;
-	top: 50%;
-	right: -50px;
-	transition: 0.3s ease-out;
+	bottom: calc(50% - 1px);
+	transform: translateY(50%);
+	right: 0;
 
-	&::before,
-	&::after {
-		content: "";
-		display: block;
-		height: 2px;
-		width: 10px;
-		background: $black;
-		position: absolute;
-		right: -1px;
-		transition: 0.3s ease-out;
+	& path {
+		transition: .3s ease-out;
 	}
 
-	&::before {
-		bottom: 2px;
-		transform: rotate(30deg) translateY(-25%);
-	}
-
-	&::after {
-		top: 2px;
-		transform: rotate(-30deg) translateY(25%);
+	&__line {
+		stroke: $black;
 	}
 }

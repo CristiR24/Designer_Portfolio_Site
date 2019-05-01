@@ -49,9 +49,9 @@ block content
                                             p #{projects[i].stats.role}
                                             h5.c-stats__name My role
                             .col-12.col-sm-4.order-sm-5.u-flex-align__cc
-                                a.c-overview__link(href = projects[i].live)
+                                a.c-link.c-link__arrow.c-overview__link(href = projects[i].live)
                                     span See Live
-                                    span.c-arrow
+                                    include ../partials/_arrow
 
     .c-description
         .o-section
@@ -75,3 +75,6 @@ block content
                         | #{projects[i].quote}
 
     include ../partials/_footer
+
+append scripts
+    script(src = 'js/project.js')

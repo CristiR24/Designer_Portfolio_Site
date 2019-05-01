@@ -1,0 +1,34 @@
+.c-link {
+    color: inherit;
+    position: relative;
+
+    &__line {
+
+        &:hover {
+            &::after {
+                opacity: 1;
+                width: calc(100% + 4px);
+            }
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            background: #d8d8d8;
+            height: 2px;
+            width: 0;
+            position: absolute;
+            right: -2px;
+            bottom: 35%;
+            opacity: 0;
+            transition: .3s ease-out;
+        }
+    }
+
+    &__arrow {
+
+        & span {
+            margin-right: 53px;
+        }
+    }
+}
