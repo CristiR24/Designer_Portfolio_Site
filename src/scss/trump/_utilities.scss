@@ -136,5 +136,13 @@
 
 	&--manual {
 		hyphens: manual;
+
+		&\@down-xs {
+			hyphens: none;
+
+			@include media-breakpoint-down(xs) {
+				hyphens: manual;
+			}
+		}
 	}
 }

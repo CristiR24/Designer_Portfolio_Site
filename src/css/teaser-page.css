@@ -1233,7 +1233,10 @@ p,
   top: 0; }
 
 .o-type__wrap {
-  hyphens: manual; }
+  hyphens: none; }
+  @media (max-width: 729.98px) {
+    .o-type__wrap {
+      hyphens: manual; } }
 
 .o-type__cursor {
   display: inline; }
@@ -1359,3 +1362,8 @@ p,
   hyphens: auto; }
   .u-hyphen--manual {
     hyphens: manual; }
+    .u-hyphen--manual\@down-xs {
+      hyphens: none; }
+      @media (max-width: 729.98px) {
+        .u-hyphen--manual\@down-xs {
+          hyphens: manual; } }

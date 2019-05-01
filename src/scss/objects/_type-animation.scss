@@ -16,7 +16,11 @@
     }
 
     &__wrap {
-        hyphens: manual;
+        hyphens: none;
+
+        @include media-breakpoint-down(xs) {
+            hyphens: manual;
+        }
     }
 
     &__cursor {
