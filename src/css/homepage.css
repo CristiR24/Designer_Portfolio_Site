@@ -1445,8 +1445,7 @@ p,
   @media (min-width: 730px) and (max-width: 889.98px) {
     .c-about__jobs {
       margin-bottom: 40px;
-      margin-top: 20px;
-      width: 85.715%; } }
+      margin-top: 20px; } }
   @media (max-width: 729.98px) {
     .c-about__jobs {
       margin: 40px 0; } }
