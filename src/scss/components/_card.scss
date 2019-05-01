@@ -2,12 +2,19 @@
 	position: relative;
 	background: $snow-white;
 
-
 	&__left {
 		width: 100%;
 
 		// sets the "right" property for all screen sizes
 		@include position-card-left();
+
+		@include media-breakpoint-down(md) {
+			margin-right: 20px;
+
+			& .container {
+				padding-right: $grid-gutter-width;
+			}
+		}
 	}
 
 	&__center {

@@ -65,6 +65,11 @@
 		display: flex;
 		justify-content: space-between;
 	}
+
+	&__evenly {
+		display: flex;
+		justify-content: space-evenly;
+	}
 }
 
 .u-flex-dir {

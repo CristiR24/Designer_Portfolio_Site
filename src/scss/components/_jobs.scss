@@ -1,10 +1,7 @@
-.c-job {
-	& + & {
-		margin-top: 20px;
-	}
+.c-jobs {
 
-	&:last-child {
-		margin-bottom: 40px;
+	&__block + &__block {
+		margin-top: 20px;
 	}
 
 	&__agency {
@@ -15,11 +12,13 @@
 	&__time-span {
 		text-align: right;
 
-		@include media-breakpoint-up(sm) {
+		@include media-breakpoint-up(md) {
 			display: inline-block;
 
 			&:last-child::before {
-				content: "- ";
+				content: "-";
+				margin-right: 3px;
+				margin-left: 3.5px;
 			}
 		}
 	}

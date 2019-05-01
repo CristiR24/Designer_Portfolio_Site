@@ -1,18 +1,20 @@
 .c-description {
 
 	&__parag {
-		margin-bottom: 80px;
-
 		@include media-breakpoint-down(xs) {
-			margin-bottom: 40px;
+			& + & {
+				margin-top: 40px;
+			}
 		}
 	}
 
 	&__block {
 		margin-top: 60px;
+		padding-bottom: 80px;
 
 		@include media-breakpoint-down(xs) {
 			margin-top: 20px;
+			padding-bottom: 40px;
 		}
 	}
 

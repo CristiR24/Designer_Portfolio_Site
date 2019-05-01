@@ -19,39 +19,42 @@ block content
                 include partials/_nav
 
                 .c-hero__introduction
-                    .c-hero__heading
-                        .row
-                            .col-11.col-lg-7.col-xl-12
-                                h1
-                                    | Hey.
-                                    br
-                                    | My name is Dragos Sargu.
-                            .col-11.col-lg-7.col-xl-12
-                                h1.o-type__placeholder= "I'm a freelance "
-                                    span.u-hyphen--manual User Experi&shy;ence|
-                                    = " designer from Moldova."
-                                h1.o-type__container
-                                        = "I'm a freelance "
-                                        span.o-type__write(data-period="3000", data-type=`["product", "user inter&shy;face", "user experi&shy;ence"]`)
-                                        span.o-type__cursor |
-                                        = " designer from Moldova."
-                    .c-hero__info
-                        .row
-                            .col-12.col-sm-4
-                                .c-info
-                                    h5.c-info__title Experience
-                                    p.c-info__content.
-                                        I have been working for the last 3 years in agencies, startups and as a freelancer. I have designed apps, landing pages, websites, for a wide range of clients.
-                            .col-12.col-sm-4
-                                .c-info
-                                    h5.c-info__title Availability
-                                    p.c-info__content.
-                                        I am currently available to work with you. I am taking fixed rate projects. Flexible schedule is a preference. With my current life rhythm, I am not able to attend a full time post.
-                            .col-12.col-sm-4
-                                .c-info
-                                    h5.c-info__title Process
-                                    p.c-info__content.
-                                        I always start with some research, then dip in to sketching. The next step is wire framing, and after we set up the feel of the product, I move on to the User Interface.
+                    .row
+                        .col-11.col-sm-5.col-md-7.col-xl-12
+                            .c-hero__heading
+                                .row.u-flex-dir__col
+                                    .col-12
+                                        h1
+                                            | Hey.
+                                            br
+                                            | My name is Dragos Sargu.
+                                    .col-12
+                                        h1.o-type__placeholder= "I'm a freelance "
+                                            span.u-hyphen--manual User Experi&shy;ence|
+                                            = " designer from Moldova."
+                                        h1.o-type__container
+                                                = "I'm a freelance "
+                                                span.o-type__write(data-period="3000", data-type=`["product", "user inter&shy;face", "user experi&shy;ence"]`)
+                                                span.o-type__cursor |
+                                                = " designer from Moldova."
+                        .col-12.col-sm-5.col-md-12.offset-sm-2.offset-md-0.u-flex-space__evenly.u-flex-dir__col
+                            .c-hero__info
+                                .row
+                                    .col-12.col-md-4
+                                        .c-info
+                                            h5.c-info__title Experience
+                                            p.c-info__content.
+                                                I have been working for the last 3 years in agencies, startups and as a freelancer. I have designed apps, landing pages, websites, for a wide range of clients.
+                                    .col-12.col-md-4
+                                        .c-info
+                                            h5.c-info__title Availability
+                                            p.c-info__content.
+                                                I am currently available to work with you. I am taking fixed rate projects. Flexible schedule is a preference. With my current life rhythm, I am not able to attend a full time post.
+                                    .col-12.col-md-4
+                                        .c-info
+                                            h5.c-info__title Process
+                                            p.c-info__content.
+                                                I always start with some research, then dip in to sketching. The next step is wire framing, and after we set up the feel of the product, I move on to the User Interface.
     .c-work
         .o-heading--pushed
             h2.c-heading.c-work__heading.
@@ -68,37 +71,39 @@ block content
         .c-card.c-card__left
             .container.u-mg-r__zero
                 .row
-                    .col-sm-6
+                    .col-sm-7.col-md-6.o-full-height
                         p.c-about__description.
                             I am an fresh thinking designer, starting my journey as a Graphic Designer back in 2014 when I was still in school. Because I enjoy creating working mechanisms, I moved my professional activity to the domain of Web and Mobile Design. I worked with both small and enormous design and development teams, start-ups and local businesses.
-                        .c-job
-                            .row
-                                .col
-                                    h4
-                                        a.c-job__agency(target='_blank', href='https://fuselabcreative.com/') FuseLab Creative
-                                    p.c-job__title Product Designer
-                                .col-auto
-                                    p.c-job__time-span August 2018
-                                    p.c-job__time-span Present
-                        .c-job
-                            .row
-                                .col
-                                    h4
-                                        a.c-job__agency(target='_blank', href='https://www.freelancer.com/u/dragossargu?fbclid=IwAR0ATF0_UQQ7oHV-A6GeZDYLEZiT4Pqrhbyntws0LkKhOwB7qNnWTOjUlpQ') Freelancer
-                                    p.c-job__title UI/UX Designer
-                                .col-auto
-                                    p.c-job__time-span July 2017
-                                    p.c-job__time-span Present
-                        .c-job
-                            .row
-                                .col
-                                    h4
-                                        a.c-job__agency(target='_blank', href='https://vsart.me/') VSArt
-                                    p.c-job__title Junior Designer
-                                .col-auto
-                                    p.c-job__time-span March 2016
-                                    p.c-job__time-span July 2017
-                    .col-12.col-sm-5.offset-sm-1.order-first.order-sm-0
+                        .o-full-height__elem.c-about__jobs
+                            .c-jobs
+                                .c-jobs__block
+                                    .row
+                                        .col
+                                            h4
+                                                a.c-jobs__agency(target='_blank', href='https://fuselabcreative.com/') FuseLab Creative
+                                            p.c-jobs__title Product Designer
+                                        .col-auto
+                                            p.c-jobs__time-span= "August 2018 "
+                                            p.c-jobs__time-span Present
+                                .c-jobs__block
+                                    .row
+                                        .col
+                                            h4
+                                                a.c-jobs__agency(target='_blank', href='https://www.freelancer.com/u/dragossargu?fbclid=IwAR0ATF0_UQQ7oHV-A6GeZDYLEZiT4Pqrhbyntws0LkKhOwB7qNnWTOjUlpQ') Freelancer
+                                            p.c-jobs__title UI/UX Designer
+                                        .col-auto
+                                            p.c-jobs__time-span= "July 2017 "
+                                            p.c-jobs__time-span Present
+                                .c-jobs__block
+                                    .row
+                                        .col
+                                            h4
+                                                a.c-jobs__agency(target='_blank', href='https://vsart.me/') VSArt
+                                            p.c-jobs__title Junior Designer
+                                        .col-auto
+                                            p.c-jobs__time-span= "March 2016 "
+                                            p.c-jobs__time-span July 2017
+                    .col-12.col-sm-5.offset-md-1.order-first.order-sm-0
                         img.c-about__image(src='images/portrait.jpg', alt='')
     .c-testimonials
         .container

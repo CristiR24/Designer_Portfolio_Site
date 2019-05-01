@@ -1,4 +1,9 @@
 .c-about {
+
+	@include media-breakpoint-between(sm, md) {
+		margin-right: 20px;
+	}
+
 	&__heading {
 		bottom: 58px;
 
@@ -9,7 +14,29 @@
 	}
 
 	&__description {
-		margin: 60px 0;
+		margin-top: 60px;
+
+		@include media-breakpoint-down(md) {
+			margin-top: 40px;
+		}
+	}
+
+	&__jobs {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+
+		margin-bottom: 20px;
+
+		@include media-breakpoint-down(md) {
+			margin-bottom: 0;
+		}
+
+		@include media-breakpoint-only(sm) {
+			margin-bottom: 40px;
+			margin-top: 20px;
+			width: 85.715%;
+		}
 
 		@include media-breakpoint-down(xs) {
 			margin: 40px 0;
@@ -21,9 +48,13 @@
 		top: 20px;
 		box-shadow: $default-shadow;
 
-		@include media-breakpoint-down(xs) {
+		@include media-breakpoint-down(sm) {
 			position: static;
-			margin-top: 20px;
+			margin: 40px 0;
+		}
+
+		@include media-breakpoint-down(xs) {
+			margin: 20px 0 0 0;
 		}
 	}
 }

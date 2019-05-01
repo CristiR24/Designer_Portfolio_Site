@@ -1,8 +1,11 @@
 .c-overview {
 
+	@include media-breakpoint-down(md) {
+		margin-right: 20px;
+	}
+
 	@include media-breakpoint-down(xs) {
 		margin-top: 20px;
-		margin-right: 20px;
 	}
 
 	&__mail {
@@ -50,7 +53,7 @@
 		}
 
 		@include media-breakpoint-down(xs) {
-			margin: 80px 0;
+			margin-top: 80px;
 		}
 
 		&:hover .c-arrow {

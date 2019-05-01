@@ -23,41 +23,43 @@ block content
     .c-overview
         .c-card.c-card__left
                 .container.u-mg-r__zero.u-pd-t__20
-                    a.c-overview__mail(href='mailto:business@dragossargu.com') business@dragossargu.com
-                    .row
-                        .col-12.col-sm-10.order-sm-1
-                            img.c-overview__image(src = 'images/' + projects[i].image1, alt='')
-                        .col-12.col-sm-10.order-sm-3
-                            h3.c-overview__title #{projects[i].title}
-                        .col-12.col-sm-6.order-sm-4
-                            p #{projects[i].description}
-                        .col-12.col-sm-2.order-sm-2
-                            .row.c-stats.c-overview__stats
-                                .col-6.col-sm-12
-                                    .c-stats__block
-                                        p #{projects[i].stats.client}
-                                        h5.c-stats__name Client
-                                    .c-stats__block
-                                        p #{projects[i].stats.proj}
-                                        h5.c-stats__name Project
-                                .col-6.col-sm-12(class='u-mg-t__20@up-sm')
-                                    .c-stats__block
-                                        p #{projects[i].stats.time}
-                                        h5.c-stats__name Time
-                                    .c-stats__block
-                                        p #{projects[i].stats.role}
-                                        h5.c-stats__name My role
-                        .col-12.col-sm-4.order-sm-5.u-flex-align__cc
-                            a.c-overview__link(href = projects[i].live)
-                                span See Live
-                                span.c-arrow
+                    .o-section.o-section__bottom
+                        a.c-overview__mail(href='mailto:business@dragossargu.com') business@dragossargu.com
+                        .row
+                            .col-12.col-sm-10.order-sm-1
+                                img.c-overview__image(src = 'images/' + projects[i].image1, alt='')
+                            .col-12.col-sm-10.order-sm-3
+                                h3.c-overview__title #{projects[i].title}
+                            .col-12.col-sm-6.order-sm-4
+                                p #{projects[i].description}
+                            .col-12.col-sm-2.order-sm-2
+                                .row.c-stats.c-overview__stats
+                                    .col-6.col-sm-12
+                                        .c-stats__block
+                                            p #{projects[i].stats.client}
+                                            h5.c-stats__name Client
+                                        .c-stats__block
+                                            p #{projects[i].stats.proj}
+                                            h5.c-stats__name Project
+                                    .col-6.col-sm-12(class='u-mg-t__20@up-sm')
+                                        .c-stats__block
+                                            p #{projects[i].stats.time}
+                                            h5.c-stats__name Time
+                                        .c-stats__block
+                                            p #{projects[i].stats.role}
+                                            h5.c-stats__name My role
+                            .col-12.col-sm-4.order-sm-5.u-flex-align__cc
+                                a.c-overview__link(href = projects[i].live)
+                                    span See Live
+                                    span.c-arrow
+
     .c-description
         .o-section
             .container
                 .row
                     p.col-12.col-sm-6.c-description__parag #{projects[i].parag1}
                     p.col-12.col-sm-6.c-description__parag #{projects[i].parag2}
-        .c-card.c-card__ce
+        .c-card.c-card__center
                 .container.c-description__block
                     img.c-description__image(src='images/' + projects[i].image2, alt='')
                     .row

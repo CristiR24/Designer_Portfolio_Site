@@ -28,11 +28,11 @@
 			display: none;
 		}
 
-		& li + li {
-			@include media-breakpoint-down(md) {
-				margin-left: 20px;
-			}
-		}
+		//& li + li {
+		//	@include media-breakpoint-down(md) {
+		//		margin-left: 20px;
+		//	}
+		//}
 	}
 
 	&__mobile {
@@ -98,14 +98,9 @@
 		padding-bottom: 40px;
 	}
 
-	&--bottom {
+	&__bottom {
 		padding-top: 0;
 		padding-bottom: 80px;
-
-		@include media-breakpoint-down(xs) {
-			padding-bottom: 60px;
-			padding-top: 0;
-		}
 
 		&-big {
 			padding-bottom: 120px;
@@ -120,7 +115,7 @@
 		}
 	}
 
-	&--big {
+	&__big {
 		padding-top: 120px;
 		padding-bottom: 120px;
 	}
