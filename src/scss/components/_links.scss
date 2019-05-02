@@ -19,9 +19,16 @@
             width: 0;
             position: absolute;
             right: -2px;
-            bottom: 35%;
+            bottom: 40%;
             opacity: 0;
-            transition: .3s ease-out;
+            transition: .3s linear;
+        }
+
+        &--sm {
+
+            &::after {
+                bottom: 35%;
+            }
         }
     }
 
