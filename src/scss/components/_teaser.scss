@@ -1,6 +1,10 @@
 .c-teaser {
     margin: 160px 0;
 
+    @include media-breakpoint-down(xs) {
+        margin: 0;
+    }
+
     &__text {
         font-family: $accent-font;
         font-weight: 300;

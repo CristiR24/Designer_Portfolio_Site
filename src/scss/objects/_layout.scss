@@ -27,12 +27,6 @@
 		@include media-breakpoint-down(xs) {
 			display: none;
 		}
-
-		//& li + li {
-		//	@include media-breakpoint-down(md) {
-		//		margin-left: 20px;
-		//	}
-		//}
 	}
 
 	&__mobile {

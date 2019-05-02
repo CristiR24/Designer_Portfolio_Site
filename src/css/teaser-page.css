@@ -1250,6 +1250,9 @@ p,
 
 .c-teaser {
   margin: 160px 0; }
+  @media (max-width: 729.98px) {
+    .c-teaser {
+      margin: 0; } }
   .c-teaser__text {
     font-family: "Montserrat";
     font-weight: 300;
