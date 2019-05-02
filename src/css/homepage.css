@@ -1241,7 +1241,7 @@ p,
 
 .o-type__wrap {
   hyphens: none; }
-  @media (max-width: 729.98px) {
+  @media (max-width: 889.98px) {
     .o-type__wrap {
       hyphens: manual; } }
 
@@ -1307,9 +1307,7 @@ p,
   padding-top: 20px; }
   @media (min-width: 1240px) {
     .c-hero {
-      margin-bottom: 80px; } }
-  @media (min-width: 890px) {
-    .c-hero {
+      margin-bottom: 80px;
       min-height: 85vh; } }
   .c-hero .container {
     padding-right: 20px;
@@ -1618,8 +1616,8 @@ p,
   hyphens: auto; }
   .u-hyphen--manual {
     hyphens: manual; }
-    .u-hyphen--manual\@down-xs {
+    .u-hyphen--manual\@down-sm {
       hyphens: none; }
-      @media (max-width: 729.98px) {
-        .u-hyphen--manual\@down-xs {
+      @media (max-width: 889.98px) {
+        .u-hyphen--manual\@down-sm {
           hyphens: manual; } }

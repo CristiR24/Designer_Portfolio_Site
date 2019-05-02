@@ -137,10 +137,10 @@
 	&--manual {
 		hyphens: manual;
 
-		&\@down-xs {
+		&\@down-sm {
 			hyphens: none;
 
-			@include media-breakpoint-down(xs) {
+			@include media-breakpoint-down(sm) {
 				hyphens: manual;
 			}
 		}

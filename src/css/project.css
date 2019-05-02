@@ -1481,8 +1481,8 @@ p,
   hyphens: auto; }
   .u-hyphen--manual {
     hyphens: manual; }
-    .u-hyphen--manual\@down-xs {
+    .u-hyphen--manual\@down-sm {
       hyphens: none; }
-      @media (max-width: 729.98px) {
-        .u-hyphen--manual\@down-xs {
+      @media (max-width: 889.98px) {
+        .u-hyphen--manual\@down-sm {
           hyphens: manual; } }
