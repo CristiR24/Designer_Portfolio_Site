@@ -7,8 +7,19 @@ block variables
     - var bigFooter = false
     - var hideFooterLinksUpMobile = true
 
+    -
+        var seo = {
+            title: 'Dragos Sargu - Web/Product Designer',
+            description: 'I am an fresh thinking UI/UX designer. My products are always responsive, pixel perfect and retina ready. I have designed apps, landing pages, websites, for a wide range of clients.',
+            image: 'images/portrait.jpg',
+            url: 'https://www.dragossargu.com/'
+        }
+
 block mixins
     include mixins/_nav-links
+
+append meta
+    include partials/_seo
 
 append styles
     link(rel="stylesheet", href="css/teaser-page.css")
