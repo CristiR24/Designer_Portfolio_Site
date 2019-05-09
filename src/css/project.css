@@ -1298,12 +1298,10 @@ p,
   color: #2E2E2E;
   letter-spacing: 1.33px;
   position: relative; }
-  @media (min-width: 730px) {
-    .c-overview__link {
-      margin-left: auto; } }
   @media (max-width: 729.98px) {
     .c-overview__link {
-      margin-top: 80px; } }
+      margin-top: 80px;
+      display: inline-block; } }
 
 .c-card {
   position: relative;

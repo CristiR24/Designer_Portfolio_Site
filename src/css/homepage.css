@@ -1246,7 +1246,12 @@ p,
       hyphens: manual; } }
 
 .o-type__cursor {
-  display: inline; }
+  display: inline;
+  font-weight: 300;
+  font-size: 1.27em;
+  line-height: 1; }
+  .o-type__cursor--md {
+    font-size: 1.1em; }
 
 .c-arrow {
   width: 164px;

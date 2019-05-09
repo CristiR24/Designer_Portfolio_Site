@@ -25,5 +25,12 @@
 
     &__cursor {
         display: inline;
+        font-weight: 300;
+        font-size: 1.27em;
+        line-height: 1;
+
+        &--md {
+            font-size: 1.1em;
+        }
     }
 }

@@ -47,11 +47,12 @@
 		position: relative;
 
 		@include media-breakpoint-up(sm) {
-			margin-left: auto;
+
 		}
 
 		@include media-breakpoint-down(xs) {
 			margin-top: 80px;
+			display: inline-block;
 		}
 	}
 }

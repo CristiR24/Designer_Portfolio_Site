@@ -46,7 +46,7 @@ TxtType.prototype.tick = function() {
         // animate the cursor when not typing nor deleting
         let siblings = this.el.parentNode.childNodes;
         [].forEach.call( siblings, sibling => {
-            if (sibling.className === 'o-type__cursor') {
+            if (sibling.classList.contains('o-type__cursor')) {
                 sibling.style.animation = 'blink .7s infinite linear alternate';
                 setTimeout(() => {
                     sibling.style.animation = '';
