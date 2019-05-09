@@ -45,14 +45,18 @@ TxtType.prototype.tick = function() {
         this.isDeleting = true;
         // animate the cursor when not typing nor deleting
         let siblings = this.el.parentNode.childNodes;
-        [].forEach.call( siblings, sibling => {
-            if (sibling.classList.contains('o-type__cursor')) {
-                sibling.style.animation = 'blink .7s infinite linear alternate';
-                setTimeout(() => {
-                    sibling.style.animation = '';
-                }, delta)
+        for ( let i = 0; i < siblings.length; i++) {
+            let sibling = siblings[i];
+            // check if the iterable element has classes
+            if ( sibling.classList ) {
+                if (sibling.classList.contains('o-type__cursor')) {
+                    sibling.style.animation = 'blink .7s infinite linear alternate';
+                    setTimeout(() => {
+                        sibling.style.animation = '';
+                    }, delta)
+                }
             }
-        });
+        }
     } else if (this.isDeleting && this.txt === '') {
         this.isDeleting = false;
         this.loopNum++;
