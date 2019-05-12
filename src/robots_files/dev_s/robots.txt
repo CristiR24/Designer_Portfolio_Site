@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /*.html$
+Sitemap: https://dev.dragossargu.com/dev_s_sitemap.xml
