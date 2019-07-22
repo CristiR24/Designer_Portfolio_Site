@@ -20,16 +20,16 @@ const animateArrowLinks = (options = {}) => {
             arrowLine.style.stroke = '#cacaca';
             // change the arrow length
             if ( options.medArrow === true ) {
-                arrowPath.setAttribute('d', 'M32.5,6 L161.327257,6 M155.948328,2 L162,5.9959254 L155.948328,10');
+                arrowPath.setAttribute('d', 'M32.5,6 L171.327257,6 M165.948328,2 L172,5.9959254 L165.948328,10');
             } else {
-                arrowPath.setAttribute('d', 'M0,6 L161.327257,6 M155.948328,2 L162,5.9959254 L155.948328,10');
+                arrowPath.setAttribute('d', 'M0,6 L171.327257,6 M165.948328,2 L172,5.9959254 L165.948328,10');
             }
         };
         arrowLink.onmouseleave = () => {
             // change the color
             arrowLine.style.stroke = '#2e2e2e';
             // change the arrow length
-            arrowPath.setAttribute('d', 'M123,6 L161.327257,6 M155.948328,2 L162,5.9959254 L155.948328,10');
+            arrowPath.setAttribute('d', 'M133,6 L171.327257,6 M165.948328,2 L172,5.9959254 L165.948328,10');
         }
     });
 };

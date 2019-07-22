@@ -1,5 +1,5 @@
 .c-arrow {
-	width: 164px;
+	width: 174px;
 	height: 12px;
 	position: absolute;
 	bottom: calc(50% - 1px);
@@ -7,7 +7,7 @@
 	right: 0;
 
 	& path {
-		transition: .3s linear;
+		transition: .15s linear;
 	}
 
 	&__line {

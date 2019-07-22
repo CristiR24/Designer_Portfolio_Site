@@ -1254,14 +1254,14 @@ p,
     font-size: 1.1em; }
 
 .c-arrow {
-  width: 164px;
+  width: 174px;
   height: 12px;
   position: absolute;
   bottom: calc(50% - 1px);
   transform: translateY(50%);
   right: 0; }
   .c-arrow path {
-    transition: .3s linear; }
+    transition: .15s linear; }
   .c-arrow__line {
     stroke: #2e2e2e; }
 
@@ -1281,11 +1281,11 @@ p,
     right: -2px;
     bottom: 40%;
     opacity: 0;
-    transition: .3s linear; }
+    transition: .15s linear; }
   .c-link__line--sm::after {
     bottom: 35%; }
   .c-link__arrow span {
-    margin-right: 53px; }
+    margin-right: 63px; }
 
 .c-underline {
   position: relative; }
