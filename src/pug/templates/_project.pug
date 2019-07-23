@@ -18,7 +18,7 @@ append meta
     include ../partials/_seo
 
 append styles
-    link(rel="stylesheet", href="css/project.css")
+    link(rel="stylesheet", href="/css/project.css")
 
 block content
 
@@ -31,7 +31,7 @@ block content
                         a.c-overview__mail(href='mailto:business@dragossargu.com') business@dragossargu.com
                         .row
                             .col-12.col-sm-10.order-sm-1
-                                img.c-overview__image(src = 'images/' + projects[i].image1, alt='')
+                                img.c-overview__image(src = '/images/' + projects[i].image1, alt='')
                             .col-12.col-sm-10.order-sm-3
                                 h3.c-overview__title #{projects[i].title}
                             .col-12.col-sm-6.order-sm-4
@@ -65,7 +65,7 @@ block content
                     p.col-12.col-sm-6.c-description__parag #{projects[i].parag2}
         .c-card.c-card__center
                 .container.c-description__block
-                    img.c-description__image(src='images/' + projects[i].image2, alt='')
+                    img.c-description__image(src='/images/' + projects[i].image2, alt='')
                     .row
                         p.col-12.col-sm-6.c-description__parag #{projects[i].parag3}
                         p.col-12.col-sm-6.c-description__parag #{projects[i].parag4}
@@ -81,4 +81,4 @@ block content
     include ../partials/_footer
 
 append scripts
-    script(src = 'js/project.js')
+    script(src = '/js/project.js')

@@ -13,7 +13,7 @@ block variables
         var seo = {
             title: 'Dragos Sargu | Designer',
             description: 'I am an fresh thinking UI/UX designer. My products are always responsive, pixel perfect and retina ready. I have designed apps, landing pages, websites, for a wide range of clients.',
-            image: 'images/portrait.jpg',
+            image: '/images/portrait.jpg',
             url: 'https://www.dragossargu.com/'
         }
 
@@ -22,7 +22,7 @@ append meta
     meta(name='robots', content='noindex, follow')
 
 append styles
-    link(rel="stylesheet", href="css/homepage.css")
+    link(rel="stylesheet", href="/css/homepage.css")
 
 block content
     .o-full-height.c-hero
@@ -117,7 +117,7 @@ block content
                                             p.c-jobs__time-span= "Mar 2016 "
                                             p.c-jobs__time-span Nov 2017
                     .col-12.col-sm-5.offset-md-1.order-first.order-sm-0
-                        img.c-about__image(src='images/portrait.jpg', alt='Dragos Sargu, Designer')
+                        img.c-about__image(src='/images/portrait.jpg', alt='Dragos Sargu, Designer')
     .c-testimonials
         .container
             .row
@@ -147,5 +147,5 @@ block content
     include partials/_footer
 
 append scripts
-    script(src = "js/type.js")
-    script(src = "js/homepage.js")
+    script(src = "/js/type.js")
+    script(src = "/js/homepage.js")

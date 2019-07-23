@@ -12,7 +12,7 @@ block variables
         var seo = {
             title: 'Dragos Sargu | Designer',
             description: 'I am an fresh thinking UI/UX designer. My products are always responsive, pixel perfect and retina ready. I have designed apps, landing pages, websites, for a wide range of clients.',
-            image: 'images/portrait.jpg',
+            image: '/images/portrait.jpg',
             url: 'https://www.dragossargu.com/'
         }
 
@@ -23,7 +23,7 @@ append meta
     include partials/_seo
 
 append styles
-    link(rel="stylesheet", href="css/teaser-page.css")
+    link(rel="stylesheet", href="/css/teaser-page.css")
 
 block content
     .o-full-screen.u-flex-space__between.u-flex-dir__col
@@ -47,5 +47,5 @@ block content
         include partials/_footer
 
 append scripts
-    script(src="js/type.js")
-    script(src="js/teaserPage.js")
+    script(src="/js/type.js")
+    script(src="/js/teaserPage.js")
