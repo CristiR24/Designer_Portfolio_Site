@@ -5,15 +5,8 @@
 
 include ../mixins/_nav-links
 
-.c-footer
-    .o-section(
-        class = bigFooter ?
-            'o-section__big o-section__bottom-big@down-xs':
-            'o-section__bottom',
-        class = medFooter ?
-            'o-section__bottom o-section__bottom-sm@sm-md':
-            'o-section__bottom')
-        .container
+mixin footerContent
+    .container
             .row
                 .col-12.col-sm
                     p.c-footer__copyright ©2019 Dragos Sargu
@@ -21,3 +14,14 @@ include ../mixins/_nav-links
                     class = hideFooterLinksUpMobile ?
                         'u-display__none@up-xs':'')
                     +horizontal-nav-icons
+
+.c-footer
+    if bigFooter
+        .o-section(class = 'o-section__big o-section__bottom-big\@down-xs')
+            +footerContent
+    else if medFooter
+        .o-section(class = 'o-section__bottom o-section__bottom-sm@sm-md')
+            +footerContent
+    else
+        .o-section.o-section__bottom
+            +footerContent
