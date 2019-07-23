@@ -1273,12 +1273,12 @@ p,
       text-align: center; } }
   .c-404__section {
     position: absolute;
-    top: calc(50% + 120px);
+    top: calc(50% + 115px);
     left: 50%;
     transform: translateX(-50%); }
     @media (max-width: 729.98px) {
       .c-404__section {
-        top: calc(33% + 85px); } }
+        top: calc(33% + 79px); } }
   .c-404__link {
     display: flex;
     justify-content: flex-end;
@@ -1299,7 +1299,7 @@ p,
       height: 100vmax;
       background: #fafafa;
       position: absolute;
-      top: -45px;
+      top: -40px;
       right: 76px; }
       @media (max-width: 729.98px) {
         .c-404__card::before {
