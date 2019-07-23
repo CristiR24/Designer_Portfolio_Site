@@ -1,0 +1,98 @@
+.c-404 {
+    position: relative;
+    min-height: 800px;
+    overflow: hidden;
+
+    @include media-breakpoint-down(md) {
+        min-height: 700px;
+    }
+    @include media-breakpoint-down(xs) {
+        min-height: 660px;
+    }
+
+    &__text {
+        z-index: -2;
+        color: $smoke-gray;
+        font-family: $base-font;
+        font-weight: 900;
+        font-size: 340px;
+        line-height: 1;
+        text-align: right;
+        user-select: none;
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        @include media-breakpoint-down(xs) {
+            font-size: 180px;
+            text-align: center;
+            top: 33%;
+            left: 50%;
+            padding: 0;
+        }
+    }
+
+    &__title {
+        line-height: 1;
+
+        @include media-breakpoint-down(xs) {
+            text-align: center;
+        }
+    }
+
+    &__message {
+
+        @include media-breakpoint-down(xs) {
+            text-align: center;
+        }
+    }
+
+    &__section {
+        position: absolute;
+        top: calc(50% + 120px);
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include media-breakpoint-down(xs) {
+            top: calc(33% + 85px);
+        }
+    }
+
+    &__link {
+        @extend h4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        @include media-breakpoint-down(sm) {
+            justify-content: flex-start;
+            margin-top: 20px;
+        }
+        @include media-breakpoint-down(xs) {
+            justify-content: center;
+        }
+    }
+
+    &__card {
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 100vw;
+            // needed to cover all the reaming space
+            height: 100vmax;
+            background: $snow-white;
+
+            position: absolute;
+            top: -45px;
+            right: 76px;
+
+            @include media-breakpoint-down(xs) {
+                right: -20px;
+            }
+        }
+    }
+}

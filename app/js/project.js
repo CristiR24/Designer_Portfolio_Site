@@ -1,1 +1,1 @@
-"use strict";addOnLoad(function(){arrows.length>0&&animateArrowLinks({medArrow:!0})});
+"use strict";addOnLoad(function(){arrows.length>0&&animateArrowLinks({medSize:!0})});

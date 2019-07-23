@@ -21,7 +21,7 @@
             right: -2px;
             bottom: 40%;
             opacity: 0;
-            transition: .15s linear;
+            transition: .2s ease-in-out;
         }
 
         &--sm {
@@ -36,6 +36,13 @@
 
         & span {
             margin-right: 63px;
+        }
+
+        &--reverse {
+            & span {
+                margin-right: 0;
+                margin-left: 63px;
+            }
         }
     }
 }

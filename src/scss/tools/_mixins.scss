@@ -21,15 +21,18 @@
 }
 
 @mixin position-card-left(
+    $offset-columns: 0,
 	$max-widths: $container-max-widths,
 	$breakpoints: $grid-breakpoints
 ) {
 	@each $breakpoint, $container-max-width in $max-widths {
 		@include media-breakpoint-up($breakpoint, $breakpoints) {
-			$half-container: $container-max-width / 2;
+            $half-container: $container-max-width / 2;
+            $column-width: $container-max-width / $grid-columns;
+            $offset-width: $column-width * $offset-columns;
 			// translate the card 50% to the right(it's width is 100%)
-			// then translate it to the left by half of the container width
-			right: calc(50% - #{$half-container});
+            // then translate it to the left by half of the container width
+			right: calc(50% - #{$half-container} + #{$offset-width});
 		}
 	}
 }

@@ -8,10 +8,7 @@
 }
 
 .o-full-screen {
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+    height: 100vh;
 }
 
 .o-list {
@@ -90,7 +87,7 @@
 	@include media-breakpoint-down(xs) {
 		padding-top: 40px;
 		padding-bottom: 40px;
-	}
+    }
 
 	&__big {
 		padding-top: 120px;
@@ -99,11 +96,23 @@
 
 	&__bottom {
 		padding-top: 0;
-		padding-bottom: 80px;
+        padding-bottom: 80px;
+
+        &-sm {
+            padding-top: 0;
+            padding-bottom: 40px;
+
+            &\@sm-md {
+                @include media-breakpoint-between(sm, md) {
+                    padding-top: 0;
+                    padding-bottom: 40px;
+                }
+            }
+        }
 
 		&-big {
+            padding-top: 0;
 			padding-bottom: 120px;
-			padding-top: 0;
 
 			&\@down-xs {
 				@include media-breakpoint-down(xs) {

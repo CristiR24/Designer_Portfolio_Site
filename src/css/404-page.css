@@ -39,12 +39,12 @@ h1,
 h2,
 h3,
 h4,
+.c-404__link,
 h5,
 .c-nav__link,
 h6,
 p,
 .c-nav__mail,
-.c-overview__mail,
 blockquote,
 pre,
 a,
@@ -1064,7 +1064,8 @@ h5,
 
 h2,
 h3,
-h4 {
+h4,
+.c-404__link {
   font-family: "Montserrat"; }
 
 h1 {
@@ -1101,7 +1102,9 @@ h3 {
   line-height: 1.875rem;
   color: #2e2e2e; }
 
-h4 {
+
+h4,
+.c-404__link {
   font-weight: 600;
   font-size: 1.125rem;
   letter-spacing: 0;
@@ -1119,8 +1122,7 @@ h5,
 
 
 p,
-.c-nav__mail,
-.c-overview__mail {
+.c-nav__mail {
   font-weight: 300;
   font-size: 0.875rem;
   letter-spacing: 0.02857em;
@@ -1224,46 +1226,6 @@ p,
   width: 20px;
   height: 18px; }
 
-.c-arrow {
-  width: 174px;
-  height: 12px;
-  position: absolute;
-  bottom: calc(50% - 1px);
-  transform: translateY(50%);
-  right: 0; }
-  .c-arrow path {
-    transition: .2s ease-in-out; }
-  .c-arrow__line {
-    stroke: #2e2e2e; }
-  .c-arrow--reverse {
-    width: 244px;
-    right: unset; }
-
-.c-link {
-  color: inherit;
-  position: relative; }
-  .c-link__line:hover::after {
-    opacity: 1;
-    width: calc(100% + 4px); }
-  .c-link__line::after {
-    content: '';
-    display: block;
-    background: #d8d8d8;
-    height: 2px;
-    width: 0;
-    position: absolute;
-    right: -2px;
-    bottom: 40%;
-    opacity: 0;
-    transition: .2s ease-in-out; }
-  .c-link__line--sm::after {
-    bottom: 35%; }
-  .c-link__arrow span {
-    margin-right: 63px; }
-  .c-link__arrow--reverse span {
-    margin-right: 0;
-    margin-left: 63px; }
-
 .c-nav--big {
   padding-top: 40px;
   padding-bottom: 40px; }
@@ -1271,47 +1233,77 @@ p,
 .c-nav__mail {
   color: #2e2e2e; }
 
-@media (max-width: 1019.98px) {
-  .c-overview {
-    margin-right: 20px; } }
-
-@media (max-width: 729.98px) {
-  .c-overview {
-    margin-top: 20px; } }
-
-.c-overview__mail {
-  color: #2e2e2e;
-  margin-bottom: 20px;
-  display: none; }
+.c-404 {
+  position: relative;
+  min-height: 800px;
+  overflow: hidden; }
+  @media (max-width: 1019.98px) {
+    .c-404 {
+      min-height: 700px; } }
   @media (max-width: 729.98px) {
-    .c-overview__mail {
-      display: block; } }
-
-.c-overview__image {
-  box-shadow: 0 2px 27pt #00000015; }
-
-@media (max-width: 729.98px) {
-  .c-overview__stats {
-    margin-top: 20px; } }
-
-.c-overview__title {
-  margin-top: 30px;
-  margin-bottom: 20px; }
+    .c-404 {
+      min-height: 660px; } }
+  .c-404__text {
+    z-index: -2;
+    color: #cacaca;
+    font-family: "Lato";
+    font-weight: 900;
+    font-size: 340px;
+    line-height: 1;
+    text-align: right;
+    user-select: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+    @media (max-width: 729.98px) {
+      .c-404__text {
+        font-size: 180px;
+        text-align: center;
+        top: 33%;
+        left: 50%;
+        padding: 0; } }
+  .c-404__title {
+    line-height: 1; }
+    @media (max-width: 729.98px) {
+      .c-404__title {
+        text-align: center; } }
   @media (max-width: 729.98px) {
-    .c-overview__title {
-      margin-top: 20px; } }
-
-.c-overview__link {
-  font-family: "Montserrat";
-  font-weight: 700;
-  font-size: 16px;
-  color: #2E2E2E;
-  letter-spacing: 1.33px;
-  position: relative; }
-  @media (max-width: 729.98px) {
-    .c-overview__link {
-      margin-top: 80px;
-      display: inline-block; } }
+    .c-404__message {
+      text-align: center; } }
+  .c-404__section {
+    position: absolute;
+    top: calc(50% + 120px);
+    left: 50%;
+    transform: translateX(-50%); }
+    @media (max-width: 729.98px) {
+      .c-404__section {
+        top: calc(33% + 85px); } }
+  .c-404__link {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+    @media (max-width: 889.98px) {
+      .c-404__link {
+        justify-content: flex-start;
+        margin-top: 20px; } }
+    @media (max-width: 729.98px) {
+      .c-404__link {
+        justify-content: center; } }
+  .c-404__card {
+    position: relative; }
+    .c-404__card::before {
+      content: '';
+      display: block;
+      width: 100vw;
+      height: 100vmax;
+      background: #fafafa;
+      position: absolute;
+      top: -45px;
+      right: 76px; }
+      @media (max-width: 729.98px) {
+        .c-404__card::before {
+          right: -20px; } }
 
 .c-card {
   position: relative;
@@ -1339,63 +1331,45 @@ p,
       .c-card__center {
         max-width: 1103.33333px; } }
 
-.c-stats {
-  text-align: center; }
-  .c-stats__block + .c-stats__block {
-    margin-top: 20px; }
-  @media (max-width: 729.98px) {
-    .c-stats__block + .c-stats__block {
-      margin-top: 40px; } }
-  .c-stats__name {
-    line-height: 1; }
+.c-link {
+  color: inherit;
+  position: relative; }
+  .c-link__line:hover::after {
+    opacity: 1;
+    width: calc(100% + 4px); }
+  .c-link__line::after {
+    content: '';
+    display: block;
+    background: #d8d8d8;
+    height: 2px;
+    width: 0;
+    position: absolute;
+    right: -2px;
+    bottom: 40%;
+    opacity: 0;
+    transition: .2s ease-in-out; }
+  .c-link__line--sm::after {
+    bottom: 35%; }
+  .c-link__arrow span {
+    margin-right: 63px; }
+  .c-link__arrow--reverse span {
+    margin-right: 0;
+    margin-left: 63px; }
 
-@media (max-width: 729.98px) {
-  .c-description__parag + .c-description__parag {
-    margin-top: 40px; } }
-
-.c-description__block {
-  margin-top: 60px;
-  padding-bottom: 80px; }
-  @media (max-width: 729.98px) {
-    .c-description__block {
-      margin-top: 20px;
-      padding-bottom: 40px; } }
-
-.c-description__image {
-  box-shadow: 0 2px 27pt #00000015;
-  position: relative;
-  top: -60px; }
-  @media (max-width: 729.98px) {
-    .c-description__image {
-      top: -20px;
-      margin-bottom: 20px; } }
-
-.c-quote {
-  padding-top: 160px; }
-  @media (max-width: 729.98px) {
-    .c-quote {
-      padding-top: 80px;
-      padding-bottom: 80px; } }
-  .c-quote__text {
-    font-family: "Lato";
-    font-weight: 300;
-    font-size: 36px;
-    color: #2e2e2e;
-    letter-spacing: 0.2px;
-    text-align: center;
-    line-height: 60px; }
-    @media (max-width: 729.98px) {
-      .c-quote__text {
-        font-size: 24px;
-        letter-spacing: 0.13px;
-        line-height: 40px; } }
-  .c-quote__symbol {
-    font-family: "Lato";
-    font-weight: 900;
-    font-size: 36px;
-    color: #000000;
-    text-align: center;
-    line-height: 44px; }
+.c-arrow {
+  width: 174px;
+  height: 12px;
+  position: absolute;
+  bottom: calc(50% - 1px);
+  transform: translateY(50%);
+  right: 0; }
+  .c-arrow path {
+    transition: .2s ease-in-out; }
+  .c-arrow__line {
+    stroke: #2e2e2e; }
+  .c-arrow--reverse {
+    width: 244px;
+    right: unset; }
 
 .c-footer__copyright {
   text-align: left; }

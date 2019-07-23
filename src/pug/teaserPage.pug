@@ -1,10 +1,11 @@
 extends layouts/_layout
 
 block variables
-    - var outerNav = true
+    - var outerNav = false
     - var hideNavMobile = false
     - var mobileNav = false
     - var bigFooter = false
+    - var medFooter = false
     - var hideFooterLinksUpMobile = true
 
     -
@@ -25,7 +26,7 @@ append styles
     link(rel="stylesheet", href="css/teaser-page.css")
 
 block content
-    .o-full-screen
+    .o-full-screen.u-flex-space__between.u-flex-dir__col
         .c-nav.c-nav--big
             .container
                 .row

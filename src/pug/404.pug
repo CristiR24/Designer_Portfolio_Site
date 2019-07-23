@@ -1,0 +1,37 @@
+extends layouts/_layout
+
+block variables
+    - var outerNav = true
+    - var hideNavMobile = false
+    - var mobileNav = false
+    - var bigFooter = false
+    - var medFooter = true
+    - var hideFooterLinksUpMobile = true
+
+append styles
+    link(rel="stylesheet", href="css/404-page.css")
+
+block content
+    .o-full-screen.o-full-height
+        .o-full-height__elem.c-404.u-flex-space__between.u-flex-dir__col
+            include partials/_nav
+
+            .container.c-404__text 404
+
+            .container.c-404__section
+                .c-404__card
+                .row
+                    .col-12
+                        h3.c-404__title Something's missing.
+                .row
+                    .col-12.col-sm-7.col-md-5.u-mg-t__20
+                        p.c-404__message The page you are looking for does not exist. The link you followed may be broken or the page may have been removed.
+                    .col-12.col-md.c-404__link
+                        a.c-link.c-link__arrow.c-link__arrow--reverse(href = '/')
+                            include partials/_arrow-reverse
+                            span Back to Homepage
+
+            include partials/_footer
+
+append scripts
+    script(src="js/404-page.js")

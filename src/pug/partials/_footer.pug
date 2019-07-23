@@ -1,5 +1,6 @@
 //- Variables
         bigFooter = true : false
+        medFooter = true : false
         hideFooterLinksUpMobile = true : false
 
 include ../mixins/_nav-links
@@ -8,6 +9,9 @@ include ../mixins/_nav-links
     .o-section(
         class = bigFooter ?
             'o-section__big o-section__bottom-big@down-xs':
+            'o-section__bottom',
+        class = medFooter ?
+            'o-section__bottom o-section__bottom-sm@sm-md':
             'o-section__bottom')
         .container
             .row

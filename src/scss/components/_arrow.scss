@@ -7,10 +7,15 @@
 	right: 0;
 
 	& path {
-		transition: .15s linear;
+		transition: .2s ease-in-out;
 	}
 
 	&__line {
 		stroke: $black;
-	}
+    }
+
+    &--reverse {
+        width: 244px;
+        right: unset;
+    }
 }
