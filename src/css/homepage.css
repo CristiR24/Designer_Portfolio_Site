@@ -1265,7 +1265,7 @@ p,
   transform: translateY(50%);
   right: 0; }
   .c-arrow path {
-    transition: .2s ease-in-out; }
+    transition: .1s ease-in-out; }
   .c-arrow__line {
     stroke: #2e2e2e; }
   .c-arrow--reverse {
@@ -1288,7 +1288,7 @@ p,
     right: -2px;
     bottom: 40%;
     opacity: 0;
-    transition: .2s ease-in-out; }
+    transition: .1s ease-in-out; }
   .c-link__line--sm::after {
     bottom: 35%; }
   .c-link__arrow span {
