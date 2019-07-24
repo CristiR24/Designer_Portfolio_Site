@@ -1,11 +1,15 @@
 .c-about {
 
-	@include media-breakpoint-between(sm, md) {
+	@include media-breakpoint-only(md) {
 		margin-right: 20px;
 	}
 
 	&__heading {
-		bottom: 58px;
+        bottom: 58px;
+
+        @include media-breakpoint-down(lg) {
+            width: 100vw;
+        }
 
 		@include media-breakpoint-up(sm) {
 			left: 9px;
@@ -25,35 +29,62 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
-
 		margin-bottom: 20px;
 
-		@include media-breakpoint-down(md) {
-			margin-bottom: 0;
-		}
-
 		@include media-breakpoint-only(sm) {
+            width: 85.714286%;
 			margin-bottom: 40px;
 			margin-top: 20px;
 		}
 
 		@include media-breakpoint-down(xs) {
-			margin: 40px 0;
+            margin-bottom: 80px;
+            margin-top: 40px;
 		}
 	}
 
 	&__image {
 		position: relative;
 		top: 20px;
-		box-shadow: $default-shadow;
+        box-shadow: $default-shadow;
+        height: 506px;
+        object-fit: cover;
 
-		@include media-breakpoint-down(sm) {
-			position: static;
-			margin: 40px 0;
-		}
+        @include media-breakpoint-down(sm) {
+            height: 450px;
+            margin-top: 20px;
+        }
 
 		@include media-breakpoint-down(xs) {
+            height: auto;
 			margin: 20px 0 0 0;
 		}
-	}
+    }
+
+    &__resume-btn {
+        @extend h4;
+        line-height: 1;
+        position: absolute;
+        left: 10px;
+        bottom: -20px;
+        background: none;
+        outline: none;
+        border: none;
+        width: 190px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        box-shadow: $default-shadow;
+
+        & span {
+            margin-left: 17px;
+        }
+
+        @include media-breakpoint-down(xs) {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
 }

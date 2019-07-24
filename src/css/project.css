@@ -1324,7 +1324,7 @@ p,
     @media (min-width: 1240px) {
       .c-card__left {
         right: calc(50% - 490px + 0px); } }
-    @media (max-width: 1019.98px) {
+    @media (min-width: 890px) and (max-width: 1019.98px) {
       .c-card__left {
         margin-right: 20px; }
         .c-card__left .container {

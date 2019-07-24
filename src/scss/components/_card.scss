@@ -8,7 +8,7 @@
 		// sets the "right" property for all screen sizes
 		@include position-card-left();
 
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-only(md) {
 			margin-right: 20px;
 
 			& .container {

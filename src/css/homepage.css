@@ -40,6 +40,7 @@ h2,
 h3,
 h4,
 .c-post__link,
+.c-about__resume-btn,
 .c-contact__mail,
 h5,
 .c-nav__link,
@@ -1067,6 +1068,7 @@ h2,
 h3,
 h4,
 .c-post__link,
+.c-about__resume-btn,
 .c-contact__mail {
   font-family: "Montserrat"; }
 
@@ -1107,6 +1109,7 @@ h3 {
 
 h4,
 .c-post__link,
+.c-about__resume-btn,
 .c-contact__mail {
   font-weight: 600;
   font-size: 1.125rem;
@@ -1420,7 +1423,7 @@ p,
     @media (min-width: 1240px) {
       .c-card__left {
         right: calc(50% - 490px + 0px); } }
-    @media (max-width: 1019.98px) {
+    @media (min-width: 890px) and (max-width: 1019.98px) {
       .c-card__left {
         margin-right: 20px; }
         .c-card__left .container {
@@ -1435,12 +1438,15 @@ p,
       .c-card__center {
         max-width: 1103.33333px; } }
 
-@media (min-width: 730px) and (max-width: 1019.98px) {
+@media (min-width: 890px) and (max-width: 1019.98px) {
   .c-about {
     margin-right: 20px; } }
 
 .c-about__heading {
   bottom: 58px; }
+  @media (max-width: 1239.98px) {
+    .c-about__heading {
+      width: 100vw; } }
   @media (min-width: 730px) {
     .c-about__heading {
       left: 9px;
@@ -1457,28 +1463,52 @@ p,
   flex-direction: column;
   justify-content: space-evenly;
   margin-bottom: 20px; }
-  @media (max-width: 1019.98px) {
-    .c-about__jobs {
-      margin-bottom: 0; } }
   @media (min-width: 730px) and (max-width: 889.98px) {
     .c-about__jobs {
+      width: 85.714286%;
       margin-bottom: 40px;
       margin-top: 20px; } }
   @media (max-width: 729.98px) {
     .c-about__jobs {
-      margin: 40px 0; } }
+      margin-bottom: 80px;
+      margin-top: 40px; } }
 
 .c-about__image {
   position: relative;
   top: 20px;
-  box-shadow: 0 2px 27pt #00000015; }
+  box-shadow: 0 2px 27pt #00000015;
+  height: 506px;
+  object-fit: cover; }
   @media (max-width: 889.98px) {
     .c-about__image {
-      position: static;
-      margin: 40px 0; } }
+      height: 450px;
+      margin-top: 20px; } }
   @media (max-width: 729.98px) {
     .c-about__image {
+      height: auto;
       margin: 20px 0 0 0; } }
+
+.c-about__resume-btn {
+  line-height: 1;
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+  background: none;
+  outline: none;
+  border: none;
+  width: 190px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  box-shadow: 0 2px 27pt #00000015; }
+  .c-about__resume-btn span {
+    margin-left: 17px; }
+  @media (max-width: 729.98px) {
+    .c-about__resume-btn {
+      left: 50%;
+      transform: translateX(-50%); } }
 
 .c-jobs__block + .c-jobs__block {
   margin-top: 20px; }

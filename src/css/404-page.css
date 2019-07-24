@@ -1273,7 +1273,7 @@ p,
       text-align: center; } }
   .c-404__section {
     position: absolute;
-    top: calc(50% + 115px);
+    top: calc(50% + 114px);
     left: 50%;
     transform: translateX(-50%); }
     @media (max-width: 729.98px) {
@@ -1316,7 +1316,7 @@ p,
     @media (min-width: 1240px) {
       .c-card__left {
         right: calc(50% - 490px + 0px); } }
-    @media (max-width: 1019.98px) {
+    @media (min-width: 890px) and (max-width: 1019.98px) {
       .c-card__left {
         margin-right: 20px; }
         .c-card__left .container {
