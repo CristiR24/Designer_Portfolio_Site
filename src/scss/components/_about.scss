@@ -77,6 +77,18 @@
         align-items: center;
         background: white;
         box-shadow: $default-shadow;
+        transition: .1s ease-out;
+
+        &:hover {
+            background: $snow-white;
+        }
+        &:active {
+            background: $black;
+            color: white;
+            & svg {
+                fill: white;
+            }
+        }
 
         & span {
             margin-left: 17px;

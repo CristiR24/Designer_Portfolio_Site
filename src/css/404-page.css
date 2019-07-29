@@ -1334,9 +1334,6 @@ p,
 .c-link {
   color: inherit;
   position: relative; }
-  .c-link__line:hover::after {
-    opacity: 1;
-    width: calc(100% + 4px); }
   .c-link__line::after {
     content: '';
     display: block;
@@ -1350,6 +1347,13 @@ p,
     transition: .1s ease-in-out; }
   .c-link__line--sm::after {
     bottom: 35%; }
+  .c-link__line:hover::after {
+    opacity: 1;
+    width: calc(100% + 4px); }
+  .c-link__line:active {
+    color: #cacaca; }
+    .c-link__line:active::after {
+      background: #2e2e2e; }
   .c-link__arrow span {
     margin-right: 63px; }
   .c-link__arrow--reverse span {

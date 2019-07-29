@@ -1278,9 +1278,6 @@ p,
 .c-link {
   color: inherit;
   position: relative; }
-  .c-link__line:hover::after {
-    opacity: 1;
-    width: calc(100% + 4px); }
   .c-link__line::after {
     content: '';
     display: block;
@@ -1294,6 +1291,13 @@ p,
     transition: .1s ease-in-out; }
   .c-link__line--sm::after {
     bottom: 35%; }
+  .c-link__line:hover::after {
+    opacity: 1;
+    width: calc(100% + 4px); }
+  .c-link__line:active {
+    color: #cacaca; }
+    .c-link__line:active::after {
+      background: #2e2e2e; }
   .c-link__arrow span {
     margin-right: 63px; }
   .c-link__arrow--reverse span {
@@ -1311,6 +1315,10 @@ p,
     position: absolute;
     left: 0;
     bottom: -6px; }
+  .c-underline:hover::after {
+    background: #cacaca; }
+  .c-underline:active::after {
+    background: #2e2e2e; }
 
 .c-nav--big {
   padding-top: 40px;
@@ -1502,7 +1510,15 @@ p,
   justify-content: center;
   align-items: center;
   background: white;
-  box-shadow: 0 2px 27pt #00000015; }
+  box-shadow: 0 2px 27pt #00000015;
+  transition: .1s ease-out; }
+  .c-about__resume-btn:hover {
+    background: #fafafa; }
+  .c-about__resume-btn:active {
+    background: #2e2e2e;
+    color: white; }
+    .c-about__resume-btn:active svg {
+      fill: white; }
   .c-about__resume-btn span {
     margin-left: 17px; }
   @media (max-width: 729.98px) {

@@ -9,6 +9,17 @@
 		background: $black;
 		position: absolute;
 		left: 0;
-		bottom: -6px;
-	}
+        bottom: -6px;
+    }
+
+    &:hover {
+        &::after {
+            background: $smoke-gray;
+        }
+    }
+    &:active {
+        &::after {
+            background: $black;
+        }
+    }
 }

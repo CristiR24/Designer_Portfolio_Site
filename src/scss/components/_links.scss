@@ -4,13 +4,6 @@
 
     &__line {
 
-        &:hover {
-            &::after {
-                opacity: 1;
-                width: calc(100% + 4px);
-            }
-        }
-
         &::after {
             content: '';
             display: block;
@@ -28,6 +21,19 @@
 
             &::after {
                 bottom: 35%;
+            }
+        }
+
+        &:hover {
+            &::after {
+                opacity: 1;
+                width: calc(100% + 4px);
+            }
+        }
+        &:active {
+            color: $smoke-gray;
+            &::after {
+                background: $black;
             }
         }
     }
