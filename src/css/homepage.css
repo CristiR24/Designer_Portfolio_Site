@@ -1439,25 +1439,17 @@ p,
       bottom: 5px; } }
 
 .c-about__description {
-  margin-top: 60px; }
-  @media (max-width: 1019.98px) {
-    .c-about__description {
-      margin-top: 40px; } }
+  margin-top: 40px; }
 
 .c-about__jobs {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin-bottom: 20px; }
+  margin-top: 40px; }
   @media (min-width: 730px) and (max-width: 889.98px) {
     .c-about__jobs {
       width: 85.714286%;
-      margin-bottom: 40px;
-      margin-top: 20px; } }
-  @media (max-width: 729.98px) {
-    .c-about__jobs {
-      margin-bottom: 80px;
-      margin-top: 40px; } }
+      margin-top: 35px; } }
 
 .c-about__image {
   position: relative;
