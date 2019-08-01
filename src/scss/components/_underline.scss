@@ -1,5 +1,10 @@
 .c-underline {
-	position: relative;
+    position: relative;
+    // make the area between the div and underline clickable
+    padding-bottom: 6px;
+    margin-bottom: -6px;
+    // color of the text in the underlined section
+    color: $smoke-gray;
 
 	&::after {
 		content: "";
@@ -9,17 +14,19 @@
 		background: $black;
 		position: absolute;
 		left: 0;
-        bottom: -6px;
+        bottom: 0;
+        transition: .3s;
     }
 
     &:hover {
-        &::after {
-            background: $smoke-gray;
-        }
+        cursor: pointer;
+        color: $black;
+
     }
     &:active {
+        color: $smoke-gray;
         &::after {
-            background: $black;
+            background: $smoke-gray;
         }
     }
 }

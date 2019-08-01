@@ -1276,7 +1276,10 @@ p,
     margin-left: 63px; }
 
 .c-underline {
-  position: relative; }
+  position: relative;
+  padding-bottom: 6px;
+  margin-bottom: -6px;
+  color: #cacaca; }
   .c-underline::after {
     content: "";
     display: block;
@@ -1285,11 +1288,15 @@ p,
     background: #2e2e2e;
     position: absolute;
     left: 0;
-    bottom: -6px; }
-  .c-underline:hover::after {
-    background: #cacaca; }
-  .c-underline:active::after {
-    background: #2e2e2e; }
+    bottom: 0;
+    transition: .3s; }
+  .c-underline:hover {
+    cursor: pointer;
+    color: #2e2e2e; }
+  .c-underline:active {
+    color: #cacaca; }
+    .c-underline:active::after {
+      background: #cacaca; }
 
 .c-nav--big {
   padding-top: 40px;
@@ -1552,9 +1559,7 @@ p,
     margin-bottom: 9px; }
   .c-contact__mail {
     transition: .3s;
-    color: #cacaca; }
-    .c-contact__mail:hover {
-      color: #2e2e2e; }
+    color: inherit; }
 
 .c-footer {
   padding-bottom: 80px; }
