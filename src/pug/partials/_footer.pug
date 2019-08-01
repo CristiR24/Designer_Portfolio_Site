@@ -1,6 +1,5 @@
 //- Variables
-        bigFooter = true : false
-        medFooter = true : false
+        smTabletFooter = true : false
         hideFooterLinksUpMobile = true : false
 
 include ../mixins/_nav-links
@@ -15,13 +14,9 @@ mixin footerContent
                         'u-display__none@up-xs':'')
                     +horizontal-nav-icons
 
-.c-footer
-    if bigFooter
-        .o-section(class = 'o-section__big o-section__bottom-big\@down-xs')
-            +footerContent
-    else if medFooter
-        .o-section(class = 'o-section__bottom o-section__bottom-sm@sm-md')
-            +footerContent
-    else
-        .o-section.o-section__bottom
-            +footerContent
+if smTabletFooter
+    .c-footer(class='c-footer--sm@tablet')
+        +footerContent
+else
+    .c-footer
+        +footerContent

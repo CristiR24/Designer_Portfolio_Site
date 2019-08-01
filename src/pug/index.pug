@@ -4,10 +4,6 @@ block variables
     - var outerNav = false
     - var hideNavMobile = false
     - var mobileNav = true
-    - var bigFooter = false
-    - var medFooter = false
-
-    include variables/_projects-content
 
     -
         var seo = {
@@ -73,9 +69,8 @@ block content
             h2.c-heading.c-work__heading.
                 Work
         .container
-
-                each project, i in projects
-                    include partials/_post
+            include partials/_post
+            include partials/_post
 
     .c-about
         .o-heading--pushed

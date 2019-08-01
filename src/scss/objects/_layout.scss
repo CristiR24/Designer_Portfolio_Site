@@ -79,51 +79,6 @@
 	}
 }
 
-.o-section {
-	position: relative;
-	padding-bottom: 80px;
-	padding-top: 80px;
-
-	@include media-breakpoint-down(xs) {
-		padding-top: 40px;
-		padding-bottom: 40px;
-    }
-
-	&__big {
-		padding-top: 120px;
-		padding-bottom: 120px;
-	}
-
-	&__bottom {
-		padding-top: 0;
-        padding-bottom: 80px;
-
-        &-sm {
-            padding-top: 0;
-            padding-bottom: 40px;
-
-            &\@sm-md {
-                @include media-breakpoint-between(sm, md) {
-                    padding-top: 0;
-                    padding-bottom: 40px;
-                }
-            }
-        }
-
-		&-big {
-            padding-top: 0;
-			padding-bottom: 120px;
-
-			&\@down-xs {
-				@include media-breakpoint-down(xs) {
-					padding-top: 0;
-					padding-bottom: 120px;
-				}
-			}
-		}
-	}
-}
-
 .o-icon {
 
 	&__dribbble {

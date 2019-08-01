@@ -1,4 +1,11 @@
 .c-footer {
+    padding-bottom: 80px;
+
+    &--sm\@tablet {
+        @include media-breakpoint-between(sm, md) {
+            padding-bottom: 40px;
+        }
+    }
 
 	&__copyright {
 		text-align: left;
