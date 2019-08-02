@@ -1,0 +1,17 @@
+mixin post(title, image, description, job)
+    .c-post.c-work__post
+        .row(class='o-full-width\@down-xs')
+            .col-12
+                img.c-post__image(src= image)
+        .row
+            .col-12.col-sm
+                h3.c-post__title= title
+            .col-12.col-sm-auto.u-flex-align__lb
+                h5.c-post__job= job
+        .row
+            .col-12.col-sm-7
+                p.c-post__description= description
+            .col-auto.col-sm.u-flex-align__rt
+                a.c-link.c-link__arrow.c-post__link(href = '/')
+                    span The Process
+                    include ../partials/_arrow

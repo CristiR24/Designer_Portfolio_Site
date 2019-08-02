@@ -1371,7 +1371,7 @@ p,
         top: 50%; } }
 
 .c-work {
-  margin-bottom: 160px; }
+  margin-bottom: 150px; }
   .c-work__post + .c-work__post {
     margin-top: 80px; }
     @media (max-width: 729.98px) {
@@ -1393,7 +1393,10 @@ p,
   margin-top: 20px; }
 
 .c-post__job {
-  color: #cacaca; }
+  color: #2e2e2e; }
+  @media (max-width: 729.98px) {
+    .c-post__job {
+      margin-top: 6px; } }
 
 .c-post__link {
   margin-top: 20px; }
@@ -1450,6 +1453,9 @@ p,
     .c-about__jobs {
       width: 85.714286%;
       margin-top: 35px; } }
+  @media (max-width: 729.98px) {
+    .c-about__jobs {
+      margin-bottom: 80px; } }
 
 .c-about__image {
   position: relative;
@@ -1464,7 +1470,7 @@ p,
   @media (max-width: 729.98px) {
     .c-about__image {
       height: auto;
-      margin: 20px 0 0 0; } }
+      top: 0; } }
 
 .c-about__resume-btn {
   line-height: 1;
@@ -1514,13 +1520,13 @@ p,
         margin-left: 3.5px; } }
 
 .c-testimonials {
-  padding-top: 190px; }
+  padding-top: 180px; }
   @media (max-width: 1019.98px) {
     .c-testimonials {
       padding-top: 100px; } }
-  @media (max-width: 889.98px) {
+  @media (max-width: 729.98px) {
     .c-testimonials {
-      padding-top: 80px; } }
+      padding-top: 140px; } }
   @media (max-width: 729.98px) {
     .c-testimonials__block + .c-testimonials__block {
       margin-top: 40px; } }

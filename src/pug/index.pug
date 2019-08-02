@@ -13,6 +13,9 @@ block variables
             url: 'https://www.dragossargu.com/'
         }
 
+block mixins
+    include mixins/_post
+
 append meta
     include partials/_seo
     meta(name='robots', content='noindex, follow')
@@ -69,8 +72,16 @@ block content
             h2.c-heading.c-work__heading.
                 Work
         .container
-            include partials/_post
-            include partials/_post
+            +post(
+                'King\'s Tailor Shop',
+                '/images/KTS-thumbnail.jpg',
+                'We don’t see people wearing tailored clothing much nowadays. There are no two identical people, so why should their clothing be. If you want your look elevated to the next level, you should try going to a tailor.',
+                'Web Design')
+            +post(
+                'Rantech Website',
+                '/images/rantech.jpg',
+                'I have been working for the last 4 years in agencies, startups and as a freelancer. I worked in two continents, designed apps, landing pages, websites, ads, posters, emails for a wide range of.',
+                'Product Design')
 
     .c-about
         .o-heading--pushed

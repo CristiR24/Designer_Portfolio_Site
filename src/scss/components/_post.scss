@@ -9,11 +9,15 @@
 	}
 
 	&__description {
-		margin-top: 20px;
+        margin-top: 20px;
 	}
 
 	&__job {
-		color: $smoke-gray;
+        color: $black;
+
+        @include media-breakpoint-only(xs) {
+            margin-top: 6px;
+        }
 	}
 
 	&__link {

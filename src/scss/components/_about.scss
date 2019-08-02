@@ -30,7 +30,10 @@
 		@include media-breakpoint-only(sm) {
             width: 85.714286%;
             margin-top: 35px;
-		}
+        }
+        @include media-breakpoint-only(xs) {
+            margin-bottom: 80px;
+        }
 	}
 
 	&__image {
@@ -47,7 +50,7 @@
 
 		@include media-breakpoint-down(xs) {
             height: auto;
-			margin: 20px 0 0 0;
+            top: 0;
 		}
     }
 
