@@ -1,7 +1,7 @@
 .c-contact {
-    padding-top: 330px;
+    padding-top: 360px;
 	// + 8px from the underline after element
-	padding-bottom: 338px;
+	padding-bottom: 368px;
     text-align: center;
 
     @include media-breakpoint-down(md) {
@@ -10,9 +10,9 @@
     }
 
 	@include media-breakpoint-down(xs) {
-		padding-top: 300px;
+		padding-top: 280px;
 		// + 8px from the underline after element
-		padding-bottom: 308px;
+		padding-bottom: 288px;
 	}
 
     &__title {

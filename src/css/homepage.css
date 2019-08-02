@@ -1542,8 +1542,8 @@ p,
     margin-top: 20px; }
 
 .c-contact {
-  padding-top: 330px;
-  padding-bottom: 338px;
+  padding-top: 360px;
+  padding-bottom: 368px;
   text-align: center; }
   @media (max-width: 1019.98px) {
     .c-contact {
@@ -1551,8 +1551,8 @@ p,
       padding-bottom: 248px; } }
   @media (max-width: 729.98px) {
     .c-contact {
-      padding-top: 300px;
-      padding-bottom: 308px; } }
+      padding-top: 280px;
+      padding-bottom: 288px; } }
   .c-contact__title {
     margin-bottom: 9px; }
   .c-contact__mail {
