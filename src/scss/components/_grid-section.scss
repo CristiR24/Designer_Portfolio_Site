@@ -1,0 +1,15 @@
+.c-grid-sec {
+
+    &__card {
+        padding-top: 80px;
+        padding-bottom: 40px;
+        &::before {
+            right: calc(81.333% + 20px);
+        }
+    }
+
+    &__image {
+        margin-top: 80px;
+        box-shadow: $default-shadow;
+    }
+}

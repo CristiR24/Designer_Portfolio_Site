@@ -1177,11 +1177,9 @@ p,
 @media (min-width: 1240px) {
   .o-heading--pushed {
     position: absolute;
-    z-index: 5; } }
-  @media (min-width: 1240px) and (min-width: 1240px) {
-    .o-heading--pushed {
-      transform: rotate(-90deg) translateY(-125%);
-      left: calc( (100vw - 980px) / 4); } }
+    z-index: 5;
+    transform: translateX(-50%) rotateZ(-90deg) translateX(-40%);
+    left: calc(-1 * ((100vw - 100%) / 4)); } }
 
 @media (max-width: 729.98px) {
   .o-full-width\@down-xs {
@@ -1202,6 +1200,9 @@ p,
 .o-icon__telegram {
   width: 20px;
   height: 18px; }
+
+.o-proj-desc__block + .o-proj-desc__block {
+  margin-top: 240px; }
 
 @keyframes blink {
   0% {
@@ -1277,9 +1278,9 @@ p,
 
 .c-underline {
   position: relative;
-  padding-bottom: 6px;
-  margin-bottom: -6px;
-  color: #cacaca; }
+  padding-bottom: 5px;
+  margin-bottom: -5px;
+  color: inherit; }
   .c-underline::after {
     content: "";
     display: block;
@@ -1290,13 +1291,6 @@ p,
     left: 0;
     bottom: 0;
     transition: .3s; }
-  .c-underline:hover {
-    cursor: pointer;
-    color: #2e2e2e; }
-  .c-underline:active {
-    color: #cacaca; }
-    .c-underline:active::after {
-      background: #cacaca; }
 
 .c-nav--big {
   padding-top: 40px;
@@ -1358,7 +1352,6 @@ p,
     .c-heading {
       line-height: 1;
       position: relative;
-      left: 24px;
       margin: 0; }
       .c-heading::before {
         content: "";
@@ -1379,8 +1372,7 @@ p,
         margin-top: 40px; } }
   @media (min-width: 1240px) {
     .c-work__heading {
-      left: 93px;
-      bottom: 0; } }
+      left: 130px; } }
 
 .c-post__image {
   box-shadow: 0 2px 27pt #00000015;
@@ -1401,45 +1393,28 @@ p,
 .c-post__link {
   margin-top: 20px; }
 
-.c-card {
-  position: relative;
-  background: #fafafa; }
-  .c-card__left {
-    width: 100%; }
-    @media (min-width: 1020px) {
-      .c-card__left {
-        right: calc(50% - 489.5px + 0px); } }
-    @media (min-width: 1240px) {
-      .c-card__left {
-        right: calc(50% - 490px + 0px); } }
-    @media (min-width: 890px) and (max-width: 1019.98px) {
-      .c-card__left {
-        margin-right: 20px; }
-        .c-card__left .container {
-          padding-right: 20px; } }
-  .c-card__center {
-    margin-left: auto;
-    margin-right: auto; }
-    @media (min-width: 1020px) {
-      .c-card__center {
-        max-width: 1102.16667px; } }
-    @media (min-width: 1240px) {
-      .c-card__center {
-        max-width: 1103.33333px; } }
-
-@media (min-width: 890px) and (max-width: 1019.98px) {
-  .c-about {
-    margin-right: 20px; } }
+.c-card::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  background: #fafafa;
+  z-index: -1; }
 
 .c-about__heading {
-  bottom: 58px; }
+  transform: translateX(51%); }
   @media (max-width: 1239.98px) {
     .c-about__heading {
-      width: 100vw; } }
-  @media (min-width: 730px) {
-    .c-about__heading {
-      left: 9px;
-      bottom: 5px; } }
+      width: 100%;
+      transform: none; } }
+
+.c-about__card::before {
+  right: 0; }
+  @media (min-width: 890px) and (max-width: 1019.98px) {
+    .c-about__card::before {
+      right: 20px; } }
 
 .c-about__description {
   margin-top: 40px; }
@@ -1557,7 +1532,13 @@ p,
     margin-bottom: 9px; }
   .c-contact__mail {
     transition: .3s;
-    color: inherit; }
+    color: #cacaca; }
+    .c-contact__mail:hover {
+      color: #2e2e2e; }
+    .c-contact__mail:active {
+      color: #cacaca; }
+      .c-contact__mail:active .c-underline::after {
+        background: #cacaca; }
 
 .c-footer {
   padding-bottom: 80px; }
@@ -1627,14 +1608,20 @@ p,
 .u-flex-dir__col {
   flex-direction: column; }
 
+.u-mg-t__20 {
+  margin-top: 20px; }
+
+.u-mg-t__40 {
+  margin-top: 40px; }
+
 .u-mg-t__60 {
   margin-top: 60px; }
 
-.u-mg-t__20 {
-  margin-top: 20px; }
-  @media (min-width: 730px) {
-    .u-mg-t__20\@up-sm {
-      margin-top: 20px; } }
+.u-mg-t__140 {
+  margin-top: 140px; }
+
+.u-mg-b__80 {
+  margin-bottom: 80px; }
 
 .u-mg-r__zero {
   margin-right: 0; }
@@ -1663,3 +1650,6 @@ p,
       @media (max-width: 889.98px) {
         .u-hyphen--manual\@down-sm {
           hyphens: manual; } }
+
+.u-gray-text {
+  color: #cacaca; }

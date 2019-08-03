@@ -22,6 +22,16 @@
     &__mail {
         @extend h4;
         transition: .3s;
-	    color: inherit;
+        color: $smoke-gray;
+
+        &:hover {
+            color: $black;
+        }
+        &:active {
+            color: $smoke-gray;
+            & .c-underline::after {
+                background: $smoke-gray;
+            }
+        }
     }
 }

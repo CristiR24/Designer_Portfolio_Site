@@ -60,8 +60,9 @@
 
 		// rotates the heading 90 deg
 		// and positions it to the left in the middle of
-		// the blank space near the section
-		@include position-heading(xl);
+        // the blank space near the section
+		transform: translateX(-50%) rotateZ(-90deg) translateX(-40%);
+        left: calc(-1 * ((100vw - 100%) / 4));
 	}
 }
 
@@ -95,4 +96,10 @@
 		width: 20px;
 		height: 18px;
 	}
+}
+
+.o-proj-desc {
+    &__block + &__block {
+        margin-top: 240px;
+    }
 }

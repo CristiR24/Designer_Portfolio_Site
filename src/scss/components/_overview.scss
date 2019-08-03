@@ -1,12 +1,13 @@
 .c-overview {
 
-	@include media-breakpoint-down(md) {
-		margin-right: 20px;
-	}
+    &__card {
+        padding-top: 20px;
+        padding-bottom: 80px;
 
-	@include media-breakpoint-down(xs) {
-		margin-top: 20px;
-	}
+        &::before {
+            right: calc(24.6% + 20px);
+        }
+    }
 
 	&__mail {
 		@extend p;
@@ -24,13 +25,11 @@
 	}
 
 	&__stats {
-		@include media-breakpoint-down(xs) {
-			margin-top: 20px;
-		}
+        padding: 80px 0;
 	}
 
 	&__title {
-		margin-top: 30px;
+		margin-top: 40px;
 		margin-bottom: 20px;
 
 		@include media-breakpoint-down(xs) {

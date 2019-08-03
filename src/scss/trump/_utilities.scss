@@ -80,20 +80,24 @@
 
 .u-mg {
 	&-t {
-		&__60 {
-			margin-top: 60px;
-		}
-
 		&__20 {
 			margin-top: 20px;
-
-			&\@up-sm {
-				@include media-breakpoint-up(sm) {
-					margin-top: 20px;
-				}
-			}
-		}
-	}
+        }
+        &__40 {
+            margin-top: 40px;
+        }
+        &__60 {
+			margin-top: 60px;
+        }
+        &__140 {
+            margin-top: 140px;
+        }
+    }
+    &-b {
+        &__80 {
+            margin-bottom: 80px;
+        }
+    }
 
 	&-r {
 		&__zero {
@@ -145,4 +149,8 @@
 			}
 		}
 	}
+}
+
+.u-gray-text {
+    color: $smoke-gray;
 }

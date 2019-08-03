@@ -1,9 +1,10 @@
-/* global addOnLoad arrows animateArrowLinks */
+/* global addOnLoad arrows arrowsRev animateArrows animateReverseArrows */
 
 addOnLoad(() => {
     if (arrows.length > 0) {
-        animateArrowLinks({
-            medSize: true,
-        });
+        animateArrows({ medSize: true });
+    }
+    if (arrowsRev.length > 0) {
+        animateReverseArrows({ medSize: true });
     }
 });

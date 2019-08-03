@@ -1,21 +1,23 @@
 .c-about {
 
-	@include media-breakpoint-only(md) {
-		margin-right: 20px;
-	}
-
 	&__heading {
-        bottom: 58px;
+        transform: translateX(51%);
 
         @include media-breakpoint-down(lg) {
-            width: 100vw;
+            width: 100%;
+            transform: none;
         }
+    }
 
-		@include media-breakpoint-up(sm) {
-			left: 9px;
-			bottom: 5px;
-		}
-	}
+    &__card {
+        &::before{
+            right: 0;
+
+            @include media-breakpoint-only(md) {
+                right: 20px;
+            }
+        }
+    }
 
 	&__description {
 		margin-top: 40px;

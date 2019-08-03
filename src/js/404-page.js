@@ -1,9 +1,7 @@
-/* global addOnLoad arrows animateArrowLinks */
+/* global addOnLoad arrowsRev animateReverseArrows */
 
 addOnLoad(() => {
-    if (arrows.length > 0) {
-        animateArrowLinks({
-            reverseLg: true,
-        });
+    if (arrowsRev.length > 0) {
+        animateReverseArrows();
     }
 });

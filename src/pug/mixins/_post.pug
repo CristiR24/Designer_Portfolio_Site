@@ -1,4 +1,4 @@
-mixin post(title, image, description, job)
+mixin post(title, image, description, job, link)
     .c-post.c-work__post
         .row(class='o-full-width\@down-xs')
             .col-12
@@ -12,6 +12,6 @@ mixin post(title, image, description, job)
             .col-12.col-sm-7
                 p.c-post__description= description
             .col-auto.col-sm.u-flex-align__rt
-                a.c-link.c-link__arrow.c-post__link(href = '/')
+                a.c-link.c-link__arrow.c-post__link(href= link)
                     span The Process
                     include ../partials/_arrow

@@ -1,0 +1,18 @@
+.c-thanks {
+    margin-top: 140px;
+
+    &__link {
+        @extend h4;
+        line-height: 22px;
+        display: block;
+        width: fit-content;
+
+        & + & {
+            margin-top: 40px;
+        }
+        &:first-child {
+            margin-top: 7px;
+        }
+    }
+
+}

@@ -1,9 +1,10 @@
 extends layouts/_layout
 
 block variables
+    - var backHomepageNav = false
     - var outerNav = false
     - var hideNavMobile = false
-    - var mobileNav = true
+    - var mobileLinksNav = true
 
     -
         var seo = {
@@ -68,68 +69,68 @@ block content
                                             p.c-info__content.
                                                 I always start with some research, then dip in to sketching. The next step is wire framing, and after we set up the feel of the product, I move on to the User Interface.
     .c-work
-        .o-heading--pushed
-            h2.c-heading.c-work__heading.
-                Work
         .container
+            .o-heading--pushed
+                h2.c-heading.c-work__heading Work
             +post(
                 'King\'s Tailor Shop',
-                '/images/KTS-thumbnail.jpg',
+                '/images/kings-tailor/thumbnail.jpg',
                 'We don’t see people wearing tailored clothing much nowadays. There are no two identical people, so why should their clothing be. If you want your look elevated to the next level, you should try going to a tailor.',
-                'Web Design')
+                'Web Design',
+                '/kings-tailor-shop/index.html')
             +post(
                 'Rantech Website',
                 '/images/rantech.jpg',
                 'I have been working for the last 4 years in agencies, startups and as a freelancer. I worked in two continents, designed apps, landing pages, websites, ads, posters, emails for a wide range of.',
-                'Product Design')
+                'Product Design',
+                '')
 
     .c-about
-        .o-heading--pushed
-            h2.c-heading.c-about__heading.
-                About
-        .c-card.c-card__left
-            .container.u-mg-r__zero
-                .row
-                    .col-sm-7.col-md-6.o-full-height
-                        p.c-about__description.
-                            I am a fresh thinking designer, starting my journey 4 years ago as a graphic designer. Because I enjoy creating working mechanisms, I moved my professional activity to the domain of web and mobile design. I have worked with both small and big design and development teams, start-ups and local businesses.
-                        .c-about__jobs
-                            .c-jobs
-                                .c-jobs__block
-                                    .row
-                                        .col
-                                            h4
-                                                a.c-link.c-link__line.c-jobs__agency(target='_blank', href='https://www.freelancer.com/u/dragossargu?fbclid=IwAR0ATF0_UQQ7oHV-A6GeZDYLEZiT4Pqrhbyntws0LkKhOwB7qNnWTOjUlpQ') Freelancer
-                                            p.c-jobs__title UI/UX Designer
-                                        .col-auto
-                                            p.c-jobs__time-span= "Nov 2017 "
-                                            p.c-jobs__time-span Present
-                                .c-jobs__block
-                                    .row
-                                        .col
-                                            h4
-                                                a.c-link.c-link__line.c-jobs__agency(target='_blank', href='https://fuselabcreative.com/') FuseLab Creative
-                                            p.c-jobs__title Product Designer
-                                        .col-auto
-                                            p.c-jobs__time-span= "Aug 2018 "
-                                            p.c-jobs__time-span Dec 2018
-                                .c-jobs__block
-                                    .row
-                                        .col
-                                            h4
-                                                a.c-link.c-link__line.c-jobs__agency(target='_blank', href='https://vsart.me/') VSArt
-                                            p.c-jobs__title Junior Web Designer
-                                        .col-auto
-                                            p.c-jobs__time-span= "Mar 2016 "
-                                            p.c-jobs__time-span Nov 2017
-                        a.c-about__resume-btn(href="/Dragos-Sargu-Resume.pdf", download)
-                            svg(height='21px', width='21px', fill='#000000', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 24 24', x='0px', y='0px')
-                                g
-                                    path(d='M22,17v4a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V17a1,1,0,0,1,2,0v3H20V17a1,1,0,0,1,2,0Zm-10.71.71A1,1,0,0,0,12,18a1.05,1.05,0,0,0,.71-.29l3.53-3.54a1,1,0,1,0-1.41-1.41L13,14.59V3a1,1,0,0,0-2,0V14.59L9.17,12.76a1,1,0,0,0-1.41,1.41Z')
-                            span Resume
+        .container
+            .o-heading--pushed
+                h2.c-heading.c-about__heading About
+        .container.c-card.c-about__card
+            .row
+                .col-sm-7.col-md-6.o-full-height
+                    p.c-about__description.
+                        I am a fresh thinking designer, starting my journey 4 years ago as a graphic designer. Because I enjoy creating working mechanisms, I moved my professional activity to the domain of web and mobile design. I have worked with both small and big design and development teams, start-ups and local businesses.
+                    .c-about__jobs
+                        .c-jobs
+                            .c-jobs__block
+                                .row
+                                    .col
+                                        h4
+                                            a.c-link.c-link__line.c-jobs__agency(target='_blank', href='https://www.freelancer.com/u/dragossargu?fbclid=IwAR0ATF0_UQQ7oHV-A6GeZDYLEZiT4Pqrhbyntws0LkKhOwB7qNnWTOjUlpQ') Freelancer
+                                        p.c-jobs__title UI/UX Designer
+                                    .col-auto
+                                        p.c-jobs__time-span= "Nov 2017 "
+                                        p.c-jobs__time-span Present
+                            .c-jobs__block
+                                .row
+                                    .col
+                                        h4
+                                            a.c-link.c-link__line.c-jobs__agency(target='_blank', href='https://fuselabcreative.com/') FuseLab Creative
+                                        p.c-jobs__title Product Designer
+                                    .col-auto
+                                        p.c-jobs__time-span= "Aug 2018 "
+                                        p.c-jobs__time-span Dec 2018
+                            .c-jobs__block
+                                .row
+                                    .col
+                                        h4
+                                            a.c-link.c-link__line.c-jobs__agency(target='_blank', href='https://vsart.me/') VSArt
+                                        p.c-jobs__title Junior Web Designer
+                                    .col-auto
+                                        p.c-jobs__time-span= "Mar 2016 "
+                                        p.c-jobs__time-span Nov 2017
+                    a.c-about__resume-btn(href="/Dragos-Sargu-Resume.pdf", download)
+                        svg(height='21px', width='21px', fill='#000000', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 24 24', x='0px', y='0px')
+                            g
+                                path(d='M22,17v4a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V17a1,1,0,0,1,2,0v3H20V17a1,1,0,0,1,2,0Zm-10.71.71A1,1,0,0,0,12,18a1.05,1.05,0,0,0,.71-.29l3.53-3.54a1,1,0,1,0-1.41-1.41L13,14.59V3a1,1,0,0,0-2,0V14.59L9.17,12.76a1,1,0,0,0-1.41,1.41Z')
+                        span Resume
 
-                    .col-12.col-sm-5.offset-md-1.order-first.order-sm-0
-                        img.c-about__image(src='/images/portrait.jpg', alt='Dragos Sargu, Designer')
+                .col-12.col-sm-5.offset-md-1.order-first.order-sm-0
+                    img.c-about__image(src='/images/portrait.jpg', alt='Dragos Sargu, Designer')
     .c-testimonials
         .container
             .row

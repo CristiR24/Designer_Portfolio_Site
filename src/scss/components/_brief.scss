@@ -1,0 +1,16 @@
+.c-brief {
+    overflow: hidden;
+
+    &__heading {
+        left: 16px;
+    }
+
+    &__card {
+        padding-top: 120px;
+        padding-bottom: 120px;
+
+        &::before {
+            left: calc(-1 * ((100vw - 100%) / 4) + 1px);
+        }
+    }
+}

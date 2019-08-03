@@ -6,20 +6,6 @@
 	color: $color;
 }
 
-@mixin position-heading($breakpoint) {
-	$container-max-width: map-get($container-max-widths, $breakpoint);
-
-	@include media-breakpoint-up($breakpoint) {
-		transform: rotate(-90deg) translateY(-125%);
-
-		// width of the outer grid section
-		$container-aside-width: 100vw - #{$container-max-width};
-		// divide by 4 to position the heading in the middle of
-		// the container-aside space
-		left: calc( (#{$container-aside-width}) / 4 );
-	}
-}
-
 @mixin position-card-left(
     $offset-columns: 0,
 	$max-widths: $container-max-widths,

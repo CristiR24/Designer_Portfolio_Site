@@ -1171,11 +1171,9 @@ p,
 @media (min-width: 1240px) {
   .o-heading--pushed {
     position: absolute;
-    z-index: 5; } }
-  @media (min-width: 1240px) and (min-width: 1240px) {
-    .o-heading--pushed {
-      transform: rotate(-90deg) translateY(-125%);
-      left: calc( (100vw - 980px) / 4); } }
+    z-index: 5;
+    transform: translateX(-50%) rotateZ(-90deg) translateX(-40%);
+    left: calc(-1 * ((100vw - 100%) / 4)); } }
 
 @media (max-width: 729.98px) {
   .o-full-width\@down-xs {
@@ -1196,6 +1194,9 @@ p,
 .o-icon__telegram {
   width: 20px;
   height: 18px; }
+
+.o-proj-desc__block + .o-proj-desc__block {
+  margin-top: 240px; }
 
 .c-nav--big {
   padding-top: 40px;
@@ -1276,31 +1277,15 @@ p,
         .c-404__card::before {
           right: -20px; } }
 
-.c-card {
-  position: relative;
-  background: #fafafa; }
-  .c-card__left {
-    width: 100%; }
-    @media (min-width: 1020px) {
-      .c-card__left {
-        right: calc(50% - 489.5px + 0px); } }
-    @media (min-width: 1240px) {
-      .c-card__left {
-        right: calc(50% - 490px + 0px); } }
-    @media (min-width: 890px) and (max-width: 1019.98px) {
-      .c-card__left {
-        margin-right: 20px; }
-        .c-card__left .container {
-          padding-right: 20px; } }
-  .c-card__center {
-    margin-left: auto;
-    margin-right: auto; }
-    @media (min-width: 1020px) {
-      .c-card__center {
-        max-width: 1102.16667px; } }
-    @media (min-width: 1240px) {
-      .c-card__center {
-        max-width: 1103.33333px; } }
+.c-card::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  background: #fafafa;
+  z-index: -1; }
 
 .c-link {
   color: inherit;
@@ -1414,14 +1399,20 @@ p,
 .u-flex-dir__col {
   flex-direction: column; }
 
+.u-mg-t__20 {
+  margin-top: 20px; }
+
+.u-mg-t__40 {
+  margin-top: 40px; }
+
 .u-mg-t__60 {
   margin-top: 60px; }
 
-.u-mg-t__20 {
-  margin-top: 20px; }
-  @media (min-width: 730px) {
-    .u-mg-t__20\@up-sm {
-      margin-top: 20px; } }
+.u-mg-t__140 {
+  margin-top: 140px; }
+
+.u-mg-b__80 {
+  margin-bottom: 80px; }
 
 .u-mg-r__zero {
   margin-right: 0; }
@@ -1450,3 +1441,6 @@ p,
       @media (max-width: 889.98px) {
         .u-hyphen--manual\@down-sm {
           hyphens: manual; } }
+
+.u-gray-text {
+  color: #cacaca; }

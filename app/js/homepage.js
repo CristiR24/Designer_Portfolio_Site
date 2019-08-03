@@ -1,1 +1,1 @@
-"use strict";addOnLoad(function(){initTypeAnimation(),arrows.length>0&&animateArrowLinks()});
+"use strict";addOnLoad(function(){initTypeAnimation(),arrows.length>0&&animateArrows()});

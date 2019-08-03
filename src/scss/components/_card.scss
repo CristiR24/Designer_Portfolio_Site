@@ -1,28 +1,12 @@
 .c-card {
-	position: relative;
-	background: $snow-white;
-
-	&__left {
-		width: 100%;
-
-		// sets the "right" property for all screen sizes
-		@include position-card-left();
-
-		@include media-breakpoint-only(md) {
-			margin-right: 20px;
-
-			& .container {
-				padding-right: $grid-gutter-width;
-			}
-		}
-	}
-
-	&__center {
-		margin-left: auto;
-		margin-right: auto;
-
-		// sets the "width" property for all screen sizes
-		// 1 is the number of columns the card offsets the grid
-		@include card-center-grid-offset(1);
-	}
+	&::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100%;
+        background: $snow-white;
+        z-index: -1;
+    }
 }
