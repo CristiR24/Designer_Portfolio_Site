@@ -33,7 +33,8 @@ sliderImg1.addEventListener('drag', e => e.preventDefault());
 sliderImg2.addEventListener('drag', e => e.preventDefault());
 
 function slide(event, transition) {
-    const sliderPos = event.x - sliderRect.left;
+    const sliderPos = event.pageX - sliderRect.left;
+    console.log(sliderPos);
 
     sliderStyle.innerHTML = `
         .c-slider::before{
@@ -51,7 +52,7 @@ function slide(event, transition) {
     sliderImg2.style.transition = transition;
 }
 
-slider.addEventListener('click', event => slide(event, '0.3s ease-in-out'));
+slider.addEventListener('click', event => slide(event, '0.2s ease-in-out'));
 
 handle.addEventListener('mousedown', () => {
     function moveSlider(event) {
@@ -59,10 +60,25 @@ handle.addEventListener('mousedown', () => {
         if (event.buttons === 0) {
             slider.removeEventListener('mousemove', moveSlider);
         }
-        const sliderPos = event.x - sliderRect.left;
+        const sliderPos = event.pageX - sliderRect.left;
         if (sliderPos > 0 && sliderPos < sliderRect.width) {
             slide(event);
         }
     }
     slider.addEventListener('mousemove', moveSlider);
+});
+handle.addEventListener('touchstart', () => {
+    function moveSlider(event) {
+        event.preventDefault();
+        const sliderPos = event.touches[0].pageX - sliderRect.left;
+        if (sliderPos > 0 && sliderPos < sliderRect.width) {
+            slide(event.touches[0]);
+        }
+    }
+    const end = () => {
+        slider.removeEventListener('touchmove', moveSlider);
+        slider.removeEventListener('touchend', end);
+    };
+    slider.addEventListener('touchmove', moveSlider);
+    slider.addEventListener('touchend', end);
 });
