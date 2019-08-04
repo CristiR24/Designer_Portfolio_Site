@@ -34,7 +34,6 @@ sliderImg2.addEventListener('drag', e => e.preventDefault());
 
 function slide(event, transition) {
     const sliderPos = event.pageX - sliderRect.left;
-    console.log(sliderPos);
 
     sliderStyle.innerHTML = `
         .c-slider::before{
