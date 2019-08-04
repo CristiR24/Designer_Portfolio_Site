@@ -19,6 +19,7 @@
         object-fit: cover;
         user-select: none;
         -webkit-user-drag: none;
+        user-drag: none;
 
         &:nth-of-type(2n + 1) {
             object-position: left center;

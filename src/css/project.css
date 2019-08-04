@@ -1454,7 +1454,8 @@ p,
     display: inline-block;
     object-fit: cover;
     user-select: none;
-    -webkit-user-drag: none; }
+    -webkit-user-drag: none;
+    user-drag: none; }
     .c-slider__img:nth-of-type(2n + 1) {
       object-position: left center;
       width: 50%; }
