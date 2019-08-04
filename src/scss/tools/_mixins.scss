@@ -40,3 +40,27 @@
 		}
 	}
 }
+
+@mixin style-range-thumb() {
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        @content;
+    }
+    &::-moz-range-thumb {
+        @content;
+    }
+    &::-ms-thumb {
+        @content;
+    }
+}
+@mixin style-range-track() {
+    &::-webkit-slider-runnable-track {
+        @content;
+    }
+    &::-moz-range-track {
+        @content;
+    }
+    &::-ms-track {
+        @content;
+    }
+}

@@ -10,74 +10,101 @@ addOnLoad(() => {
 });
 
 const slider = document.querySelector('.js-slider');
-const sliderStyle = slider.appendChild(document.createElement('style'));
+const sliderStyle = document.querySelector('.js-slider__style');
 let sliderRect = slider.getBoundingClientRect();
+let previousPos = sliderRect.width / 2;
 
 const handle = document.querySelector('.js-slider__handle');
-const sliderImg1 = document.getElementsByClassName('js-slider__img')[0];
-const sliderImg2 = document.getElementsByClassName('js-slider__img')[1];
+
+const getPos = (event, rect) => event.pageX - rect.left;
 
 const imgRatio = 0.629;
+function updateSlider(pos, rect, transition) {
+    sliderStyle.innerHTML = `
+        .c-slider::before{
+            left: ${pos}px;
+            transition: ${transition};
+        }
+        .c-slider .c-slider__handle {
+            left: ${pos}px;
+            transition: ${transition};
+        }
+        .c-slider .c-slider__img {
+            height: ${rect.width * imgRatio}px;
+        }
+        .c-slider .c-slider__img:first-of-type {
+            width: ${pos}px;
+            transition: ${transition};
+        }
+        .c-slider .c-slider__img:last-of-type {
+            width: calc(100% - ${pos}px);
+            transition: ${transition};
+        }
+    `;
+    previousPos = pos;
+}
+updateSlider(previousPos, sliderRect, '');
 
-sliderImg1.style.height = `${sliderRect.width * imgRatio}px`;
-sliderImg2.style.height = `${sliderRect.width * imgRatio}px`;
 window.addEventListener('resize', () => {
     const newSliderRect = slider.getBoundingClientRect();
     sliderRect = newSliderRect;
-    sliderImg1.style.height = `${sliderRect.width * imgRatio}px`;
-    sliderImg2.style.height = `${sliderRect.width * imgRatio}px`;
+    updateSlider(previousPos, sliderRect, '');
 });
+
+// slider.addEventListener('click', (event) => {
+//     const sliderPos = getPos(event, sliderRect);
+//     updateSlider(sliderPos, sliderRect, '0.3s ease-in');
+// });
+
+// handle.addEventListener('mousedown', () => {
+//     function moveSlider(event) {
+//         event.preventDefault();
+//         event.stopPropagation();
+//         if (event.buttons === 0) {
+//             slider.removeEventListener('mousemove', moveSlider);
+//         }
+//         const sliderPos = getPos(event, sliderRect);
+//         if (sliderPos > 0 && sliderPos < sliderRect.width) {
+//             updateSlider(sliderPos, sliderRect, '');
+//         }
+//     }
+//     slider.addEventListener('mousemove', moveSlider);
+// });
+// handle.addEventListener('touchstart', () => {
+//     function moveSlider(event) {
+//         event.preventDefault();
+//         event.stopPropagation();
+//         const sliderPos = getPos(event.touches[0], sliderRect);
+//         if (sliderPos > 0 && sliderPos < sliderRect.width) {
+//             updateSlider(sliderPos, sliderRect, '');
+//         }
+//     }
+//     const end = () => {
+//         slider.removeEventListener('touchmove', moveSlider);
+//         slider.removeEventListener('touchend', end);
+//     };
+//     slider.addEventListener('touchmove', moveSlider);
+//     slider.addEventListener('touchend', end);
+// });
+
+const sliderImages = document.getElementsByClassName('c-slider__img');
 // prevent the dragging of images
 slider.addEventListener('drag', e => e.preventDefault());
-sliderImg1.addEventListener('drag', e => e.preventDefault());
-sliderImg2.addEventListener('drag', e => e.preventDefault());
-
-function slide(event, transition) {
-    const sliderPos = event.pageX - sliderRect.left;
-
-    sliderStyle.innerHTML = `
-        .c-slider::before{
-            left:${sliderPos}px;
-            transition: ${transition};
-        }`;
-
-    handle.style.left = `${sliderPos}px`;
-    handle.style.transition = transition;
-
-    sliderImg1.style.width = `${sliderPos}px`;
-    sliderImg1.style.transition = transition;
-
-    sliderImg2.style.width = `calc(100% - ${sliderPos}px)`;
-    sliderImg2.style.transition = transition;
+for (const img of sliderImages) {
+    img.addEventListener('drag', e => e.preventDefault());
 }
 
-slider.addEventListener('click', event => slide(event, '0.2s ease-in-out'));
+const range = document.querySelector('.js-slider__range');
+// compensate the thumb width
+range.setAttribute('max', `${sliderRect.width - 13}`);
+range.setAttribute('value', `${sliderRect.width / 2}`);
 
-handle.addEventListener('mousedown', () => {
-    function moveSlider(event) {
-        event.preventDefault();
-        if (event.buttons === 0) {
-            slider.removeEventListener('mousemove', moveSlider);
-        }
-        const sliderPos = event.pageX - sliderRect.left;
-        if (sliderPos > 0 && sliderPos < sliderRect.width) {
-            slide(event);
-        }
+slider.addEventListener('click', (event) => {
+    const sliderPos = getPos(event, sliderRect);
+    if (sliderPos > 0 && sliderPos < sliderRect.width) {
+        updateSlider(sliderPos, sliderRect, '.2s ease-in');
+        range.value = sliderPos;
     }
-    slider.addEventListener('mousemove', moveSlider);
 });
-handle.addEventListener('touchstart', () => {
-    function moveSlider(event) {
-        event.preventDefault();
-        const sliderPos = event.touches[0].pageX - sliderRect.left;
-        if (sliderPos > 0 && sliderPos < sliderRect.width) {
-            slide(event.touches[0]);
-        }
-    }
-    const end = () => {
-        slider.removeEventListener('touchmove', moveSlider);
-        slider.removeEventListener('touchend', end);
-    };
-    slider.addEventListener('touchmove', moveSlider);
-    slider.addEventListener('touchend', end);
-});
+range.addEventListener('input', () => updateSlider(range.value, sliderRect, ''));
+range.addEventListener('change', () => updateSlider(range.value, sliderRect, ''));
