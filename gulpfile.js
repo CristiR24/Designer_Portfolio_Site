@@ -1,31 +1,32 @@
-const gulp = require("gulp");
-const sass = require("gulp-sass");
-const browserSync = require("browser-sync").create();
-const cleanCSS = require("gulp-clean-css");
-const autoprefixer = require("gulp-autoprefixer");
-const del = require("del");
-const babel = require("gulp-babel");
-const terser = require("gulp-terser");
-const pug = require("gulp-pug");
+const sass = require('gulp-sass');
+const browserSync = require('browser-sync').create();
+const cleanCSS = require('gulp-clean-css');
+const autoprefixer = require('gulp-autoprefixer');
+const del = require('del');
+const babel = require('gulp-babel');
+const terser = require('gulp-terser');
+const pug = require('gulp-pug');
 
-const {src, dest, watch, parallel, series} = require("gulp");
+const {
+    src, dest, watch, parallel, series,
+} = require('gulp');
 
 const dir = {
-    html: "src/*.html",
-    pug: "src/pug/**/*.pug",
-    pugPages: "src/pug/*.pug",
-    fonts: "src/fonts/**/*.otf",
-    images: "src/images/**/*.+(png|jpg|jpeg|gif|svg)",
-    scss: "src/scss/**/*.scss",
-    css: "src/css",
-    js: "src/js/**/*.js"
+    html: 'src/*.html',
+    pug: 'src/pug/**/*.pug',
+    pugPages: 'src/pug/*.pug',
+    fonts: 'src/fonts/**/*.otf',
+    images: 'src/images/**/*.+(png|jpg|jpeg|gif|svg)',
+    scss: 'src/scss/**/*.scss',
+    css: 'src/css',
+    js: 'src/js/**/*.js',
 };
 
 function server(done) {
     browserSync.init({
         server: {
-            baseDir: "src"
-        }
+            baseDir: 'src',
+        },
     });
     done();
 }
@@ -36,47 +37,47 @@ function browserSyncReload(done) {
 }
 
 function clean() {
-    return del(["app/*", "src/css/*.css"]);
+    return del(['app/*', 'src/css/*.css']);
 }
 
 function html() {
     return src(dir.html)
-        .pipe(dest("app"));
+        .pipe(dest('app'));
 }
 
 function pugCompile() {
     return src(dir.pugPages)
         .pipe(pug())
-        .pipe(dest("src"));
+        .pipe(dest('src'));
 }
 
 function fonts() {
     return src(dir.fonts)
-        .pipe(dest("app/fonts"));
+        .pipe(dest('app/fonts'));
 }
 
 function images() {
     return src(dir.images)
-        .pipe(dest("app/images"))
+        .pipe(dest('app/images'));
 }
 
 function styles() {
     return src(dir.scss)
         .pipe(sass())
         .pipe(dest(dir.css))
-        .pipe(autoprefixer(["last 15 versions"]))
+        .pipe(autoprefixer(['last 15 versions']))
         .pipe(cleanCSS())
-        .pipe(dest("app/css"))
+        .pipe(dest('app/css'))
         .pipe(browserSync.stream());
 }
 
 function script() {
     return src(dir.js)
         .pipe(babel({
-            presets: ['@babel/preset-env']
+            presets: ['@babel/preset-env'],
         }))
         .pipe(terser())
-        .pipe(dest("app/js"));
+        .pipe(dest('app/js'));
 }
 
 function watchFiles() {
@@ -89,7 +90,9 @@ function watchFiles() {
 }
 
 // complex tasks
-const build = series(clean, parallel(html, pugCompile, fonts, images, styles, script));
+const build = series(clean, parallel(
+    html, pugCompile, fonts, images, styles, script,
+));
 const serve = series(build, parallel(watchFiles, server));
 
 // export tasks
