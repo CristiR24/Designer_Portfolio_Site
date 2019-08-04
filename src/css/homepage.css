@@ -1531,7 +1531,7 @@ p,
   .c-contact__title {
     margin-bottom: 9px; }
   .c-contact__mail {
-    transition: .3s;
+    transition: .2s ease-out;
     color: #cacaca; }
     .c-contact__mail:hover {
       color: #2e2e2e; }

@@ -1385,10 +1385,12 @@ p,
   .c-style__btn--hover {
     background: white;
     color: #d74b4b;
-    box-shadow: 0 2px 27pt #00000015; }
+    box-shadow: 0 2px 27pt #c0515115; }
   .c-style__btn--click {
+    transform: scale(0.94445);
     background: #d74b4b;
-    color: white; }
+    color: white;
+    box-shadow: 1px 1px 27pt #c9222248; }
 
 .c-color {
   margin: 10px 0;
@@ -1456,11 +1458,18 @@ p,
   .c-thanks__link {
     line-height: 22px;
     display: block;
-    width: fit-content; }
+    width: fit-content;
+    transition: .2s ease-out; }
     .c-thanks__link + .c-thanks__link {
       margin-top: 40px; }
     .c-thanks__link:first-child {
       margin-top: 7px; }
+    .c-thanks__link:hover {
+      color: #cacaca; }
+    .c-thanks__link:active {
+      color: #cacaca; }
+      .c-thanks__link:active .c-underline::after {
+        background: #cacaca; }
 
 .c-contact {
   padding-top: 360px;
@@ -1477,7 +1486,7 @@ p,
   .c-contact__title {
     margin-bottom: 9px; }
   .c-contact__mail {
-    transition: .3s;
+    transition: .2s ease-out;
     color: #cacaca; }
     .c-contact__mail:hover {
       color: #2e2e2e; }

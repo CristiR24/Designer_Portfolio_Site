@@ -47,11 +47,13 @@
         &--hover {
             background: white;
             color: #d74b4b;
-            box-shadow: $default-shadow;
+            box-shadow: 0 2px 27pt #c0515115;
         }
         &--click {
+            transform: scale(0.94445);
             background: #d74b4b;
             color: white;
+            box-shadow: 1px 1px 27pt #c9222248;
         }
     }
 }

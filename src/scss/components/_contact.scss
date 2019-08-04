@@ -21,7 +21,7 @@
 
     &__mail {
         @extend h4;
-        transition: .3s;
+        transition: .2s ease-out;
         color: $smoke-gray;
 
         &:hover {
