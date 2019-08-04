@@ -203,8 +203,12 @@ block content
                     .col-5.offset-3
                         p King’s Tailor Shop is based on a custom grid 6 columns with absolutely no gutter.  This grid allowed me to pull off such interesting and responsive layouts.
                     .col-11
-                        img.c-grid-sec__image(src='/images/kings-tailor/grid.jpg')
-
+                        .c-grid-sec__slider.c-slider.js-slider
+                            img.c-slider__img.js-slider__img(src='/images/kings-tailor/no-grid.jpg', draggable='false')
+                            img.c-slider__img.js-slider__img(src='/images/kings-tailor/grid.jpg', draggable='false')
+                            .c-slider__handle.js-slider__handle
+                                .c-slider__arrow
+                                .c-slider__arrow
     .c-thanks
         .container
             .row
