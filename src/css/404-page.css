@@ -1218,8 +1218,9 @@ p,
   width: 20px;
   height: 18px; }
 
-.o-proj-desc__block + .o-proj-desc__block {
-  margin-top: 240px; }
+@media (min-width: 1240px) {
+  .o-proj-desc__block + .o-proj-desc__block {
+    margin-top: 240px; } }
 
 .c-nav--big {
   padding-top: 40px;
@@ -1311,6 +1312,10 @@ p,
   z-index: -1; }
 
 .c-link {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
   color: inherit;
   position: relative; }
   .c-link__line::after {

@@ -1214,8 +1214,9 @@ p,
   width: 20px;
   height: 18px; }
 
-.o-proj-desc__block + .o-proj-desc__block {
-  margin-top: 240px; }
+@media (min-width: 1240px) {
+  .o-proj-desc__block + .o-proj-desc__block {
+    margin-top: 240px; } }
 
 @keyframes blink {
   0% {

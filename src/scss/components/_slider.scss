@@ -26,6 +26,7 @@
         }
         &:nth-of-type(2n) {
             object-position: right center;
+            margin-left: auto;
             width: 50%;
         }
     }
@@ -71,13 +72,13 @@
 
     &__range {
         // disable input on click
-        pointer-events: none;
+        // pointer-events: none;
         // disable window scroll on touch move
         touch-action: none;
         z-index: 3;
         height: 100%;
         @include style-range-thumb() {
-            pointer-events: auto;
+            // pointer-events: auto;
             height: 26px;
             width: 26px;
             border-radius: 50%;

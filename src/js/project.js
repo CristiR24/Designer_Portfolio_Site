@@ -45,12 +45,6 @@ function updateSlider(pos, rect, transition) {
 }
 updateSlider(previousPos, sliderRect, '');
 
-window.addEventListener('resize', () => {
-    const newSliderRect = slider.getBoundingClientRect();
-    sliderRect = newSliderRect;
-    updateSlider(previousPos, sliderRect, '');
-});
-
 // slider.addEventListener('click', (event) => {
 //     const sliderPos = getPos(event, sliderRect);
 //     updateSlider(sliderPos, sliderRect, '0.3s ease-in');
@@ -87,24 +81,40 @@ window.addEventListener('resize', () => {
 //     slider.addEventListener('touchend', end);
 // });
 
-const sliderImages = document.getElementsByClassName('c-slider__img');
-// prevent the dragging of images
-slider.addEventListener('drag', e => e.preventDefault());
-for (const img of sliderImages) {
-    img.addEventListener('drag', e => e.preventDefault());
-}
-
 const range = document.querySelector('.js-slider__range');
 // compensate the thumb width
-range.setAttribute('max', `${sliderRect.width - 13}`);
-range.setAttribute('value', `${sliderRect.width / 2}`);
+range.max = sliderRect.width - 13;
+range.value = Math.round(sliderRect.width / 2);
 
-slider.addEventListener('click', (event) => {
-    const sliderPos = getPos(event, sliderRect);
-    if (sliderPos > 0 && sliderPos < sliderRect.width) {
-        updateSlider(sliderPos, sliderRect, '.2s ease-in');
-        range.value = sliderPos;
-    }
+// slider.addEventListener('click', (event) => {
+//     const sliderPos = getPos(event, sliderRect);
+//     if (sliderPos > range.min && sliderPos < range.max) {
+//         updateSlider(sliderPos, sliderRect, '1s linear');
+//         range.value = sliderPos;
+//     } else if (sliderPos < range.min) {
+//         updateSlider(range.min, sliderRect, '1s linear');
+//         range.value = range.min;
+//     } else {
+//         updateSlider(range.max, sliderRect, '1s linear');
+//         range.value = range.max;
+//     }
+// });
+range.addEventListener('input', (event) => {
+    event.stopPropagation();
+    updateSlider(range.value, sliderRect, '');
 });
-range.addEventListener('input', () => updateSlider(range.value, sliderRect, ''));
-range.addEventListener('change', () => updateSlider(range.value, sliderRect, ''));
+range.addEventListener('change', (event) => {
+    event.stopPropagation();
+    updateSlider(range.value, sliderRect, '');
+});
+
+window.addEventListener('resize', () => {
+    const rangeRatio = range.value / range.max;
+
+    const newSliderRect = slider.getBoundingClientRect();
+    sliderRect = newSliderRect;
+
+    range.max = sliderRect.width - 13;
+    range.value = Math.round(range.max * rangeRatio);
+    updateSlider(range.value, sliderRect, '');
+});

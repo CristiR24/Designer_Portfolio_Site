@@ -99,7 +99,9 @@
 }
 
 .o-proj-desc {
-    &__block + &__block {
-        margin-top: 240px;
+    @include media-breakpoint-up(xl) {
+        &__block + &__block {
+            margin-top: 240px;
+        }
     }
 }

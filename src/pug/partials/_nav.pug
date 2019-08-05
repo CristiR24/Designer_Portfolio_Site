@@ -6,26 +6,27 @@
 
 mixin navContent
     .row
-        .col
-            if backHomepageNav
-                a.c-link.c-link__arrow.c-link__arrow--reverse.c-nav__link(href = '/')
+        if backHomepageNav
+            .col.c-nav__link
+                a.c-link.c-link__arrow.c-link__arrow--reverse(href = '/')
                     include _arrow-reverse
                     span Back to Homepage
-            else
-                a.c-nav__mail(href='mailto:business@dragossargu.com').
+        else
+            .col.c-nav__mail
+                a.c-link(href='mailto:business@dragossargu.com').
                     business@dragossargu.com
         .col-auto.col-sm-5.col-md-4.u-flex-align__lc(
             class = mobileLinksNav ?
                 'o-mobile-nav-poz': '')
             ul.o-list.o-list__desktop
-                li
-                    a.c-link.c-link__line.c-link__line--sm.c-nav__link(target='_blank', href='https://dribbble.com/dragos_sargu').
+                li.c-nav__link
+                    a.c-link.c-link__line.c-link__line--sm(target='_blank', href='https://dribbble.com/dragos_sargu').
                         Dribbble
-                li
-                    a.c-link.c-link__line.c-link__line--sm.c-nav__link(target='_blank', href='https://www.behance.net/dragos_sargu?fbclid=IwAR1T7mY5uI0hyMioCgI-bkggJFNc1HRHWi1pLz1CHRBNYNB9dc3Q5s1gMD0').
+                li.c-nav__link
+                    a.c-link.c-link__line.c-link__line--sm(target='_blank', href='https://www.behance.net/dragos_sargu?fbclid=IwAR1T7mY5uI0hyMioCgI-bkggJFNc1HRHWi1pLz1CHRBNYNB9dc3Q5s1gMD0').
                         Behance
-                li
-                    a.c-link.c-link__line.c-link__line--sm.c-nav__link(target='_blank', href='https://t.me/dragos_sargu').
+                li.c-nav__link
+                    a.c-link.c-link__line.c-link__line--sm(target='_blank', href='https://t.me/dragos_sargu').
                         Telegram
             if mobileLinksNav
                 ul.o-list__mobile

@@ -7,6 +7,12 @@
         &::before {
             right: calc(24.6% + 20px);
         }
+
+        @include media-breakpoint-down(sm) {
+            &::before {
+                right: calc(12.5% + 20px);
+            }
+        }
     }
 
 	&__mail {
@@ -25,7 +31,8 @@
 	}
 
 	&__stats {
-        padding: 80px 0;
+        padding-bottom: 80px;
+        padding-top: 80px;
 	}
 
 	&__title {
@@ -42,16 +49,14 @@
 		font-weight: 700;
 		font-size: 16px;
 		color: #2E2E2E;
-		letter-spacing: 1.33px;
-		position: relative;
+        letter-spacing: 1.33px;
 
-		@include media-breakpoint-up(sm) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-		}
-
-		@include media-breakpoint-down(xs) {
-			margin-top: 80px;
-			display: inline-block;
-		}
+        @include media-breakpoint-down(sm) {
+            justify-content: flex-end;
+        }
 	}
 }

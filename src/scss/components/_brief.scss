@@ -2,7 +2,7 @@
     overflow: hidden;
 
     &__heading {
-        left: 16px;
+        right: 105px;
     }
 
     &__card {
@@ -11,6 +11,9 @@
 
         &::before {
             left: calc(-1 * ((100vw - 100%) / 4) + 1px);
+            @include media-breakpoint-down(lg) {
+                left: calc(-1 * (100vw - 100%) / 2 + 60px);
+            }
         }
     }
 }
