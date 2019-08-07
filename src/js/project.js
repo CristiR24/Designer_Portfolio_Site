@@ -9,112 +9,54 @@ addOnLoad(() => {
     }
 });
 
-const slider = document.querySelector('.js-slider');
-const sliderStyle = document.querySelector('.js-slider__style');
-let sliderRect = slider.getBoundingClientRect();
-let previousPos = sliderRect.width / 2;
+const overlay = document.querySelector('.c-slider__overlay');
+const handle = document.querySelector('.c-slider__handle');
+const slider = document.querySelector('.c-slider');
+let leftOffset = slider.getBoundingClientRect().left;
+let sliderWidth = slider.getBoundingClientRect().width;
 
-const handle = document.querySelector('.js-slider__handle');
+const getPos = event => event.pageX - leftOffset;
 
-const getPos = (event, rect) => event.pageX - rect.left;
-
-const imgRatio = 0.629;
-function updateSlider(pos, rect, transition) {
-    sliderStyle.innerHTML = `
-        .c-slider::before{
-            left: ${pos}px;
-            transition: ${transition};
-        }
-        .c-slider .c-slider__handle {
-            left: ${pos}px;
-            transition: ${transition};
-        }
-        .c-slider .c-slider__img {
-            height: ${rect.width * imgRatio}px;
-        }
-        .c-slider .c-slider__img:first-of-type {
-            width: ${pos}px;
-            transition: ${transition};
-        }
-        .c-slider .c-slider__img:last-of-type {
-            width: calc(100% - ${pos}px);
-            transition: ${transition};
-        }
-    `;
-    previousPos = pos;
+function slide(pos, transition) {
+    if (pos < sliderWidth) {
+        const percent = pos / sliderWidth * 100;
+        overlay.style.width = `${percent}%`;
+        overlay.style.transition = transition;
+    }
 }
-updateSlider(previousPos, sliderRect, '');
 
-// slider.addEventListener('click', (event) => {
-//     const sliderPos = getPos(event, sliderRect);
-//     updateSlider(sliderPos, sliderRect, '0.3s ease-in');
-// });
-
-// handle.addEventListener('mousedown', () => {
-//     function moveSlider(event) {
-//         event.preventDefault();
-//         event.stopPropagation();
-//         if (event.buttons === 0) {
-//             slider.removeEventListener('mousemove', moveSlider);
-//         }
-//         const sliderPos = getPos(event, sliderRect);
-//         if (sliderPos > 0 && sliderPos < sliderRect.width) {
-//             updateSlider(sliderPos, sliderRect, '');
-//         }
-//     }
-//     slider.addEventListener('mousemove', moveSlider);
-// });
-// handle.addEventListener('touchstart', () => {
-//     function moveSlider(event) {
-//         event.preventDefault();
-//         event.stopPropagation();
-//         const sliderPos = getPos(event.touches[0], sliderRect);
-//         if (sliderPos > 0 && sliderPos < sliderRect.width) {
-//             updateSlider(sliderPos, sliderRect, '');
-//         }
-//     }
-//     const end = () => {
-//         slider.removeEventListener('touchmove', moveSlider);
-//         slider.removeEventListener('touchend', end);
-//     };
-//     slider.addEventListener('touchmove', moveSlider);
-//     slider.addEventListener('touchend', end);
-// });
-
-const range = document.querySelector('.js-slider__range');
-// compensate the thumb width
-range.max = sliderRect.width - 13;
-range.value = Math.round(sliderRect.width / 2);
-
-// slider.addEventListener('click', (event) => {
-//     const sliderPos = getPos(event, sliderRect);
-//     if (sliderPos > range.min && sliderPos < range.max) {
-//         updateSlider(sliderPos, sliderRect, '1s linear');
-//         range.value = sliderPos;
-//     } else if (sliderPos < range.min) {
-//         updateSlider(range.min, sliderRect, '1s linear');
-//         range.value = range.min;
-//     } else {
-//         updateSlider(range.max, sliderRect, '1s linear');
-//         range.value = range.max;
-//     }
-// });
-range.addEventListener('input', (event) => {
-    event.stopPropagation();
-    updateSlider(range.value, sliderRect, '');
+handle.addEventListener('mousedown', () => {
+    function updateSlider(event) {
+        if (event.buttons === 0) {
+            slider.removeEventListener('mousemove', updateSlider);
+            return;
+        }
+        const pos = getPos(event);
+        slide(pos, '');
+    }
+    slider.addEventListener('mousemove', updateSlider);
 });
-range.addEventListener('change', (event) => {
-    event.stopPropagation();
-    updateSlider(range.value, sliderRect, '');
+
+handle.addEventListener('touchstart', () => {
+    function updateSlider(event) {
+        const pos = getPos(event.touches[0]);
+        slide(pos, '');
+    }
+    const end = () => {
+        slider.removeEventListener('touchmove', updateSlider);
+        slider.removeEventListener('touchend', end);
+    };
+    slider.addEventListener('touchmove', updateSlider);
+    slider.addEventListener('touchend', end);
+});
+
+slider.addEventListener('click', (event) => {
+    event.preventDefault();
+    const pos = getPos(event);
+    slide(pos, '0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) all');
 });
 
 window.addEventListener('resize', () => {
-    const rangeRatio = range.value / range.max;
-
-    const newSliderRect = slider.getBoundingClientRect();
-    sliderRect = newSliderRect;
-
-    range.max = sliderRect.width - 13;
-    range.value = Math.round(range.max * rangeRatio);
-    updateSlider(range.value, sliderRect, '');
+    leftOffset = slider.getBoundingClientRect().left;
+    sliderWidth = slider.getBoundingClientRect().width;
 });

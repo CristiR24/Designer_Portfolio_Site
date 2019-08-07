@@ -1,0 +1,39 @@
+extends layouts/_layout
+
+block variables
+    - var backHomepageNav = true
+    - var outerNav = true
+    - var hideNavMobile = false
+    - var mobileLinksNav = false
+
+    -
+        var seo = {
+            title: 'King\'s Tailor Shop',
+            description: 'We don’t see people wearing tailored clothing much nowadays. There are no two identical people, so why should their clothing be. If you want your look elevated to the next level, you should try going to a tailor.',
+            image: '/images/kings-tailor/thumbnail.jpg',
+            url: 'https://www.dragossargu.com/KTS.html'
+        }
+
+append meta
+    include partials/_seo
+    meta(name='robots', content='noindex, follow')
+
+append styles
+    link(rel="stylesheet", href="/css/realpixels.css")
+
+block content
+    include partials/_nav
+
+    img(src='/images/kings-tailor/realpixels/hero.jpg')
+    img(src='/images/kings-tailor/realpixels/services.jpg')
+    img(src='/images/kings-tailor/realpixels/heritage.jpg')
+    img(src='/images/kings-tailor/realpixels/process.jpg')
+    img(src='/images/kings-tailor/realpixels/testimonials.jpg')
+    img(src='/images/kings-tailor/realpixels/contact.jpg')
+
+    include partials/_contact
+
+    include partials/_footer
+
+append scripts
+    script(src = "/js/realpixels.js")

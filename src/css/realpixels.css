@@ -36,6 +36,7 @@ h1,
 h2,
 h3,
 h4,
+.c-contact__mail,
 h5,
 .c-nav__link,
 h6,
@@ -1083,7 +1084,8 @@ h5,
 
 h2,
 h3,
-h4 {
+h4,
+.c-contact__mail {
   font-family: "Montserrat"; }
 
 h1 {
@@ -1120,7 +1122,9 @@ h3 {
   line-height: 1.875rem;
   color: #2e2e2e; }
 
-h4 {
+
+h4,
+.c-contact__mail {
   font-weight: 600;
   font-size: 1.125rem;
   letter-spacing: 0;
@@ -1215,33 +1219,53 @@ p,
   .o-proj-desc__block + .o-proj-desc__block {
     margin-top: 240px; } }
 
-@keyframes blink {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
-
-.o-type__placeholder {
-  visibility: hidden; }
-
-.o-type__container {
+.c-arrow {
+  width: 174px;
+  height: 12px;
   position: absolute;
-  padding-right: 10px;
-  top: 0; }
+  bottom: calc(50% - 1px);
+  transform: translateY(50%);
+  right: 0; }
+  .c-arrow path {
+    transition: .1s ease-in-out; }
+  .c-arrow__line {
+    stroke: #2e2e2e; }
+  .c-arrow--reverse {
+    width: 244px;
+    right: unset; }
 
-.o-type__wrap {
-  hyphens: none; }
-  @media (max-width: 889.98px) {
-    .o-type__wrap {
-      hyphens: manual; } }
-
-.o-type__cursor {
-  display: inline;
-  font-weight: 300;
-  font-size: 1.27em;
-  line-height: 1; }
-  .o-type__cursor--md {
-    font-size: 1.1em; }
+.c-link {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  position: relative; }
+  .c-link__line::after {
+    content: '';
+    display: block;
+    background: #d8d8d8;
+    height: 2px;
+    width: 0;
+    position: absolute;
+    right: -2px;
+    bottom: 40%;
+    opacity: 0;
+    transition: .1s ease-in-out; }
+  .c-link__line--sm::after {
+    bottom: 35%; }
+  .c-link__line:hover::after {
+    opacity: 1;
+    width: calc(100% + 4px); }
+  .c-link__line:active {
+    color: #cacaca; }
+    .c-link__line:active::after {
+      background: #2e2e2e; }
+  .c-link__arrow span {
+    margin-right: 63px; }
+  .c-link__arrow--reverse span {
+    margin-right: 0;
+    margin-left: 63px; }
 
 .c-nav--big {
   padding-top: 40px;
@@ -1250,28 +1274,45 @@ p,
 .c-nav__mail {
   color: #2e2e2e; }
 
-.c-teaser {
-  margin: 160px 0; }
+.c-underline {
+  position: relative;
+  padding-bottom: 5px;
+  margin-bottom: -5px;
+  color: inherit; }
+  .c-underline::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #2e2e2e;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: .3s; }
+
+.c-contact {
+  padding-top: 360px;
+  padding-bottom: 368px;
+  text-align: center; }
+  @media (max-width: 1019.98px) {
+    .c-contact {
+      padding-top: 240px;
+      padding-bottom: 248px; } }
   @media (max-width: 729.98px) {
-    .c-teaser {
-      margin: 0; } }
-  .c-teaser__text {
-    font-family: "Montserrat";
-    font-weight: 300;
-    font-size: 3rem;
-    line-height: 3.875rem;
-    letter-spacing: 0.029em;
-    color: #2e2e2e; }
-    @media (max-width: 729.98px) {
-      .c-teaser__text {
-        font-size: 2.25rem;
-        line-height: 3.375rem;
-        text-align: center; } }
-  .c-teaser__links {
-    margin-top: 20px; }
-    @media (max-width: 729.98px) {
-      .c-teaser__links {
-        display: none; } }
+    .c-contact {
+      padding-top: 280px;
+      padding-bottom: 288px; } }
+  .c-contact__title {
+    margin-bottom: 9px; }
+  .c-contact__mail {
+    transition: .2s ease-out;
+    color: #cacaca; }
+    .c-contact__mail:hover {
+      color: #2e2e2e; }
+    .c-contact__mail:active {
+      color: #cacaca; }
+      .c-contact__mail:active .c-underline::after {
+        background: #cacaca; }
 
 .c-footer {
   padding-bottom: 80px; }
