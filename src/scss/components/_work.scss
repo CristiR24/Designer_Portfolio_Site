@@ -1,19 +1,24 @@
 .c-work {
-	margin-bottom: 150px;
+    margin-bottom: 150px;
+
+    @include media-breakpoint-down(lg) {
+        margin-bottom: 260px;
+    }
 
 	// every portfolio project preceding another one
 	&__post + &__post {
 		margin-top: 80px;
-
-		@include media-breakpoint-down(xs) {
-			margin-top: 40px;
-		}
 	}
 
 	&__heading {
 
 		@include media-breakpoint-up(xl) {
 			left: 130px;
-		}
+        }
+
+        @include media-breakpoint-down(lg) {
+            transform: translateY(-100%);
+            top: -40px;
+        }
 	}
 }

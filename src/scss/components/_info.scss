@@ -1,9 +1,18 @@
 .c-info {
 
+    &__block {
+        @include media-breakpoint-down(sm) {
+            & + & {
+                margin-top: 40px;
+            }
+        }
+    }
+
 	&__title {
-		text-transform: uppercase;
-		letter-spacing: 0.2858em;
-		margin-bottom: 16px;
-		line-height: 1;
-	}
+        margin-bottom: 12px;
+        // text-transform: uppercase;
+		// letter-spacing: 0.2858em;
+		// margin-bottom: 16px;
+        // line-height: 1;
+    }
 }

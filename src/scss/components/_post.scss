@@ -2,10 +2,6 @@
 	&__image {
 		box-shadow: $default-shadow;
 		margin-bottom: 40px;
-
-		@include media-breakpoint-down(xs) {
-			margin-bottom: 20px;
-		}
 	}
 
 	&__description {
@@ -13,15 +9,22 @@
 	}
 
 	&__job {
-        color: $black;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
 
         @include media-breakpoint-only(xs) {
-            margin-top: 6px;
+            justify-content: flex-start;
+            margin-top: 20px;
         }
 	}
 
 	&__link {
 		@extend h4;
-		margin-top: 20px;
+        margin-top: 20px;
+
+        @include media-breakpoint-down(xs) {
+            margin-top: 35px;
+        }
 	}
 }

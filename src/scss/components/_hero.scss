@@ -8,7 +8,11 @@
 	@include media-breakpoint-up(xl) {
 		margin-bottom: 80px;
 		min-height: 85vh;
-	}
+    }
+
+    @include media-breakpoint-down(lg) {
+        margin-bottom: 320px;
+    }
 
 	& .container {
 		padding-right: $grid-gutter-width;
@@ -42,10 +46,6 @@
 
 		@include media-breakpoint-down(sm) {
 			margin-bottom: 20px;
-
-			.col-12 + .col-12 {
-				margin-top: 40px;
-			}
 		}
 
 		@include media-breakpoint-down(xs) {

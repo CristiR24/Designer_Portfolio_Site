@@ -1,7 +1,13 @@
 .c-grid-sec {
 
     &__heading {
-        right: 80px;
+        position: static;
+        margin-bottom: 40px;
+
+        @include media-breakpoint-up(xl) {
+            position: absolute;
+            right: 80px;
+        }
     }
 
     &__card {
@@ -10,10 +16,22 @@
         &::before {
             right: calc(81.333% + 20px);
         }
+
+        @include media-breakpoint-down(xs) {
+            padding-top: 0;
+            padding-bottom: 0;
+            &::before {
+                display: none;
+            }
+        }
     }
 
     &__slider {
         margin-top: 80px;
         box-shadow: $default-shadow;
+
+        @include media-breakpoint-down(xs) {
+            margin-top: 40px;
+        }
     }
 }

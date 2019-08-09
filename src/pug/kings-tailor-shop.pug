@@ -27,45 +27,43 @@ block content
 
     .c-overview
         .container.c-card.c-overview__card
-            .row
+            .row(class='o-full-width\@down-xs')
                 .col-12
                     img.c-overview__image(src='/images/kings-tailor/thumbnail.jpg')
+            .row
+                .col-12
                     h3.c-overview__title King's Tailor Shop
             .row
-                .col-7.col-md-6
+                .col-12.col-sm-7.col-md-6
                     p We don’t see people wearing tailored clothing much nowadays. There are no two identical people, so why should their clothing be. If you want your look elevated to the next level, you should try going to a tailor.
-                .col-5.col-md-6.c-overview__link
+                .col-12.col-sm-5.col-md-6.c-overview__link
                     a.c-link.c-link__arrow(href = '')
                         span See Live
                         include partials/_arrow
-        .container.c-overview__stats
+        .container.c-stats.c-overview__stats
             .row
-                .col-3.u-flex-align__ct
-                    .c-stat
-                        h4.c-stat__value John King
-                        p.c-stat__name Client
-                .col-3.u-flex-align__ct
-                    .c-stat
-                        h4.c-stat__value Landing Page
-                        p.c-stat__name Project
-                .col-3.u-flex-align__ct
-                    .c-stat
-                        h4.c-stat__value 40 hours
-                        p.c-stat__name Time
-                .col-3.u-flex-align__ct
-                    .c-stat
-                        h4.c-stat__value Web Design
-                        p.c-stat__name My Role
+                .col-12.col-sm-3.c-stats__block
+                    h4.c-stats__value John King
+                    p.c-stats__name Client
+                .col-12.col-sm-3.c-stats__block
+                    h4.c-stats__value Landing Page
+                    p.c-stats__name Project
+                .col-12.col-sm-3.c-stats__block
+                    h4.c-stats__value 40 hours
+                    p.c-stats__name Time
+                .col-12.col-sm-3.c-stats__block
+                    h4.c-stats__value Web Design
+                    p.c-stats__name My Role
 
     .o-proj-desc
+        .container
+            .o-heading--pushed
+                h2.c-heading.c-brief__heading Brief
         .o-proj-desc__block.c-brief
-            .container
-                .o-heading--pushed
-                    h2.c-heading.c-brief__heading Brief
             .container.c-card.c-brief__card
                 .row
-                    .col-7.col-md-6.offset-3
-                        p I have been approached with the task of creating a modern landing page for a tailor shop with a rich history behind it. Preserving heritage while designing a contemporary landing page is a must in this project. Also, the goal was to show that wearing tailored clothing is marvelous without directly saying it.  I had no restrictions design-wise as long as the client was happy with the result.
+                    .col-12.col-sm-7.col-md-6.offset-sm-3
+                        p.c-brief__description I have been approached with the task of creating a modern landing page for a tailor shop with a rich history behind it. Preserving heritage while designing a contemporary landing page is a must in this project. Also, the goal was to show that wearing tailored clothing is marvelous without directly saying it.  I had no restrictions design-wise as long as the client was happy with the result.
 
         .o-proj-desc__block.c-challenges
             .container
@@ -73,28 +71,28 @@ block content
                     h2.c-heading.c-challenges__heading Challenges
                 .c-challenges__section
                     .row
-                        .col-3.u-flex-align__cc
+                        .col-12.col-sm-3.u-flex-align__cc
                             .c-challenges__roman-i
-                        .col-7.col-md-6
-                            h4 Making it easy to shop for the conservative and/or busy ones.
-                            p.u-mg-t__20 I created a non-e-commerce — e-commerce project by getting rid of the sign-ups, virtual shopping carts, and the inserting card data on the website. This was achieved by calling the client to schedule an appointment. Also, the payment is made on the day – cash or credit card.
+                        .col-12.col-sm-7.col-md-6
+                            h4.c-challenges__title Making it easy to shop for the conservative and/or busy ones.
+                            p I created a non-e-commerce — e-commerce project by getting rid of the sign-ups, virtual shopping carts, and the inserting card data on the website. This was achieved by calling the client to schedule an appointment. Also, the payment is made on the day – cash or credit card.
                 .c-challenges__section
                     .row
-                        .col-3.u-flex-align__cc
+                        .col-12.col-sm-3.u-flex-align__cc
                             .c-challenges__roman-i
                             .c-challenges__roman-i
-                        .col-7.col-md-6
-                            h4 Preserving heritage while being modern. Standing out.
-                            p.u-mg-t__20 Using the older visual language, combined with the new school of design I achieved exactly what we needed. The font itself is from the modern serif category. The serifs provide the aged look and the high contrast between thin and thick lines are making it fresh. Also, I used strict squares and playful layouts for the exact same purpose.
+                        .col-12.col-sm-7.col-md-6
+                            h4.c-challenges__title Preserving heritage while being modern. Standing out.
+                            p Using the older visual language, combined with the new school of design I achieved exactly what we needed. The font itself is from the modern serif category. The serifs provide the aged look and the high contrast between thin and thick lines are making it fresh. Also, I used strict squares and playful layouts for the exact same purpose.
                 .c-challenges__section
                     .row
-                        .col-3.u-flex-align__cc
+                        .col-12.col-sm-3.u-flex-align__cc
                             .c-challenges__roman-i
                             .c-challenges__roman-i
                             .c-challenges__roman-i
-                        .col-7.col-md-6
-                            h4 Being appealing to the new generation of fashion-heads.
-                            p.u-mg-t__20
+                        .col-12.col-sm-7.col-md-6
+                            h4.c-challenges__title Being appealing to the new generation of fashion-heads.
+                            p
                                 | Using a subtle yet very stylish visual language is everything that the millennials need to trust a fashion brand.
                                 br
                                 | PS: Influencers! Influencers! Influencers! Having a trendsetter in the testimonials section definitely helps.
@@ -102,129 +100,129 @@ block content
         .o-proj-desc__block.c-style
             .container
                 .o-heading--pushed
-                    h2.c-heading.c-brief__heading Style
+                    h2.c-heading.c-style__heading Style
                 .c-style__section
                     .row
-                        .col-3.u-flex-align__lc
+                        .col-12.col-sm-3.u-flex-align__lc
                             h3.u-gray-text Typography
                         .col
                             .c-style__font Playfair Display
                     .row
-                        .col-6.col-md-5.col-lg-4.offset-3
+                        .col-12.col-sm-6.col-md-5.col-lg-4.offset-sm-3
                             p.u-mg-t__20 We needed it to provide history – serif. We also needed it to be fresh-looking – modern serif. I used only one font because I planned making it sophisticated by shapes colors and layouts.
                 .c-style__section
-                    .row
-                        .col-6.offset-3
-                            h5 Deep Black
-                        .col-3.col-md-2
-                            h5 Silk Red
-                    .row
-                        .col-3.u-flex-align__lc
-                            h3.u-gray-text Colors
+                    .row.c-colors
+                        .col-6.offset-sm-3
+                            h5.c-colors__name Deep Black
+                        .col-6.col-sm-3.col-md-2
+                            h5.c-colors__name.c-colors__name--right Silk Red
+                        .col-12.col-sm-3.order-first.order-sm-0.u-flex-align__lc
+                            h3.c-colors__title Colors
                         .col-6
-                            .c-color.c-color--black
-                                h5.c-color__text MAIN
-                                h5.c-color__text #333333
-                        .col-3.col-md-2
-                            .c-color.c-color--red
-                                h5.c-color__text ACCENT
-                                h5.c-color__text #D74B4B
-                    .row
-                        .col-3.offset-3
-                            .c-color.c-color--gray
-                                h5.c-color__text BACKGROUND
-                                h5.c-color__text #F5F5F5
+                            .c-colors__block.c-colors__block--main
+                                h5.c-colors__text MAIN
+                                h5.c-colors__text #333333
+                        .col-6.col-sm-3.col-md-2
+                            .c-colors__block.c-colors__block--accent
+                                h5.c-colors__text ACCENT
+                                h5.c-colors__text #D74B4B
+                        .col-6.col-3.offset-sm-3
+                            .c-colors__block.c-colors__block--bg-1
+                                h5.c-colors__text BACKGROUND
+                                h5.c-colors__text #F5F5F5
                         .col-6.col-md-5
-                            .c-color.c-color--white
-                                h5.c-color__text BACKGROUND
-                                h5.c-color__text #FFFFFF
-                    .row
-                        .col-3.offset-3
-                            h5 Milk Gray
+                            .c-colors__block.c-colors__block--bg-2
+                                h5.c-colors__text BACKGROUND
+                                h5.c-colors__text #FFFFFF
+                        .col-6.col-3.offset-sm-3
+                            h5.c-colors__name Milk Gray
                         .col-6.col-md-5
-                            h5 White
-                .c-style__section.c-card.c-style__card
-                    .row
-                        .col-2.col-md-3
-                            h3 Brand
-                        .col-4.col-md-3
-                            h3 The Red Dot
-                        .col-6.col-md-5.col-lg-4
-                            p Have you ever encountered a basic symbol with more meaning than a dot? Especially if is used as a period. Moreover it is red. King’s Tailor Shop are making a statement, both with words and clothing.
-                    .row.u-mg-t__40
-                        .col-4.col-md-3.offset-2.offset-md-3
-                            h3
+                            h5.c-colors__name.c-colors__name--right White
+                .c-brand.c-card.c-brand__card.c-style__section
+                    .row.c-brand__block
+                        .col-12.col-sm-2.col-md-3
+                            h3.c-brand__title Brand
+                        .col-12.col-sm-4.col-md-3
+                            h3.c-brand__element The Red Dot
+                        .col-12.col-sm-6.col-md-5.col-lg-4
+                            p.c-brand__description Have you ever encountered a basic symbol with more meaning than a dot? Especially if is used as a period. Moreover it is red. King’s Tailor Shop are making a statement, both with words and clothing.
+                    .row.c-brand__block
+                        .col-12.col-sm-4.col-md-3.offset-sm-2.offset-md-3
+                            h3.c-brand__element
                                 | Uncapitalized
                                 br
                                 | Letter
-                        .col-6.col-md-5.col-lg-4
-                            p The owners last name is King, but if we use it uncapitalized, it brings more royalty to the table. It is quite unique to break the rules in such a niche. Subtle yet bold.
+                        .col-12.col-sm-6.col-md-5.col-lg-4
+                            p.c-brand__description The owners last name is King, but if we use it uncapitalized, it brings more royalty to the table. It is quite unique to break the rules in such a niche. Subtle yet bold.
+                    .row(class='o-full-width\@down-xs')
                         .col-12.col-md-11
                             img.c-style__image(src="/images/kings-tailor/showcase.jpg")
-                .c-style__section
-                    .row
+                .c-ui-elements.c-style__section
+                    .row.c-ui-elements__block
                         .col-12.col-md-3.u-flex-align__lc
-                            h3.u-gray-text UI Elements
-                        .col-5.col-md-2.u-flex-align__lc
-                            h3 Buttons
-                        .col-4
+                            h3.c-ui-elements__title UI Elements
+                        .col-12.col-sm-5.col-md-2.u-flex-align__lc
+                            h3.c-ui-elements__elem Buttons
+                        .col.col-sm-4
                             .c-style__btn.c-style__btn--passive book your suit
-                        .col-2.u-flex-align__lc
+                        .col-auto.col-sm-2.u-flex-align__lc
                             h4.u-gray-text Passive
-                    .row.u-mg-t__40
-                        .col-4.offset-5
+                    .row.c-ui-elements__btn-section
+                        .col.col-sm-4.offset-sm-5
                             .c-style__btn.c-style__btn--hover book your suit
-                        .col-2.u-flex-align__lc
+                        .col-auto.col-sm-2.u-flex-align__lc
                             h4.u-gray-text Hover
-                    .row.u-mg-t__40
-                        .col-4.offset-5
+                    .row.c-ui-elements__btn-section
+                        .col.col-sm-4.offset-sm-5
                             .c-style__btn.c-style__btn--click book your suit
-                        .col-2.u-flex-align__lc
+                        .col-auto.col-sm-2.u-flex-align__lc
                             h4.u-gray-text Click
-                    .row.u-mg-t__140
-                        .col-5.col-md-2.offset-md-3
-                            h3 Inputs
-                        .col-7.col-md-6
-                            .c-inputs
+                    .row.c-ui-elements__block
+                        .col-12.col-sm-5.col-md-2.offset-md-3
+                            h3.c-ui-elements__elem Inputs
+                        .col-12.col-sm-7.col-md-6
+                            .c-inputs(class='o-full-width\@down-xs')
                                 .row.c-inputs__block
-                                    .col-8.u-flex-align__cc
+                                    .col.col-sm-8.c-inputs__img-wrapper
                                         img.c-inputs__img(src='/images/kings-tailor/input-passive.png')
-                                    .col-4.u-flex-align__lc
-                                        h4.c-inputs__state Passive
+                                    .col-auto.col-sm-4.c-inputs__state
+                                        h4 Passive
                                 .row.c-inputs__block
-                                    .col-8.u-flex-align__cc
+                                    .col.col-sm-8.c-inputs__img-wrapper
                                         img.c-inputs__img(src='/images/kings-tailor/input-active.png')
-                                    .col-4.u-flex-align__lc
-                                        h4.c-inputs__state Active
+                                    .col-auto.col-sm-4.c-inputs__state
+                                        h4 Active
                                 .row.c-inputs__block
-                                    .col-8.u-flex-align__cc
+                                    .col.col-sm-8.c-inputs__img-wrapper
                                         img.c-inputs__img(src='/images/kings-tailor/input-error.png')
-                                    .col-4.u-flex-align__lc
-                                        h4.c-inputs__state Error
+                                    .col-auto.col-sm-4.c-inputs__state
+                                        h4 Error
         .o-proj-desc__block.c-grid-sec
             .container
                 .o-heading--pushed
                     h2.c-heading.c-grid-sec__heading Grid
             .container.c-card.c-grid-sec__card
                 .row
-                    .col-6.col-md-5.offset-3
+                    .col-12.col-sm-6.col-md-5.offset-sm-3
                         p King’s Tailor Shop is based on a custom grid 6 columns with absolutely no gutter.  This grid allowed me to pull off such interesting and responsive layouts.
+                .row(class='o-full-width\@down-xs')
                     .col-12.col-md-11
                         .c-grid-sec__slider.c-slider.js-slider
                             img.c-slider__img(src='/images/kings-tailor/grid.jpg')
-                            .c-slider__overlay
-                                .c-slider__separator
-                                    .c-slider__handle
+                            .c-slider__overlay.js-slider__overlay
+                                .c-slider__separator.js-slider__separator
+                                    .c-slider__handle.js-slider__handle
                                         .c-slider__arrow
                                         .c-slider__arrow
     .c-thanks
         .container
             .row
-                .col-8
-                    h3.u-gray-text Thank you for your attention!
-                .col
+                .col-12.col-sm-8
+                    h3.c-thanks__message Thank you for your attention!
+                .col-12.col-sm-4.u-flex-align__lb
                     a.c-thanks__link(href='/kings-tailor-shop/realpixels.html')
                         .c-underline See Real Pixels
+                .col-12.col-sm-4.offset-sm-8.u-mg-t__40
                     a.c-thanks__link(href='https://www.behance.net/gallery/81762185/Kings-Tailor-Shop', target='_blank')
                         .c-underline View on Behance
 

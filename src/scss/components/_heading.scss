@@ -1,6 +1,5 @@
 .c-heading {
-	margin: 160px 0;
-	text-align: center;
+    position: absolute;
 
 	@include media-breakpoint-up(xl) {
 		line-height: 1;

@@ -1,7 +1,16 @@
 .c-challenges {
 
-    &__section + &__section {
-        margin-top: 120px;
+    &__section {
+        & + & {
+            margin-top: 120px;
+        }
+
+        @include media-breakpoint-down(xs) {
+            margin-top: 80px;
+            & + & {
+                margin-top: 80px;
+            }
+        }
     }
 
     &__roman-i {
@@ -12,5 +21,20 @@
     }
     &__roman-i + &__roman-i {
         margin-left: 20px;
+    }
+
+    &__heading {
+        @include media-breakpoint-down(xs) {
+            position: static;
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+
+        @include media-breakpoint-down(xs) {
+            margin-top: 20px;
+            text-align: center;
+        }
     }
 }

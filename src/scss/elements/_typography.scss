@@ -29,11 +29,7 @@ h1 {
 }
 
 h2 {
-	@include style-text(300, 2.25rem, 0, 2.5rem);
-
-	@include media-breakpoint-up(xl) {
-		@include style-text(700, 2rem, 0, 2.5rem);
-	}
+    @include style-text(700, 2rem, 0, 2.5rem);
 }
 
 h3 {

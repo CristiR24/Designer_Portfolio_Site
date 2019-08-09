@@ -1,0 +1,15 @@
+.c-stats {
+	text-align: center;
+
+	&__name {
+        margin-top: 6px;
+    }
+
+    &__block {
+        @include media-breakpoint-down(xs) {
+            & + & {
+                margin-top: 80px;
+            }
+        }
+    }
+}

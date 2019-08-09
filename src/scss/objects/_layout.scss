@@ -69,8 +69,9 @@
 // this class should be applied on a .row
 // to reach the desirable result
 .o-full-width\@down-xs {
+
 	@include media-breakpoint-down(xs) {
-		margin-left: -20px;
+        margin-left: -20px;
 		margin-right: -20px;
 
 		[class ^= "col"] {
@@ -99,8 +100,8 @@
 }
 
 .o-proj-desc {
-    @include media-breakpoint-up(xl) {
-        &__block + &__block {
+    &__block {
+        & + & {
             margin-top: 240px;
         }
     }

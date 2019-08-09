@@ -9,9 +9,10 @@ addOnLoad(() => {
     }
 });
 
-const overlay = document.querySelector('.c-slider__overlay');
-const handle = document.querySelector('.c-slider__handle');
-const slider = document.querySelector('.c-slider');
+const overlay = document.querySelector('.js-slider__overlay');
+const separator = document.querySelector('.js-slider__separator');
+const handle = document.querySelector('.js-slider__handle');
+const slider = document.querySelector('.js-slider');
 let leftOffset = slider.getBoundingClientRect().left;
 let sliderWidth = slider.getBoundingClientRect().width;
 
@@ -28,9 +29,11 @@ function slide(pos, transition) {
 handle.addEventListener('mousedown', () => {
     function updateSlider(event) {
         if (event.buttons === 0) {
+            slider.style.cursor = 'pointer';
             slider.removeEventListener('mousemove', updateSlider);
             return;
         }
+        slider.style.cursor = 'ew-resize';
         const pos = getPos(event);
         slide(pos, '');
     }
@@ -52,8 +55,11 @@ handle.addEventListener('touchstart', () => {
 
 slider.addEventListener('click', (event) => {
     event.preventDefault();
-    const pos = getPos(event);
-    slide(pos, '0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) all');
+    // if the user clicked outside the slider handle(thumb)
+    if (event.target !== handle) {
+        const pos = getPos(event);
+        slide(pos, '0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000)');
+    }
 });
 
 window.addEventListener('resize', () => {

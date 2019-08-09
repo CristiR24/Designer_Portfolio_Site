@@ -1,11 +1,11 @@
 .c-about {
 
 	&__heading {
-        transform: translateX(51%);
-
+        @include media-breakpoint-up(xl) {
+            transform: translateX(51%);
+        }
         @include media-breakpoint-down(lg) {
-            width: 100%;
-            transform: none;
+            transform: translateY(-50%);
         }
     }
 
@@ -13,14 +13,18 @@
         &::before{
             right: 0;
 
-            @include media-breakpoint-only(md) {
+            @include media-breakpoint-between(sm, md) {
                 right: 20px;
             }
         }
     }
 
 	&__description {
-		margin-top: 40px;
+        margin-top: 40px;
+
+        @include media-breakpoint-between(sm, lg) {
+            margin-top: 60px;
+        }
 	}
 
 	&__jobs {
@@ -47,12 +51,12 @@
 
         @include media-breakpoint-down(sm) {
             height: 450px;
-            margin-top: 20px;
         }
 
 		@include media-breakpoint-down(xs) {
             height: auto;
             top: 0;
+            margin-top: 60px;
 		}
     }
 

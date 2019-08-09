@@ -1,0 +1,32 @@
+.c-ui-elements {
+
+    &__title {
+        color: $smoke-gray;
+
+        @include media-breakpoint-down(xs) {
+            margin-bottom: 80px;
+        }
+    }
+
+    &__elem {
+
+        @include media-breakpoint-down(xs) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__block {
+        // the siblings(don't need to be next to each other)
+        & ~ & {
+            margin-top: 140px;
+
+            @include media-breakpoint-down(xs) {
+                margin-top: 80px;
+            }
+        }
+    }
+
+    &__btn-section {
+        margin-top: 40px;
+    }
+}

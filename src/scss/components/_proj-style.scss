@@ -2,12 +2,16 @@
 
     &__section {
         position: relative;
-
         & + & {
             margin-top: 240px;
         }
-        &:first-of-type {
-            margin-top: 40px;
+        // first section
+        &:nth-of-type(2) {
+            padding-top: 40px;
+
+            @include media-breakpoint-down(xs) {
+                margin-top: 40px;
+            }
         }
     }
 
@@ -15,12 +19,9 @@
         font-family: 'Playfair Display', serif;
         font-size: 64px;
         line-height: 85px;
-    }
 
-    &__card {
-        padding: 80px 0;
-        &::before {
-            right: calc(91.5% + 20px);
+        @include media-breakpoint-down(xs) {
+            margin-top: 40px;
         }
     }
 
@@ -54,6 +55,13 @@
             background: #d74b4b;
             color: white;
             box-shadow: 1px 1px 27pt #c9222248;
+        }
+    }
+
+    &__heading {
+
+        @include media-breakpoint-down(xs) {
+            position: static;
         }
     }
 }

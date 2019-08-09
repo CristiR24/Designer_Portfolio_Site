@@ -1,11 +1,20 @@
 .c-brief {
     overflow: hidden;
+    @include media-breakpoint-down(xs) {
+        margin-top: 20px;
+    }
 
     &__heading {
-        right: 105px;
+        transform: translateY(-50%);
+
+        @include media-breakpoint-up(xl) {
+            right: 105px;
+            transform: translateY(0);
+        }
     }
 
     &__card {
+        overflow-x: unset;
         padding-top: 120px;
         padding-bottom: 120px;
 
@@ -14,6 +23,20 @@
             @include media-breakpoint-down(lg) {
                 left: calc(-1 * (100vw - 100%) / 2 + 60px);
             }
+            @include media-breakpoint-down(xs) {
+                left: -20px;
+            }
+        }
+
+        @include media-breakpoint-down(xs) {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+    }
+
+    &__description {
+        @include media-breakpoint-down(xs) {
+            padding-right: 20px;
         }
     }
 }
