@@ -50,7 +50,7 @@
         object-fit: cover;
 
         @include media-breakpoint-down(sm) {
-            height: 450px;
+            height: 480px;
         }
 
 		@include media-breakpoint-down(xs) {
