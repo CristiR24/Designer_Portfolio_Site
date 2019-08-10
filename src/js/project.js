@@ -2,15 +2,14 @@
 
 addOnLoad(() => {
     if (arrows.length > 0) {
-        animateArrows({ medSize: true });
+        animateArrows({ realPixelsBtn: true });
     }
     if (arrowsRev.length > 0) {
-        animateReverseArrows({ medSize: true });
+        animateReverseArrows({ smBackBtn: true });
     }
 });
 
 const overlay = document.querySelector('.js-slider__overlay');
-const separator = document.querySelector('.js-slider__separator');
 const handle = document.querySelector('.js-slider__handle');
 const slider = document.querySelector('.js-slider');
 let leftOffset = slider.getBoundingClientRect().left;

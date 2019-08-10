@@ -1212,7 +1212,7 @@ p,
   margin-top: 240px; }
 
 .c-arrow {
-  width: 174px;
+  width: 176px;
   height: 12px;
   position: absolute;
   bottom: calc(50% - 1px);
@@ -1223,7 +1223,7 @@ p,
   .c-arrow__line {
     stroke: #2e2e2e; }
   .c-arrow--reverse {
-    width: 244px;
+    width: 245px;
     right: unset; }
 
 .c-link {

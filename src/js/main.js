@@ -21,7 +21,9 @@ const animateArrows = (options = {}) => {
             // change the color
             arrowLine.style.stroke = '#cacaca';
             // change the arrow length
-            if (options.medSize) {
+            if (options.realPixelsBtn) {
+                arrowPath.setAttribute('d', 'M8.5,6 L171.327257,6 M165.948328,2 L172,5.9959254 L165.948328,10');
+            } else if (options.liveBtn) {
                 arrowPath.setAttribute('d', 'M32.5,6 L171.327257,6 M165.948328,2 L172,5.9959254 L165.948328,10');
             } else {
                 arrowPath.setAttribute('d', 'M0,6 L171.327257,6 M165.948328,2 L172,5.9959254 L165.948328,10');
@@ -52,8 +54,8 @@ const animateReverseArrows = (options = {}) => {
             // change the color
             arrowLine.style.stroke = '#cacaca';
             // change the arrow length
-            if (options.medSize) {
-                arrowPath.setAttribute('d', 'M3,6 L184.5,6 M8.051672,2 L2,5.9959254 L8.051672,10');
+            if (options.smBackBtn) {
+                arrowPath.setAttribute('d', 'M3,6 L185.5,6 M8.051672,2 L2,5.9959254 L8.051672,10');
             } else {
                 arrowPath.setAttribute('d', 'M3,6 L240.327257,6 M8.051672,2 L2,5.9959254 L8.051672,10');
             }

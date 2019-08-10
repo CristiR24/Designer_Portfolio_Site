@@ -7,17 +7,21 @@
         &::before {
             right: calc(24.6% + 20px);
         }
-
+        @include media-breakpoint-down(md) {
+            &::before {
+                right: calc(24.6% + 30px);
+            }
+        }
         @include media-breakpoint-down(sm) {
             &::before {
-                right: calc(12.5% + 20px);
+                right: 135px;
             }
         }
         @include media-breakpoint-down(xs) {
             padding-bottom: 40px;
 
             &:before {
-                right: 100px;
+                right: 115px;
             }
         }
     }

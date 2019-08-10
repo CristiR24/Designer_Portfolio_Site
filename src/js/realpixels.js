@@ -2,6 +2,6 @@
 
 addOnLoad(() => {
     if (arrowsRev.length > 0) {
-        animateReverseArrows({ medSize: true });
+        animateReverseArrows({ smBackBtn: true });
     }
 });
