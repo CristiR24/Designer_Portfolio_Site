@@ -1299,6 +1299,10 @@ p,
 .c-overview__stats {
   padding-bottom: 80px;
   padding-top: 80px; }
+  @media (max-width: 1239.98px) {
+    .c-overview__stats {
+      padding-bottom: 140px;
+      padding-top: 140px; } }
   @media (max-width: 729.98px) {
     .c-overview__stats {
       padding-bottom: 240px;
@@ -1344,13 +1348,14 @@ p,
 
 .c-brief {
   overflow: hidden; }
-  @media (max-width: 729.98px) {
+  @media (max-width: 1239.98px) {
     .c-brief {
       margin-top: 20px; } }
   .c-brief__heading {
     transform: translateY(-50%); }
     @media (min-width: 1240px) {
       .c-brief__heading {
+        left: unset;
         right: 105px;
         transform: translateY(0); } }
   .c-brief__card {
@@ -1361,7 +1366,10 @@ p,
       left: calc(-1 * ((100vw - 100%) / 4) + 1px); }
       @media (max-width: 1239.98px) {
         .c-brief__card::before {
-          left: calc(-1 * (100vw - 100%) / 2 + 60px); } }
+          left: 0; } }
+      @media (max-width: 1019.98px) {
+        .c-brief__card::before {
+          left: 20px; } }
       @media (max-width: 729.98px) {
         .c-brief__card::before {
           left: -20px; } }
@@ -1394,10 +1402,8 @@ p,
   margin-top: 120px; }
 
 @media (max-width: 729.98px) {
-  .c-challenges__section {
-    margin-top: 80px; }
-    .c-challenges__section + .c-challenges__section {
-      margin-top: 80px; } }
+  .c-challenges__section + .c-challenges__section {
+    margin-top: 80px; } }
 
 .c-challenges__roman-i {
   display: inline-block;
@@ -1408,9 +1414,10 @@ p,
 .c-challenges__roman-i + .c-challenges__roman-i {
   margin-left: 20px; }
 
-@media (max-width: 729.98px) {
+@media (max-width: 1239.98px) {
   .c-challenges__heading {
-    position: static; } }
+    position: static;
+    margin-bottom: 80px; } }
 
 .c-challenges__title {
   margin-bottom: 20px; }
@@ -1423,11 +1430,9 @@ p,
   position: relative; }
   .c-style__section + .c-style__section {
     margin-top: 240px; }
-  .c-style__section:nth-of-type(2) {
-    padding-top: 40px; }
-    @media (max-width: 729.98px) {
-      .c-style__section:nth-of-type(2) {
-        margin-top: 40px; } }
+  @media (min-width: 1240px) {
+    .c-style__section:nth-child(2) {
+      padding-top: 40px; } }
 
 .c-style__font {
   font-family: 'Playfair Display', serif;
@@ -1464,9 +1469,10 @@ p,
     color: white;
     box-shadow: 1px 1px 27pt #c9222248; }
 
-@media (max-width: 729.98px) {
+@media (max-width: 1239.98px) {
   .c-style__heading {
-    position: static; } }
+    position: static;
+    margin-bottom: 80px; } }
 
 .c-colors__text {
   line-height: 1; }
@@ -1525,6 +1531,9 @@ p,
   padding: 80px 0; }
   .c-brand__card::before {
     right: calc(91.5% + 20px); }
+  @media (max-width: 1019.98px) {
+    .c-brand__card::before {
+      right: calc(100% - 60px); } }
   @media (max-width: 729.98px) {
     .c-brand__card {
       padding: 40px 0; }
@@ -1533,7 +1542,7 @@ p,
 
 .c-ui-elements__title {
   color: #cacaca; }
-  @media (max-width: 729.98px) {
+  @media (max-width: 889.98px) {
     .c-ui-elements__title {
       margin-bottom: 80px; } }
 
@@ -1584,19 +1593,34 @@ p,
         .c-inputs__state h4, .c-inputs__state .c-thanks__link, .c-inputs__state .c-contact__mail {
           margin-right: 30px; } }
 
+@media (max-width: 1239.98px) {
+  .c-grid-sec {
+    padding-top: 20px; } }
+
 .c-grid-sec__heading {
-  position: static;
-  margin-bottom: 40px; }
-  @media (min-width: 1240px) {
+  position: absolute;
+  right: 80px; }
+  @media (max-width: 1239.98px) {
     .c-grid-sec__heading {
-      position: absolute;
-      right: 80px; } }
+      right: unset;
+      transform: translateY(-50%); } }
+  @media (max-width: 729.98px) {
+    .c-grid-sec__heading {
+      transform: none;
+      position: static;
+      margin-bottom: 40px; } }
 
 .c-grid-sec__card {
   padding-top: 80px;
   padding-bottom: 40px; }
   .c-grid-sec__card::before {
     right: calc(81.333% + 20px); }
+  @media (max-width: 1019.98px) {
+    .c-grid-sec__card::before {
+      right: calc(82%); } }
+  @media (max-width: 889.98px) {
+    .c-grid-sec__card::before {
+      right: calc(80.2%); } }
   @media (max-width: 729.98px) {
     .c-grid-sec__card {
       padding-top: 0;
@@ -1806,11 +1830,12 @@ p,
 .u-mg-t__40 {
   margin-top: 40px; }
 
-.u-mg-t__60 {
-  margin-top: 60px; }
-
 .u-mg-t__140 {
   margin-top: 140px; }
+
+@media (max-width: 729.98px) {
+  .u-mg-t__zero-mobile {
+    margin-top: 0; } }
 
 .u-mg-b__80 {
   margin-bottom: 80px; }

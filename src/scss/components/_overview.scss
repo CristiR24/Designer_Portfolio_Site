@@ -41,6 +41,11 @@
         padding-bottom: 80px;
         padding-top: 80px;
 
+        @include media-breakpoint-down(lg) {
+            padding-bottom: 140px;
+            padding-top: 140px;
+        }
+
         @include media-breakpoint-down(xs) {
             padding-bottom: 240px;
             padding-top: 240px;

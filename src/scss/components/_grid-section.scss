@@ -1,12 +1,22 @@
 .c-grid-sec {
 
-    &__heading {
-        position: static;
-        margin-bottom: 40px;
+    @include media-breakpoint-down(lg) {
+        padding-top: 20px;
+    }
 
-        @include media-breakpoint-up(xl) {
-            position: absolute;
-            right: 80px;
+    &__heading {
+        position: absolute;
+        right: 80px;
+
+        @include media-breakpoint-down(lg) {
+            right: unset;
+            transform: translateY(-50%);
+        }
+
+        @include media-breakpoint-down(xs) {
+            transform: none;
+            position: static;
+            margin-bottom: 40px;
         }
     }
 
@@ -16,7 +26,16 @@
         &::before {
             right: calc(81.333% + 20px);
         }
-
+        @include media-breakpoint-down(md) {
+            &::before {
+                right: calc(82%);
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            &::before {
+                right: calc(80.2%);
+            }
+        }
         @include media-breakpoint-down(xs) {
             padding-top: 0;
             padding-bottom: 0;

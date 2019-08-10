@@ -3,7 +3,7 @@
     &__title {
         color: $smoke-gray;
 
-        @include media-breakpoint-down(xs) {
+        @include media-breakpoint-down(sm) {
             margin-bottom: 80px;
         }
     }

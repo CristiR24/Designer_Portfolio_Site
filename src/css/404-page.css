@@ -1422,11 +1422,12 @@ p,
 .u-mg-t__40 {
   margin-top: 40px; }
 
-.u-mg-t__60 {
-  margin-top: 60px; }
-
 .u-mg-t__140 {
   margin-top: 140px; }
+
+@media (max-width: 729.98px) {
+  .u-mg-t__zero-mobile {
+    margin-top: 0; } }
 
 .u-mg-b__80 {
   margin-bottom: 80px; }

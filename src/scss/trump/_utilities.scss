@@ -86,11 +86,14 @@
         &__40 {
             margin-top: 40px;
         }
-        &__60 {
-			margin-top: 60px;
-        }
         &__140 {
             margin-top: 140px;
+        }
+
+        &__zero-mobile {
+            @include media-breakpoint-down(xs) {
+                margin-top: 0;
+            }
         }
     }
     &-b {

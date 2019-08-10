@@ -6,7 +6,6 @@
         }
 
         @include media-breakpoint-down(xs) {
-            margin-top: 80px;
             & + & {
                 margin-top: 80px;
             }
@@ -24,8 +23,9 @@
     }
 
     &__heading {
-        @include media-breakpoint-down(xs) {
+        @include media-breakpoint-down(lg) {
             position: static;
+            margin-bottom: 80px;
         }
     }
 
