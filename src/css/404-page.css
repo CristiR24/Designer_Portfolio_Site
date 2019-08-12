@@ -229,7 +229,8 @@ a:focus {
  */
 a:active,
 a:hover {
-  outline: 0; }
+  outline: 0;
+  -webkit-tap-highlight-color: transparent; }
 
 /**
  * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
@@ -1217,6 +1218,11 @@ p,
 
 .c-nav__mail {
   color: #2e2e2e; }
+
+.c-nav__link {
+  font-weight: 400; }
+  .c-nav__link--back {
+    font-weight: 700; }
 
 .c-404 {
   position: relative;

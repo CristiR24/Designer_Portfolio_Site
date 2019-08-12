@@ -36,6 +36,7 @@ h1,
 h2,
 h3,
 h4,
+.c-overview__link,
 .c-thanks__link,
 .c-contact__mail,
 h5,
@@ -231,7 +232,8 @@ a:focus {
  */
 a:active,
 a:hover {
-  outline: 0; }
+  outline: 0;
+  -webkit-tap-highlight-color: transparent; }
 
 /**
  * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
@@ -1087,6 +1089,7 @@ h5,
 h2,
 h3,
 h4,
+.c-overview__link,
 .c-thanks__link,
 .c-contact__mail {
   font-family: "Montserrat"; }
@@ -1120,6 +1123,7 @@ h3 {
 
 
 h4,
+.c-overview__link,
 .c-thanks__link,
 .c-contact__mail {
   font-weight: 600;
@@ -1271,6 +1275,11 @@ p,
 .c-nav__mail {
   color: #2e2e2e; }
 
+.c-nav__link {
+  font-weight: 400; }
+  .c-nav__link--back {
+    font-weight: 700; }
+
 .c-overview__card {
   padding-top: 20px;
   padding-bottom: 80px; }
@@ -1316,11 +1325,6 @@ p,
   margin-bottom: 20px; }
 
 .c-overview__link {
-  font-family: "Montserrat";
-  font-weight: 700;
-  font-size: 16px;
-  color: #2E2E2E;
-  letter-spacing: 1.33px;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -1588,12 +1592,12 @@ p,
     display: flex;
     align-items: center;
     justify-content: flex-start; }
-    .c-inputs__state h4, .c-inputs__state .c-thanks__link, .c-inputs__state .c-contact__mail {
+    .c-inputs__state h4, .c-inputs__state .c-overview__link, .c-inputs__state .c-thanks__link, .c-inputs__state .c-contact__mail {
       color: white; }
     @media (max-width: 729.98px) {
       .c-inputs__state {
         justify-content: flex-end; }
-        .c-inputs__state h4, .c-inputs__state .c-thanks__link, .c-inputs__state .c-contact__mail {
+        .c-inputs__state h4, .c-inputs__state .c-overview__link, .c-inputs__state .c-thanks__link, .c-inputs__state .c-contact__mail {
           margin-right: 30px; } }
 
 @media (max-width: 1239.98px) {
@@ -1709,7 +1713,7 @@ p,
     position: absolute;
     left: 0;
     bottom: 0;
-    transition: .3s; }
+    transition: .1s ease-in; }
 
 .c-thanks {
   margin-top: 140px; }
@@ -1724,7 +1728,7 @@ p,
     line-height: 22px;
     display: block;
     width: fit-content;
-    transition: .2s ease-out; }
+    transition: color .2s ease-in-out; }
     @media (max-width: 729.98px) {
       .c-thanks__link {
         margin: 0 auto; } }
@@ -1755,6 +1759,7 @@ p,
     .c-contact__mail:hover {
       color: #2e2e2e; }
     .c-contact__mail:active {
+      transition: .1s ease-in;
       color: #cacaca; }
       .c-contact__mail:active .c-underline::after {
         background: #cacaca; }

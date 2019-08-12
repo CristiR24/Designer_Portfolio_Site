@@ -11,6 +11,11 @@
     }
 
 	&__link {
-		@extend h5;
+        @extend h5;
+        font-weight: 400;
+
+        &--back {
+            font-weight: 700;
+        }
 	}
 }

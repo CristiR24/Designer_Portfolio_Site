@@ -62,11 +62,7 @@
 	}
 
 	&__link {
-		font-family: $accent-font;
-		font-weight: 700;
-		font-size: 16px;
-		color: #2E2E2E;
-        letter-spacing: 1.33px;
+		@extend h4;
 
         display: flex;
         justify-content: center;

@@ -28,6 +28,7 @@
             color: $black;
         }
         &:active {
+            transition: .1s ease-in;
             color: $smoke-gray;
             & .c-underline::after {
                 background: $smoke-gray;

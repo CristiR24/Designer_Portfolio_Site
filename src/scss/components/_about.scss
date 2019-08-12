@@ -82,6 +82,7 @@
             background: $snow-white;
         }
         &:active {
+            transition: .1s ease-in;
             background: $black;
             color: white;
             & svg {

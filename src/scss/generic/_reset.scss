@@ -211,7 +211,7 @@ html {
 }
 
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 /**
@@ -219,7 +219,7 @@ a {
  */
 
 a:focus {
-	outline: none;
+    outline: none;
 }
 
 /**
@@ -228,7 +228,8 @@ a:focus {
 
 a:active,
 a:hover {
-	outline: 0;
+    outline: 0;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /**

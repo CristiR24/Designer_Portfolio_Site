@@ -18,7 +18,7 @@
         line-height: 22px;
         display: block;
         width: fit-content;
-        transition: .2s ease-out;
+        transition: color .2s ease-in-out;
 
         @include media-breakpoint-down(xs) {
             margin: 0 auto;

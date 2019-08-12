@@ -22,9 +22,9 @@ const animateArrows = (options = {}) => {
             arrowLine.style.stroke = '#cacaca';
             // change the arrow length
             if (options.realPixelsBtn) {
-                arrowPath.setAttribute('d', 'M8.5,6 L171.327257,6 M165.948328,2 L172,5.9959254 L165.948328,10');
+                arrowPath.setAttribute('d', 'M13.5,6 L171.327257,6 M165.948328,2 L172,5.9959254 L165.948328,10');
             } else if (options.liveBtn) {
-                arrowPath.setAttribute('d', 'M32.5,6 L171.327257,6 M165.948328,2 L172,5.9959254 L165.948328,10');
+                arrowPath.setAttribute('d', 'M34.5,6 L171.327257,6 M165.948328,2 L172,5.9959254 L165.948328,10');
             } else {
                 arrowPath.setAttribute('d', 'M0,6 L171.327257,6 M165.948328,2 L172,5.9959254 L165.948328,10');
             }

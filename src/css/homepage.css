@@ -231,7 +231,8 @@ a:focus {
  */
 a:active,
 a:hover {
-  outline: 0; }
+  outline: 0;
+  -webkit-tap-highlight-color: transparent; }
 
 /**
  * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
@@ -1307,7 +1308,7 @@ p,
     position: absolute;
     left: 0;
     bottom: 0;
-    transition: .3s; }
+    transition: .1s ease-in; }
 
 .c-nav--big {
   padding-top: 40px;
@@ -1315,6 +1316,11 @@ p,
 
 .c-nav__mail {
   color: #2e2e2e; }
+
+.c-nav__link {
+  font-weight: 400; }
+  .c-nav__link--back {
+    font-weight: 700; }
 
 .c-hero {
   border: 20px solid white;
@@ -1495,6 +1501,7 @@ p,
   .c-about__resume-btn:hover {
     background: #fafafa; }
   .c-about__resume-btn:active {
+    transition: .1s ease-in;
     background: #2e2e2e;
     color: white; }
     .c-about__resume-btn:active svg {
@@ -1562,6 +1569,7 @@ p,
     .c-contact__mail:hover {
       color: #2e2e2e; }
     .c-contact__mail:active {
+      transition: .1s ease-in;
       color: #cacaca; }
       .c-contact__mail:active .c-underline::after {
         background: #cacaca; }
