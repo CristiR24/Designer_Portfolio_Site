@@ -11,11 +11,7 @@ The template engine **Pug** was added to the technology stack, taking it one ste
 To improve my efficiency and automate the workflow I used **Gulp** task runner.
 
 ## See Live
-This project is still in development.
-
 [www.dragossargu.com](https://www.dragossargu.com/)
-
-To see the current state of the project access [dev.dragossargu.com](https://dev.dragossargu.com/).
 
 ## Run
 To run it by yourself, do a `npm install` in the root folder, then run `gulp` in the command line.
