@@ -1654,25 +1654,20 @@ p,
     user-select: none;
     -webkit-user-drag: none; }
   .c-slider__overlay {
-    height: 100%;
-    width: 50%;
-    background: url("/images/kings-tailor/no-grid.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top left;
+    clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%);
     position: absolute;
     top: 0;
     left: 0; }
   .c-slider__separator {
-    position: relative;
-    top: 0;
-    transform: translateX(-50%);
-    left: 100%;
-    user-select: none;
     width: 4px;
     height: 100%;
     background: white;
-    box-shadow: 0 2px 27pt #00000015; }
+    box-shadow: 0 2px 27pt #00000015;
+    user-select: none;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    left: 50%; }
   .c-slider__handle {
     width: 26px;
     height: 26px;
