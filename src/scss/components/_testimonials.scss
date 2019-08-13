@@ -1,8 +1,8 @@
 .c-testimonials {
-    padding-top: 180px;
+    margin-top: 180px;
 
     @include media-breakpoint-down(md) {
-        padding-top: 260px;
+        margin-top: 260px;
     }
 
 	&__block {

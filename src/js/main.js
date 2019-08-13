@@ -79,3 +79,29 @@ addOnLoad(() => {
     const body = document.querySelector('body');
     body.classList.remove('u-transitions-on-load');
 });
+
+
+const toAnimate = document.querySelectorAll('.js-animate');
+let animated = 0;
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        const { top } = entry.boundingClientRect;
+        if (entry.intersectionRatio > 0) {
+            if (top > 0) {
+                entry.target.classList.add('o-appear');
+            } else {
+                entry.target.classList.add('o-reveal');
+            }
+            observer.unobserve(entry.target);
+            animated += 1;
+            if (animated === toAnimate.length) {
+                observer.disconnect();
+            }
+        }
+    });
+}, { threshold: 0 });
+
+toAnimate.forEach((elem) => {
+    observer.observe(elem);
+});

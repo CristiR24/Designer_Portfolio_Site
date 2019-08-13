@@ -1,6 +1,6 @@
 .c-grid-sec {
 
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-between(lg, sm) {
         padding-top: 20px;
     }
 
@@ -14,7 +14,7 @@
         }
 
         @include media-breakpoint-down(xs) {
-            transform: none;
+            transform: translateY(0);
             position: static;
             margin-bottom: 40px;
         }
