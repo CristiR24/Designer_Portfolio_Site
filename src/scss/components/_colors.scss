@@ -22,13 +22,18 @@
     }
 
     &__block {
-        margin: 10px 0;
-        height: 140px;
-        padding: 20px;
-        line-height: 1;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin: 10px 0;
+        padding: 20px;
+        line-height: 1;
+        height: 140px;
+
+        @include media-breakpoint-down(xs) {
+            // set the height equal to it's width to form a square
+            height: calc(50vw - 30px);
+        }
 
         &--main {
             background: #333333;

@@ -1369,6 +1369,12 @@ p,
 
 .c-info__title {
   margin-bottom: 12px; }
+  @media (min-width: 1240px) {
+    .c-info__title {
+      text-transform: uppercase;
+      letter-spacing: 0.2858em;
+      margin-bottom: 16px;
+      line-height: 1; } }
 
 .c-heading {
   position: absolute; }

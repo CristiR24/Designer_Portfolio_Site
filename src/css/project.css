@@ -1495,13 +1495,16 @@ p,
     text-align: right; } }
 
 .c-colors__block {
-  margin: 10px 0;
-  height: 140px;
-  padding: 20px;
-  line-height: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 20px;
+  line-height: 1;
+  height: 140px; }
+  @media (max-width: 729.98px) {
+    .c-colors__block {
+      height: calc(50vw - 30px); } }
   .c-colors__block--main {
     background: #333333; }
     .c-colors__block--main .c-colors__text {
