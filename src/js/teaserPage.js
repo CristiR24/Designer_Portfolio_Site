@@ -1,5 +1,3 @@
-/* global addOnLoad initTypeAnimation */
+/* global initTypeAnimation */
 
-addOnLoad(() => {
-    initTypeAnimation(150);
-});
+initTypeAnimation(150);

@@ -1,12 +1,3 @@
-// this is a cross browser function to add a function on page load
-function addOnLoad(myfunc) {
-    if (window.addEventListener) {
-        window.addEventListener('load', myfunc, false);
-    } else if (window.attachEvent) {
-        window.attachEvent('onload', myfunc);
-    }
-}
-
 const arrows = document.querySelectorAll('.c-arrow:not(.c-arrow--reverse)');
 const arrowsRev = document.querySelectorAll('.c-arrow.c-arrow--reverse');
 
@@ -74,34 +65,3 @@ const animateReverseArrows = (options = {}) => {
         });
     });
 };
-
-addOnLoad(() => {
-    const body = document.querySelector('body');
-    body.classList.remove('u-transitions-on-load');
-});
-
-
-const toAnimate = document.querySelectorAll('.js-animate');
-let animated = 0;
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        const { top } = entry.boundingClientRect;
-        if (entry.intersectionRatio > 0) {
-            if (top > 0) {
-                entry.target.classList.add('o-appear');
-            } else {
-                entry.target.classList.add('o-reveal');
-            }
-            observer.unobserve(entry.target);
-            animated += 1;
-            if (animated === toAnimate.length) {
-                observer.disconnect();
-            }
-        }
-    });
-}, { threshold: 0 });
-
-toAnimate.forEach((elem) => {
-    observer.observe(elem);
-});

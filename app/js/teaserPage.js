@@ -1,1 +1,1 @@
-"use strict";addOnLoad(function(){initTypeAnimation(150)});
+"use strict";initTypeAnimation(150);

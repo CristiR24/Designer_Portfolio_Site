@@ -34,20 +34,14 @@
     &__card {
         padding: 80px 0;
         &::before {
-            right: calc(91.5% + 20px);
-        }
-
-        @include media-breakpoint-down(md) {
-            &::before {
-                right: calc(100% - 60px);
-            }
+            left: calc(-100vw + 60px);
         }
 
         @include media-breakpoint-down(xs) {
             padding: 40px 0;
 
             &::before {
-                right: 0px;
+                left: -20px;
             }
         }
     }

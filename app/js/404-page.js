@@ -1,1 +1,1 @@
-"use strict";addOnLoad(function(){arrowsRev.length>0&&animateReverseArrows()});
+"use strict";arrowsRev.length>0&&animateReverseArrows();

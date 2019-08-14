@@ -24,23 +24,24 @@
         padding-top: 80px;
         padding-bottom: 40px;
         &::before {
-            right: calc(81.333% + 20px);
+            right: 83.5%;
         }
         @include media-breakpoint-down(md) {
             &::before {
-                right: calc(82%);
+                right: 82%;
             }
         }
         @include media-breakpoint-down(sm) {
             &::before {
-                right: calc(80.2%);
+                right: 80.3%;
             }
         }
         @include media-breakpoint-down(xs) {
             padding-top: 0;
             padding-bottom: 0;
             &::before {
-                display: none;
+                right: 20px;
+                background: transparent;
             }
         }
     }

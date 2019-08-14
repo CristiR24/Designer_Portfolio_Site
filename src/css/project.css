@@ -1223,7 +1223,7 @@ p,
 @keyframes slide-in-bottom {
   from {
     opacity: 0;
-    transform: translateY(500px); }
+    transform: translateY(200px); }
   to {
     transform: translateY(0);
     opacity: 1; } }
@@ -1564,15 +1564,12 @@ p,
 .c-brand__card {
   padding: 80px 0; }
   .c-brand__card::before {
-    right: calc(91.5% + 20px); }
-  @media (max-width: 1019.98px) {
-    .c-brand__card::before {
-      right: calc(100% - 60px); } }
+    left: calc(-100vw + 60px); }
   @media (max-width: 729.98px) {
     .c-brand__card {
       padding: 40px 0; }
       .c-brand__card::before {
-        right: 0px; } }
+        left: -20px; } }
 
 .c-ui-elements__title {
   color: #cacaca; }
@@ -1648,19 +1645,20 @@ p,
   padding-top: 80px;
   padding-bottom: 40px; }
   .c-grid-sec__card::before {
-    right: calc(81.333% + 20px); }
+    right: 83.5%; }
   @media (max-width: 1019.98px) {
     .c-grid-sec__card::before {
-      right: calc(82%); } }
+      right: 82%; } }
   @media (max-width: 889.98px) {
     .c-grid-sec__card::before {
-      right: calc(80.2%); } }
+      right: 80.3%; } }
   @media (max-width: 729.98px) {
     .c-grid-sec__card {
       padding-top: 0;
       padding-bottom: 0; }
       .c-grid-sec__card::before {
-        display: none; } }
+        right: 20px;
+        background: transparent; } }
 
 .c-grid-sec__slider {
   margin-top: 80px;

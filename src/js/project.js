@@ -1,13 +1,11 @@
-/* global addOnLoad arrows arrowsRev animateArrows animateReverseArrows */
+/* global arrows arrowsRev animateArrows animateReverseArrows */
 
-addOnLoad(() => {
-    if (arrows.length > 0) {
-        animateArrows({ realPixelsBtn: true });
-    }
-    if (arrowsRev.length > 0) {
-        animateReverseArrows({ smBackBtn: true });
-    }
-});
+if (arrows.length > 0) {
+    animateArrows({ realPixelsBtn: true });
+}
+if (arrowsRev.length > 0) {
+    animateReverseArrows({ smBackBtn: true });
+}
 
 const overlay = document.querySelector('.js-slider__overlay');
 const handle = document.querySelector('.js-slider__handle');

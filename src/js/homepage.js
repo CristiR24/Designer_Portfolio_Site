@@ -1,6 +1,6 @@
-/* global addOnLoad arrows animateArrows initTypeAnimation */
+/* global arrows animateArrows initTypeAnimation */
 
-addOnLoad(() => {
-    initTypeAnimation();
-    if (arrows.length > 0) { animateArrows(); }
-});
+initTypeAnimation();
+if (arrows.length > 0) {
+    animateArrows();
+}
