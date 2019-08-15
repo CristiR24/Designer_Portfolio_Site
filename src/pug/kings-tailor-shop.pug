@@ -21,6 +21,11 @@ append styles
     link(href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet")
     link(rel="stylesheet", href="/css/project.css")
 
+append firstScripts
+    script(src="https://unpkg.com/scrollreveal@4.0.5/dist/scrollreveal.min.js")
+    script.
+        ScrollReveal({ duration: 500 });
+
 block content
     include partials/_nav
 
@@ -39,7 +44,7 @@ block content
                     a.c-link.c-link__arrow(href = '/kings-tailor-shop/realpixels.html')
                         span Real Pixels
                         include partials/_arrow
-        .container.c-stats.c-overview__stats
+        .container.c-stats.c-overview__stats.js-animate
             .row
                 .col-12.col-sm-3.c-stats__block
                     h4.c-stats__value John King
@@ -59,7 +64,7 @@ block content
             .o-heading--pushed
                 h2.c-heading.c-brief__heading Brief
         .o-proj-desc__block.c-brief
-            .container.c-card.c-brief__card
+            .container.c-card.c-brief__card.js-animate
                 .row
                     .col-12.col-sm-7.col-md-6.offset-sm-3
                         p.c-brief__description I have been approached with the task of creating a modern landing page for a tailor shop with a rich history behind it. Preserving heritage while designing a contemporary landing page is a must in this project. Also, the goal was to show that wearing tailored clothing is marvelous without directly saying it.  I had no restrictions design-wise as long as the client was happy with the result.
@@ -68,7 +73,7 @@ block content
             .container
                 .o-heading--pushed
                     h2.c-heading.c-challenges__heading Challenges
-            .container
+            .container.js-animate
                 .c-challenges__section
                     .row
                         .col-12.col-sm-3.u-flex-align__cc
@@ -101,7 +106,7 @@ block content
             .container
                 .o-heading--pushed
                     h2.c-heading.c-style__heading Style
-                .c-style__section
+                .c-style__section.js-animate
                     .row
                         .col-12.col-sm-3.u-flex-align__lc
                             h3.u-gray-text Typography
@@ -110,7 +115,7 @@ block content
                     .row
                         .col-12.col-sm-6.col-md-5.col-lg-4.offset-sm-3
                             p.u-mg-t__20 We needed it to provide history – serif. We also needed it to be fresh-looking – modern serif. I used only one font because I planned making it sophisticated by shapes colors and layouts.
-                .c-style__section
+                .c-style__section.js-animate
                     .row.c-colors
                         .col-6.offset-sm-3
                             h5.c-colors__name Deep Black
@@ -138,7 +143,7 @@ block content
                             h5.c-colors__name Milk Gray
                         .col-6.col-md-5
                             h5.c-colors__name.c-colors__name--right White
-                .c-brand.c-card.c-brand__card.c-style__section
+                .c-brand.c-card.c-brand__card.c-style__section.js-animate
                     .row.c-brand__block
                         .col-12.col-sm-2.col-md-3
                             h3.c-brand__title Brand
@@ -157,7 +162,7 @@ block content
                     .row(class='o-full-width\@down-xs')
                         .col-12.col-md-11
                             img.c-style__image(src="/images/kings-tailor/showcase.jpg")
-                .c-ui-elements.c-style__section
+                .c-ui-elements.c-style__section.js-animate
                     .row.c-ui-elements__block
                         .col-12.col-md-3.u-flex-align__lc
                             h3.c-ui-elements__title UI Elements
@@ -201,19 +206,18 @@ block content
             .container
                 .o-heading--pushed
                     h2.c-heading.c-grid-sec__heading Grid
-                .c-card.c-grid-sec__card
-                    .row
-                        .col-12.col-sm-6.col-md-5.offset-sm-3
-                            p King’s Tailor Shop is based on a custom grid 6 columns with absolutely no gutter.  This grid allowed me to pull off such interesting and responsive layouts.
-                    .row(class='o-full-width\@down-xs')
-                        .col-12.col-md-11
-                            .c-grid-sec__slider.c-slider.js-slider
-                                img.c-slider__img(src='/images/kings-tailor/grid.jpg')
-                                img.c-slider__img.c-slider__overlay.js-slider__overlay(src='/images/kings-tailor/no-grid.jpg')
-                                .c-slider__separator.js-slider__separator
-                                .c-slider__handle.js-slider__handle
-                                    .c-slider__arrow
-                                    .c-slider__arrow
+            .container.c-card.c-grid-sec__card.js-animate
+                .row
+                    .col-12.col-sm-6.col-md-5.offset-sm-3
+                        p King’s Tailor Shop is based on a custom grid 6 columns with absolutely no gutter.  This grid allowed me to pull off such interesting and responsive layouts.
+                .row(class='o-full-width\@down-xs')
+                    .col-12.col-md-11
+                        .c-grid-sec__slider.c-slider.js-slider
+                            img.c-slider__img.c-slider__overlay.js-slider__overlay(src='/images/kings-tailor/no-grid.jpg')
+                            .c-slider__separator.js-slider__separator
+                            .c-slider__handle.js-slider__handle
+                                .c-slider__arrow
+                                .c-slider__arrow
     .c-thanks
         .container
             .row
@@ -231,4 +235,5 @@ block content
     include partials/_footer
 
 append scripts
+    script(src = "/js/reveal.js")
     script(src = "/js/project.js")

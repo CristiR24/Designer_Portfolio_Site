@@ -1234,8 +1234,8 @@ p,
   to {
     opacity: 1; } }
 
-.js-animate {
-  opacity: 0; }
+.sr .js-animate {
+  visibility: hidden; }
 
 .o-appear {
   animation: slide-in-bottom 0.7s ease both; }
@@ -1658,7 +1658,7 @@ p,
       padding-bottom: 0; }
       .c-grid-sec__card::before {
         right: 20px;
-        background: transparent; } }
+        background: white; } }
 
 .c-grid-sec__slider {
   margin-top: 80px;
@@ -1670,16 +1670,15 @@ p,
 .c-slider {
   position: relative;
   cursor: pointer;
+  background: url("/images/kings-tailor/grid.jpg");
+  background-size: cover;
   -webkit-tap-highlight-color: transparent; }
   .c-slider__img {
     display: block;
     user-select: none;
     -webkit-user-drag: none; }
   .c-slider__overlay {
-    clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%);
-    position: absolute;
-    top: 0;
-    left: 0; }
+    clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%); }
   .c-slider__separator {
     width: 4px;
     height: 100%;

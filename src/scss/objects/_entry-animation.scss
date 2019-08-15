@@ -18,8 +18,8 @@
     }
 }
 
-.js-animate {
-    opacity: 0;
+.sr .js-animate {
+    visibility: hidden;
 }
 
 .o-appear {
