@@ -1,22 +1,25 @@
-/* global ScrollReveal */
+const toAnimate = document.querySelectorAll('.js-animate');
+let animated = 0;
 
-const styles = {
-    opacity: 0,
-    distance: '50%',
-    origin: 'bottom',
-    easing: 'ease-out',
-};
-
-ScrollReveal().reveal('.js-animate', {
-    ...styles,
-    viewFactor: 0.2,
-    beforeReveal: (el) => {
-        const rect = el.getBoundingClientRect();
-        // if it appears in the viewport from the bottom
-        if (rect.top < 0) {
-            ScrollReveal().clean(el);
-            el.style.visibility = 'hidden';
-            ScrollReveal().reveal(el, { easing: 'ease-out' });
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        const { top } = entry.boundingClientRect;
+        if (entry.intersectionRatio > 0) {
+            if (top > 0) {
+                entry.target.classList.add('o-appear');
+            } else {
+                entry.target.classList.add('o-reveal');
+            }
+            observer.unobserve(entry.target);
+            animated += 1;
+            if (animated === toAnimate.length) {
+                observer.disconnect();
+                console.log('disconnected');
+            }
         }
-    },
+    });
+});
+
+toAnimate.forEach((elem) => {
+    observer.observe(elem);
 });

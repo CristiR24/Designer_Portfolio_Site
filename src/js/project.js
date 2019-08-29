@@ -1,5 +1,4 @@
-/* global arrows arrowsRev animateArrows animateReverseArrows
-   ScrollReveal styles */
+/* global arrows arrowsRev animateArrows animateReverseArrows */
 
 if (arrows.length > 0) {
     animateArrows({ realPixelsBtn: true });
@@ -7,11 +6,6 @@ if (arrows.length > 0) {
 if (arrowsRev.length > 0) {
     animateReverseArrows({ smBackBtn: true });
 }
-
-ScrollReveal().reveal('.c-thanks', {
-    ...styles,
-    viewFactor: 0.9,
-});
 
 const overlay = document.querySelector('.js-slider__overlay');
 const handle = document.querySelector('.js-slider__handle');

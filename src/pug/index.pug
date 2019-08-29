@@ -11,7 +11,8 @@ block variables
             title: 'Dragos Sargu | Designer',
             description: 'I am an fresh thinking UI/UX designer. My products are always responsive, pixel perfect and retina ready. I have designed apps, landing pages, websites, for a wide range of clients.',
             image: '/images/portrait.jpg',
-            url: 'https://www.dragossargu.com/'
+            url: 'https://www.dragossargu.com/',
+            hidden: true,
         }
 
 block mixins
@@ -22,11 +23,6 @@ append meta
 
 append styles
     link(rel="stylesheet", href="/css/homepage.css")
-
-append firstScripts
-    script(src="https://unpkg.com/scrollreveal@4.0.5/dist/scrollreveal.min.js")
-    script.
-        ScrollReveal({ duration: 500 });
 
 block content
     .o-full-height.c-hero

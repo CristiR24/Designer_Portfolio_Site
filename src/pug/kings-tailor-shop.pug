@@ -11,7 +11,8 @@ block variables
             title: 'King\'s Tailor Shop',
             description: 'We don’t see people wearing tailored clothing much nowadays. There are no two identical people, so why should their clothing be. If you want your look elevated to the next level, you should try going to a tailor.',
             image: '/images/kings-tailor/thumbnail.jpg',
-            url: 'https://www.dragossargu.com/KTS.html'
+            url: 'https://www.dragossargu.com/KTS.html',
+            hidden: true,
         }
 
 append meta
@@ -20,11 +21,6 @@ append meta
 append styles
     link(href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet")
     link(rel="stylesheet", href="/css/project.css")
-
-append firstScripts
-    script(src="https://unpkg.com/scrollreveal@4.0.5/dist/scrollreveal.min.js")
-    script.
-        ScrollReveal({ duration: 500 });
 
 block content
     include partials/_nav
@@ -219,7 +215,7 @@ block content
                                 .c-slider__arrow
                                 .c-slider__arrow
     .c-thanks
-        .container
+        .container.js-animate
             .row
                 .col-12.col-sm-8
                     h3.c-thanks__message Thank you for your attention!
