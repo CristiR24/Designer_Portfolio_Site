@@ -1,3 +1,8 @@
+window.addEventListener('load', () => {
+    const mailLink = document.querySelector('.c-contact__mail');
+    mailLink.style.transition = '0.2s ease-out';
+});
+
 const arrows = document.querySelectorAll('.c-arrow:not(.c-arrow--reverse)');
 const arrowsRev = document.querySelectorAll('.c-arrow.c-arrow--reverse');
 
