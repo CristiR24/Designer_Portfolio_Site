@@ -40,18 +40,18 @@ block content
                     a.c-link.c-link__arrow(href = '/kings-tailor-shop/realpixels.html')
                         span Real Pixels
                         include partials/_arrow
-        .container.c-stats.c-overview__stats.js-animate
+        .container.c-stats.c-overview__stats
             .row
-                .col-12.col-sm-3.c-stats__block
+                .col-12.col-sm-3.c-stats__block.js-animate
                     h4.c-stats__value John King
                     p.c-stats__name Client
-                .col-12.col-sm-3.c-stats__block
+                .col-12.col-sm-3.c-stats__block.js-animate
                     h4.c-stats__value Landing Page
                     p.c-stats__name Project
-                .col-12.col-sm-3.c-stats__block
+                .col-12.col-sm-3.c-stats__block.js-animate
                     h4.c-stats__value 40 hours
                     p.c-stats__name Time
-                .col-12.col-sm-3.c-stats__block
+                .col-12.col-sm-3.c-stats__block.js-animate
                     h4.c-stats__value Web Design
                     p.c-stats__name My Role
 
@@ -69,15 +69,15 @@ block content
             .container
                 .o-heading--pushed
                     h2.c-heading.c-challenges__heading Challenges
-            .container.js-animate
-                .c-challenges__section
+            .container
+                .c-challenges__section.js-animate
                     .row
                         .col-12.col-sm-3.u-flex-align__cc
                             .c-challenges__roman-i
                         .col-12.col-sm-7.col-md-6
                             h4.c-challenges__title Making it easy to shop for the conservative and/or busy ones.
                             p I created a non-e-commerce — e-commerce project by getting rid of the sign-ups, virtual shopping carts, and the inserting card data on the website. This was achieved by calling the client to schedule an appointment. Also, the payment is made on the day – cash or credit card.
-                .c-challenges__section
+                .c-challenges__section.js-animate
                     .row
                         .col-12.col-sm-3.u-flex-align__cc
                             .c-challenges__roman-i
@@ -85,7 +85,7 @@ block content
                         .col-12.col-sm-7.col-md-6
                             h4.c-challenges__title Preserving heritage while being modern. Standing out.
                             p Using the older visual language, combined with the new school of design I achieved exactly what we needed. The font itself is from the modern serif category. The serifs provide the aged look and the high contrast between thin and thick lines are making it fresh. Also, I used strict squares and playful layouts for the exact same purpose.
-                .c-challenges__section
+                .c-challenges__section.js-animate
                     .row
                         .col-12.col-sm-3.u-flex-align__cc
                             .c-challenges__roman-i
@@ -157,9 +157,9 @@ block content
                             p.c-brand__description The owners last name is King, but if we use it uncapitalized, it brings more royalty to the table. It is quite unique to break the rules in such a niche. Subtle yet bold.
                     .row(class='o-full-width\@down-xs')
                         .col-12.col-md-11
-                            img.c-style__image(src="/images/kings-tailor/showcase.jpg")
-                .c-ui-elements.c-style__section.js-animate
-                    .row.c-ui-elements__block
+                            img.c-style__image.js-animate.js-animate-left(src="/images/kings-tailor/showcase.jpg")
+                .c-ui-elements.c-style__section
+                    .row.c-ui-elements__block.js-animate
                         .col-12.col-md-3.u-flex-align__lc
                             h3.c-ui-elements__title UI Elements
                         .col-12.col-sm-5.col-md-2.u-flex-align__lc
@@ -168,17 +168,18 @@ block content
                             .c-style__btn.c-style__btn--passive book your suit
                         .col-auto.col-sm-2.u-flex-align__lc
                             h4.u-gray-text Passive
-                    .row.c-ui-elements__btn-section
+
                         .col.col-sm-4.offset-sm-5
-                            .c-style__btn.c-style__btn--hover book your suit
+                            .c-ui-elements__btn-section
+                                .c-style__btn.c-style__btn--hover book your suit
                         .col-auto.col-sm-2.u-flex-align__lc
                             h4.u-gray-text Hover
-                    .row.c-ui-elements__btn-section
                         .col.col-sm-4.offset-sm-5
-                            .c-style__btn.c-style__btn--click book your suit
+                            .c-ui-elements__btn-section
+                                .c-style__btn.c-style__btn--click book your suit
                         .col-auto.col-sm-2.u-flex-align__lc
                             h4.u-gray-text Click
-                    .row.c-ui-elements__block
+                    .row.c-ui-elements__block.js-animate
                         .col-12.col-sm-5.col-md-2.offset-md-3
                             h3.c-ui-elements__elem.u-mg-t__20.u-mg-t__zero-mobile Inputs
                         .col-12.col-sm-7.col-md-6
@@ -208,7 +209,7 @@ block content
                         p King’s Tailor Shop is based on a custom grid 6 columns with absolutely no gutter.  This grid allowed me to pull off such interesting and responsive layouts.
                 .row(class='o-full-width\@down-xs')
                     .col-12.col-md-11
-                        .c-grid-sec__slider.c-slider.js-slider
+                        .c-grid-sec__slider.c-slider.js-slider.js-animate.js-animate-left
                             img.c-slider__img.c-slider__overlay.js-slider__overlay(src='/images/kings-tailor/no-grid.jpg')
                             .c-slider__separator.js-slider__separator
                             .c-slider__handle.js-slider__handle

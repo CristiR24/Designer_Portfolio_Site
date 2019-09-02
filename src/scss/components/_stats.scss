@@ -11,5 +11,15 @@
                 margin-top: 80px;
             }
         }
+
+        &:nth-of-type(2) {
+            animation-delay: 0.15s;
+        }
+        &:nth-of-type(3) {
+            animation-delay: 0.3s;
+        }
+        &:nth-of-type(4) {
+            animation-delay: 0.45s;
+        }
     }
 }

@@ -8,6 +8,16 @@
       opacity: 1;
     }
 }
+@keyframes slide-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-125px);
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
 
 @keyframes reveal {
     from {
@@ -23,7 +33,21 @@
 }
 
 .o-appear {
-    animation: slide-in-bottom 1.1s ease-out both;
+    animation: 0.9s ease-out both;
+
+    &--bottom {
+        animation-name: slide-in-bottom;
+    }
+    &--left {
+        animation-name: slide-in-left;
+    }
+    &--mixed {
+        animation-name: slide-in-bottom;
+
+        @include media-breakpoint-down(xs) {
+            animation: reveal 0.8s ease-out both;
+        }
+    }
 }
 
 .o-reveal {

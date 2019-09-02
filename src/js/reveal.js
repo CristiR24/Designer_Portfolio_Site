@@ -6,7 +6,13 @@ const observer = new IntersectionObserver((entries) => {
         const { top } = entry.boundingClientRect;
         if (entry.intersectionRatio > 0) {
             if (top > 0) {
-                entry.target.classList.add('o-appear');
+                if (entry.target.classList.contains('js-animate-left')) {
+                    entry.target.classList.add('o-appear', 'o-appear--left');
+                } else if (entry.target.classList.contains('js-animate-mixed')) {
+                    entry.target.classList.add('o-appear', 'o-appear--mixed');
+                } else {
+                    entry.target.classList.add('o-appear', 'o-appear--bottom');
+                }
             } else {
                 entry.target.classList.add('o-reveal');
             }

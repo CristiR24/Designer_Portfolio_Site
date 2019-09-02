@@ -10,7 +10,13 @@
 			& + & {
 				margin-top: 40px;
 			}
-		}
+        }
+        &:nth-of-type(2) {
+            animation-delay: 0.15s;
+        }
+        &:nth-of-type(3) {
+            animation-delay: 0.3s;
+        }
 	}
 
     &__reviewer {
