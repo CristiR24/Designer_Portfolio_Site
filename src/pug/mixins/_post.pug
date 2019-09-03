@@ -2,7 +2,8 @@ mixin post(title, image, description, job, link)
     .c-post.c-work__post
         .row(class='o-full-width\@down-xs')
             .col-12
-                img.c-post__image(src= image)
+                a(href= link)
+                    img.c-post__image(src= image)
         .row
             .col-12.col-sm-9.order-1.order-sm-0
                 h3.c-post__title= title
