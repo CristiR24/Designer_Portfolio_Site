@@ -12,8 +12,11 @@ block variables
             description: 'We don’t see people wearing tailored clothing much nowadays. There are no two identical people, so why should their clothing be. If you want your look elevated to the next level, you should try going to a tailor.',
             image: '/images/kings-tailor/thumbnail.jpg',
             url: 'https://www.dragossargu.com/KTS.html',
-            hidden: true,
+            hidden: false,
         }
+
+block mixins
+    include mixins/_image
 
 append meta
     include partials/_seo
@@ -29,7 +32,8 @@ block content
         .container.c-card.c-overview__card
             .row(class='o-full-width\@down-xs')
                 .col-12
-                    img.c-overview__image(src='/images/kings-tailor/thumbnail.jpg')
+                    +image('/images/kings-tailor/thumbnail.jpg',
+                        'c-overview__image')
             .row
                 .col-12
                     h3.c-overview__title King's Tailor Shop
@@ -157,7 +161,8 @@ block content
                             p.c-brand__description The owners last name is King, but if we use it uncapitalized, it brings more royalty to the table. It is quite unique to break the rules in such a niche. Subtle yet bold.
                     .row(class='o-full-width\@down-xs')
                         .col-12.col-md-11
-                            img.c-style__image.js-animate.js-animate-left(src="/images/kings-tailor/showcase.jpg")
+                            +image('/images/kings-tailor/showcase.jpg',
+                                'c-style__image js-animate js-animate-left')
                 .c-ui-elements.c-style__section
                     .row.c-ui-elements__block.js-animate
                         .col-12.col-md-3.u-flex-align__lc
@@ -186,17 +191,20 @@ block content
                             .c-inputs(class='o-full-width\@down-xs')
                                 .row.c-inputs__block
                                     .col.col-sm-8.c-inputs__img-wrapper
-                                        img.c-inputs__img(src='/images/kings-tailor/input-passive.png')
+                                        +image('/images/kings-tailor/input-passive.png',
+                                            'c-inputs__img')
                                     .col-auto.col-sm-4.c-inputs__state
                                         h4 Passive
                                 .row.c-inputs__block
                                     .col.col-sm-8.c-inputs__img-wrapper
-                                        img.c-inputs__img(src='/images/kings-tailor/input-active.png')
+                                        +image('/images/kings-tailor/input-active.png',
+                                            'c-inputs__img')
                                     .col-auto.col-sm-4.c-inputs__state
                                         h4 Active
                                 .row.c-inputs__block
                                     .col.col-sm-8.c-inputs__img-wrapper
-                                        img.c-inputs__img(src='/images/kings-tailor/input-error.png')
+                                        +image('/images/kings-tailor/input-error.png',
+                                            'c-inputs__img')
                                     .col-auto.col-sm-4.c-inputs__state
                                         h4 Error
         .o-proj-desc__block.c-grid-sec
@@ -210,7 +218,8 @@ block content
                 .row(class='o-full-width\@down-xs')
                     .col-12.col-md-11
                         .c-grid-sec__slider.c-slider.js-slider.js-animate.js-animate-left
-                            img.c-slider__img.c-slider__overlay.js-slider__overlay(src='/images/kings-tailor/no-grid.jpg')
+                            +image('/images/kings-tailor/no-grid.jpg',
+                                'c-slider__img c-slider__overlay js-slider__overlay')
                             .c-slider__separator.js-slider__separator
                             .c-slider__handle.js-slider__handle
                                 .c-slider__arrow

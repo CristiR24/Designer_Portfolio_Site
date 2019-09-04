@@ -1,0 +1,7 @@
+mixin image(path, classes, alt)
+    -// path with no extension
+    - var noExt = path.match(/[^.]+/)[0];
+
+    picture
+        source(srcset= noExt + '.webp')
+        img(src= path, class= classes, alt= alt)

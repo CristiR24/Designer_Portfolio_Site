@@ -18,6 +18,7 @@
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-import": "^2.18.2",
+    "gm": "^1.23.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-babel": "^8.0.0-beta.2",
@@ -27,6 +28,7 @@
     "gulp-terser": "^1.2.0"
   },
   "dependencies": {
+    "gulp-rename": "^1.4.0",
     "pug": "^2.0.4"
   }
 }
