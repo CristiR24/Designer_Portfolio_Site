@@ -20,7 +20,6 @@ const observer = new IntersectionObserver((entries) => {
             animated += 1;
             if (animated === toAnimate.length) {
                 observer.disconnect();
-                console.log('disconnected');
             }
         }
     });

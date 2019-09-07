@@ -1216,7 +1216,6 @@ p,
   width: 176px;
   height: 12px;
   position: absolute;
-  bottom: calc(50% - 1px);
   transform: translateY(50%);
   right: 0; }
   .c-arrow path {

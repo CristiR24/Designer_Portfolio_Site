@@ -76,7 +76,7 @@ function images() {
 }
 
 function convertImg(path) {
-    const fileName = path.match(/\w+\.(jpg|png|jpeg|gif)/)[0];
+    const fileName = path.match(/[^/]+\.(jpg|png|jpeg|gif)/)[0];
     const convertPath = path.replace(/src/, 'app')
         .replace(/\.(jpg|png)/, '.webp');
     gm(path)

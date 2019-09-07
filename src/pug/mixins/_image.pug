@@ -1,7 +1,10 @@
 mixin image(path, classes, alt)
     -// path with no extension
     - var noExt = path.match(/[^.]+/)[0];
+    - var ext = path.match(/\.\w+/)[0];
 
     picture
+        source(media='(max-width: 450px)', srcset= noExt + '_w450.webp')
         source(srcset= noExt + '.webp')
+        source(media='(max-width: 450px)', srcset= noExt + '_450' + ext)
         img(src= path, class= classes, alt= alt)

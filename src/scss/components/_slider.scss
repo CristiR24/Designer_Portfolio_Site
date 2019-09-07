@@ -1,8 +1,17 @@
+// fallback for webp images
+.webp .c-slider {
+    background: url('/images/kings-tailor/grid.webp');
+    background-size: cover;
+}
+.no-webp .c-slider,
+.no-js .c-slider {
+    background: url('/images/kings-tailor/grid.jpg');
+    background-size: cover;
+}
+
 .c-slider {
     position: relative;
     cursor: pointer;
-    background: url('/images/kings-tailor/grid.jpg');
-    background-size: cover;
     -webkit-tap-highlight-color: transparent;
 
     &__img {
