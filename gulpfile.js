@@ -6,12 +6,12 @@ const babel = require('gulp-babel');
 const terser = require('gulp-terser');
 const pug = require('gulp-pug');
 const rename = require('gulp-rename');
+const gmq = require('gulp-group-css-media-queries');
+const zip = require('gulp-zip');
+const ggm = require('gulp-gm');
 
 const browserSync = require('browser-sync').create();
-const gm = require('gm');
-
-const fs = require('fs');
-const { sep } = require('path');
+const critical = require('critical').stream;
 
 const {
     src, dest, watch, parallel, series,
@@ -59,6 +59,28 @@ function html() {
         .pipe(dest('app'));
 }
 
+function prod() {
+    return src('app/**/*.html')
+        .pipe(critical({
+            inline: true,
+            dimensions: [{
+                width: 320,
+            }, {
+                width: 730,
+            }, {
+                width: 890,
+            }, {
+                width: 1020,
+            }, {
+                width: 1240,
+            }],
+        }))
+        .pipe(dest('app'))
+        .pipe(src(['app/*', '!app/website.zip']))
+        .pipe(zip('website.zip'))
+        .pipe(dest('app'));
+}
+
 function pugCompile() {
     return src(dirs.pugPages)
         .pipe(pug())
@@ -75,43 +97,16 @@ function images() {
         .pipe(dest('app/images'));
 }
 
-function convertImg(path) {
-    const fileName = path.match(/[^/]+\.(jpg|png|jpeg|gif)/)[0];
-    const convertPath = path.replace(/src/, 'app')
-        .replace(/\.(jpg|png)/, '.webp');
-    gm(path)
-        .setFormat('webp')
-        .write(convertPath, (error) => {
-            if (error) throw error;
-            // log 'fileName' with blue
-            console.log('\x1b[34m%s\x1b[0m', fileName, 'converted');
-        });
-}
-
-function convertAll(done) {
-    const readDir = dir => (
-        fs.readdirSync(dir).map(path => dir + sep + path)
-    );
-    function convertImages(dirPaths) {
-        for (const path of dirPaths) {
-            fs.stat(path, (err, stats) => {
-                if (err) throw err;
-                if (stats.isDirectory()) {
-                    convertImages(readDir(path));
-                } else if (path.match(/\w+\.(jpg|png|jpeg|gif)/)) {
-                    convertImg(path);
-                }
-            });
-        }
-    }
-    const imagePaths = readDir('src/images');
-    convertImages(imagePaths);
-    done();
+function convert() {
+    return src('src/images/**/*.+(jpg|png|jpeg|gif)')
+        .pipe(ggm((gmfile => gmfile.setFormat('webp'))))
+        .pipe(dest('app/images'));
 }
 
 function styles() {
     return src(dirs.scss)
         .pipe(sass())
+        .pipe(gmq())
         .pipe(dest(dirs.css))
         .pipe(autoprefixer(['last 15 versions']))
         .pipe(cleanCSS())
@@ -133,22 +128,20 @@ function watchFiles() {
     watch(dirs.html, parallel(html, browserSyncReload));
     watch(dirs.fonts, parallel(fonts, browserSyncReload));
     watch(dirs.images, parallel(images, browserSyncReload));
+    watch('src/images/**/*.+(jpg|png|jpeg|gif)', parallel(convert, browserSyncReload));
     watch(dirs.scss, styles);
     watch(dirs.js, parallel(script, browserSyncReload));
-
-    watch('src/images/**/*.+(png|jpg|jpeg|gif)')
-        .on('change', (path) => {
-            convertImg(path);
-        });
-    watch('src/images/**/*.+(png|jpg|jpeg|gif)')
-        .on('add', (path) => {
-            convertImg(path);
-        });
 }
 
 // complex tasks
 const build = series(clean, parallel(
-    html, pugCompile, fonts, styles, script, series(images, convertAll),
+    html,
+    pugCompile,
+    fonts,
+    styles,
+    script,
+    images,
+    convert,
 ));
 const serve = series(build, parallel(watchFiles, server));
 
@@ -158,13 +151,13 @@ exports.html = html;
 exports.pugCompile = pugCompile;
 exports.fonts = fonts;
 exports.images = images;
+exports.convert = convert;
 exports.styles = styles;
 exports.script = script;
 exports.watchFiles = watchFiles;
 exports.build = build;
 exports.serve = serve;
 
-exports.convertImg = convertImg;
-exports.convertAll = convertAll;
+exports.prod = prod;
 
 exports.default = serve;
