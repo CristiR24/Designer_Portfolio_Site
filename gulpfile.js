@@ -59,7 +59,7 @@ function html() {
         .pipe(dest('app'));
 }
 
-function prod() {
+function criticalCSS() {
     return src('app/**/*.html')
         .pipe(critical({
             inline: true,
@@ -75,8 +75,11 @@ function prod() {
                 width: 1240,
             }],
         }))
-        .pipe(dest('app'))
-        .pipe(src(['app/*', '!app/website.zip']))
+        .pipe(dest('app'));
+}
+
+function zipSite() {
+    return src(['app/**/*', '!app/website.zip'])
         .pipe(zip('website.zip'))
         .pipe(dest('app'));
 }
@@ -144,6 +147,7 @@ const build = series(clean, parallel(
     convert,
 ));
 const serve = series(build, parallel(watchFiles, server));
+const prod = series(criticalCSS, zipSite);
 
 // export tasks
 exports.clean = clean;
@@ -159,5 +163,7 @@ exports.build = build;
 exports.serve = serve;
 
 exports.prod = prod;
+exports.zipSite = zipSite;
+exports.criticalCSS = criticalCSS;
 
 exports.default = serve;
