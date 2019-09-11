@@ -1,4 +1,4 @@
-extends layouts/_layout
+extends ../layouts/_layout
 
 block variables
     - var backHomepageNav = true
@@ -16,17 +16,17 @@ block variables
         }
 
 block mixins
-    include mixins/_image
+    include ../mixins/_image
 
 append meta
-    include partials/_seo
+    include ../partials/_seo
 
 append styles
     link(href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet")
     link(rel="stylesheet", href="/css/project.css")
 
 block content
-    include partials/_nav
+    include ../partials/_nav
 
     .c-overview
         .container.c-card.c-overview__card
@@ -43,7 +43,7 @@ block content
                 .col-12.col-sm-5.col-md-6.c-overview__link
                     a.c-link.c-link__arrow(href = '/kings-tailor-shop/realpixels.html')
                         span Real Pixels
-                        include partials/_arrow
+                        include ../partials/_arrow
         .container.c-stats.c-overview__stats
             .row
                 .col-12.col-sm-3.c-stats__block.js-animate
@@ -236,9 +236,9 @@ block content
                     a.c-thanks__link(href='https://www.behance.net/gallery/81762185/Kings-Tailor-Shop', target='_blank')
                         .c-underline View on Behance
 
-    include partials/_contact
+    include ../partials/_contact
 
-    include partials/_footer
+    include ../partials/_footer
 
 append scripts
     script(src = "/js/reveal.js")

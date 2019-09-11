@@ -1,5 +1,6 @@
 app
 src/**/*.html
+src/**/*.css
 
 node_modules
 

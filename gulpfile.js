@@ -5,10 +5,9 @@ const del = require('del');
 const babel = require('gulp-babel');
 const terser = require('gulp-terser');
 const pug = require('gulp-pug');
-const rename = require('gulp-rename');
 const gmq = require('gulp-group-css-media-queries');
 const zip = require('gulp-zip');
-const ggm = require('gulp-gm');
+const gm = require('gulp-gm');
 
 const browserSync = require('browser-sync').create();
 const critical = require('critical').stream;
@@ -17,14 +16,42 @@ const {
     src, dest, watch, parallel, series,
 } = require('gulp');
 
-const dirs = {
-    html: 'src/*.html',
-    pug: 'src/pug/**/*.pug',
-    pugPages: 'src/pug/*.pug',
-    images: 'src/images/**/*.+(png|jpg|jpeg|gif|svg)',
-    scss: 'src/scss/**/*.scss',
-    css: 'src/css',
-    js: 'src/js/**/*.js',
+const paths = {
+    html: {
+        src: 'src/**/*.html',
+        dest: 'app',
+    },
+    pug: {
+        src: ['src/pug/**/*.pug', '!src/pug/**/_*.pug'],
+        dest: 'src',
+    },
+    images: {
+        src: 'src/images/**/*.+(png|jpg|jpeg|gif|svg)',
+        dest: 'app/images',
+    },
+    toConvert: {
+        src: 'src/images/**/*.+(jpg|png|jpeg|gif)',
+        dest: 'app/images',
+    },
+    scss: {
+        src: 'src/scss/**/*.scss',
+        dest: 'app/css',
+    },
+    js: {
+        src: 'src/js/**/*.js',
+        dest: 'app/js',
+    },
+    toZip: {
+        src: ['app/**/*', '!app/website.zip'],
+        dest: 'app',
+    },
+    toDel: {
+        src: ['app/*', 'src/css/*.css', 'src/**/*.html'],
+    },
+    critical: {
+        src: 'app/**/*.html',
+        dest: 'app',
+    },
 };
 
 function server(done) {
@@ -42,24 +69,16 @@ function browserSyncReload(done) {
 }
 
 function clean() {
-    return del(['app/*', 'src/css/*.css']);
+    return del(paths.toDel.src);
 }
 
 function html() {
-    return src('src/kings-tailor-shop.html')
-        .pipe(rename('/kings-tailor-shop/index.html'))
-        .pipe(dest('app'))
-        .pipe(src('src/kts-realpixels.html'))
-        .pipe(rename('/kings-tailor-shop/realpixels.html'))
-        .pipe(dest('app'))
-        .pipe(src(['src/*.html',
-            '!src/kings-tailor-shop.html',
-            '!src/kts-realpixels.html']))
-        .pipe(dest('app'));
+    return src(paths.html.src)
+        .pipe(dest(paths.html.dest));
 }
 
 function criticalCSS() {
-    return src('app/**/*.html')
+    return src(paths.critical.src)
         .pipe(critical({
             inline: true,
             dimensions: [{
@@ -74,65 +93,63 @@ function criticalCSS() {
                 width: 1240,
             }],
         }))
-        .pipe(dest('app'));
+        .pipe(dest(paths.critical.dest));
 }
 
 function zipSite() {
-    return src(['app/**/*', '!app/website.zip'])
+    return src(paths.toZip.src)
         .pipe(zip('website.zip'))
-        .pipe(dest('app'));
+        .pipe(dest(paths.toZip.dest));
 }
 
 function pugCompile() {
-    return src(dirs.pugPages)
+    return src(paths.pug.src)
         .pipe(pug())
-        .pipe(dest('src'));
+        .pipe(dest(paths.pug.dest));
 }
 
 function images() {
-    return src(dirs.images)
-        .pipe(dest('app/images'));
+    return src(paths.images.src)
+        .pipe(dest(paths.images.dest));
 }
 
 function convert() {
-    return src('src/images/**/*.+(jpg|png|jpeg|gif)')
-        .pipe(ggm((gmfile => gmfile.setFormat('webp'))))
-        .pipe(dest('app/images'));
+    return src(paths.toConvert.src)
+        .pipe(gm((gmfile => gmfile.setFormat('webp'))))
+        .pipe(dest(paths.toConvert.dest));
 }
 
 function styles() {
-    return src(dirs.scss)
+    return src(paths.scss.src)
         .pipe(sass())
         .pipe(gmq())
-        .pipe(dest(dirs.css))
         .pipe(autoprefixer(['last 15 versions']))
         .pipe(cleanCSS())
-        .pipe(dest('app/css'))
+        .pipe(dest(paths.scss.dest))
         .pipe(browserSync.stream());
 }
 
 function script() {
-    return src(dirs.js)
+    return src(paths.js.src)
         .pipe(babel({
             presets: ['@babel/preset-env'],
         }))
         .pipe(terser())
-        .pipe(dest('app/js'));
+        .pipe(dest(paths.js.dest));
 }
 
 function watchFiles() {
-    watch(dirs.pug, pugCompile);
-    watch(dirs.html, parallel(html, browserSyncReload));
-    watch(dirs.images, parallel(images, browserSyncReload));
-    watch('src/images/**/*.+(jpg|png|jpeg|gif)', parallel(convert, browserSyncReload));
-    watch(dirs.scss, styles);
-    watch(dirs.js, parallel(script, browserSyncReload));
+    watch(paths.pug.src, pugCompile);
+    watch(paths.html.src, series(html, browserSyncReload));
+    watch(paths.images.src, series(images, browserSyncReload));
+    watch(paths.toConvert.src, series(convert, browserSyncReload));
+    watch(paths.scss.src, styles);
+    watch(paths.js.src, series(script, browserSyncReload));
 }
 
 // complex tasks
 const build = series(clean, parallel(
-    html,
-    pugCompile,
+    series(pugCompile, html),
     styles,
     script,
     images,

@@ -1,4 +1,4 @@
-extends layouts/_layout
+extends ../layouts/_layout
 
 block variables
     - var backHomepageNav = true
@@ -16,16 +16,16 @@ block variables
         }
 
 block mixins
-    include mixins/_image
+    include ../mixins/_image
 
 append meta
-    include partials/_seo
+    include ../partials/_seo
 
 append styles
     link(rel="stylesheet", href="/css/realpixels.css")
 
 block content
-    include partials/_nav
+    include ../partials/_nav
 
     +image('/images/kings-tailor/realpixels/hero.jpg')
     +image('/images/kings-tailor/realpixels/services.jpg')
@@ -34,9 +34,9 @@ block content
     +image('/images/kings-tailor/realpixels/testimonials.jpg')
     +image('/images/kings-tailor/realpixels/contact.jpg')
 
-    include partials/_contact
+    include ../partials/_contact
 
-    include partials/_footer
+    include ../partials/_footer
 
 append scripts
     script(src = "/js/realpixels.js")
