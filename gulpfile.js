@@ -21,7 +21,6 @@ const dirs = {
     html: 'src/*.html',
     pug: 'src/pug/**/*.pug',
     pugPages: 'src/pug/*.pug',
-    fonts: 'src/fonts/**/*.otf',
     images: 'src/images/**/*.+(png|jpg|jpeg|gif|svg)',
     scss: 'src/scss/**/*.scss',
     css: 'src/css',
@@ -90,11 +89,6 @@ function pugCompile() {
         .pipe(dest('src'));
 }
 
-function fonts() {
-    return src(dirs.fonts)
-        .pipe(dest('app/fonts'));
-}
-
 function images() {
     return src(dirs.images)
         .pipe(dest('app/images'));
@@ -129,7 +123,6 @@ function script() {
 function watchFiles() {
     watch(dirs.pug, pugCompile);
     watch(dirs.html, parallel(html, browserSyncReload));
-    watch(dirs.fonts, parallel(fonts, browserSyncReload));
     watch(dirs.images, parallel(images, browserSyncReload));
     watch('src/images/**/*.+(jpg|png|jpeg|gif)', parallel(convert, browserSyncReload));
     watch(dirs.scss, styles);
@@ -140,7 +133,6 @@ function watchFiles() {
 const build = series(clean, parallel(
     html,
     pugCompile,
-    fonts,
     styles,
     script,
     images,
@@ -153,7 +145,6 @@ const prod = series(criticalCSS, zipSite);
 exports.clean = clean;
 exports.html = html;
 exports.pugCompile = pugCompile;
-exports.fonts = fonts;
 exports.images = images;
 exports.convert = convert;
 exports.styles = styles;
