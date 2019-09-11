@@ -1,1 +1,0 @@
-"use strict";arrowsRev.length>0&&animateReverseArrows();

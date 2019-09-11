@@ -1,1 +1,0 @@
-"use strict";initTypeAnimation(150);

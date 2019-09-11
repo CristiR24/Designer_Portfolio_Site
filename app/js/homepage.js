@@ -1,1 +1,0 @@
-"use strict";initTypeAnimation(),arrows.length>0&&animateArrows();
