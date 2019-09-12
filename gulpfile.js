@@ -8,6 +8,7 @@ const pug = require('gulp-pug');
 const gmq = require('gulp-group-css-media-queries');
 const zip = require('gulp-zip');
 const gm = require('gulp-gm');
+const revAll = require('gulp-rev-all');
 
 const browserSync = require('browser-sync').create();
 const critical = require('critical').stream;
@@ -41,10 +42,6 @@ const paths = {
         src: 'src/js/**/*.js',
         dest: 'app/js',
     },
-    toZip: {
-        src: ['app/**/*', '!app/website.zip'],
-        dest: 'app',
-    },
     toDel: {
         src: ['app/*', 'src/css/*.css', 'src/**/*.html'],
     },
@@ -52,12 +49,20 @@ const paths = {
         src: 'app/**/*.html',
         dest: 'app',
     },
+    toZip: {
+        src: ['app/**/*', '!app/website.zip'],
+        dest: 'app',
+    },
+    revision: {
+        src: 'app/**',
+        dest: 'app',
+    },
 };
 
 function server(done) {
     browserSync.init({
         server: {
-            baseDir: 'app',
+            baseDir: 'app/',
         },
     });
     done();
@@ -75,31 +80,6 @@ function clean() {
 function html() {
     return src(paths.html.src)
         .pipe(dest(paths.html.dest));
-}
-
-function criticalCSS() {
-    return src(paths.critical.src)
-        .pipe(critical({
-            inline: true,
-            dimensions: [{
-                width: 320,
-            }, {
-                width: 730,
-            }, {
-                width: 890,
-            }, {
-                width: 1020,
-            }, {
-                width: 1240,
-            }],
-        }))
-        .pipe(dest(paths.critical.dest));
-}
-
-function zipSite() {
-    return src(paths.toZip.src)
-        .pipe(zip('website.zip'))
-        .pipe(dest(paths.toZip.dest));
 }
 
 function pugCompile() {
@@ -138,6 +118,40 @@ function script() {
         .pipe(dest(paths.js.dest));
 }
 
+function criticalCSS() {
+    return src(paths.critical.src)
+        .pipe(critical({
+            inline: true,
+            dimensions: [{
+                width: 320,
+            }, {
+                width: 730,
+            }, {
+                width: 890,
+            }, {
+                width: 1020,
+            }, {
+                width: 1240,
+            }],
+        }))
+        .pipe(dest(paths.critical.dest));
+}
+
+function zipSite() {
+    return src(paths.toZip.src)
+        .pipe(zip('website.zip'))
+        .pipe(dest(paths.toZip.dest));
+}
+
+function revision() {
+    return src(paths.revision.src)
+        .pipe(revAll.revision({
+            dontRenameFile: ['images/icon/favicon.png', '.html'],
+            dontUpdateReference: ['images/icon/favicon.png', '.html'],
+        }))
+        .pipe(dest(paths.revision.dest));
+}
+
 function watchFiles() {
     watch(paths.pug.src, pugCompile);
     watch(paths.html.src, series(html, browserSyncReload));
@@ -156,7 +170,7 @@ const build = series(clean, parallel(
     convert,
 ));
 const serve = series(build, parallel(watchFiles, server));
-const prod = series(criticalCSS, zipSite);
+const prod = series(revision, criticalCSS, zipSite);
 
 // export tasks
 exports.clean = clean;
@@ -173,5 +187,6 @@ exports.serve = serve;
 exports.prod = prod;
 exports.zipSite = zipSite;
 exports.criticalCSS = criticalCSS;
+exports.revision = revision;
 
 exports.default = serve;
