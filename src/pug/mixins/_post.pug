@@ -2,8 +2,8 @@ mixin post(title, image, description, job, link)
     .c-post.c-work__post
         .row(class='o-full-width\@down-xs')
             .col-12
-                a(href= link)
-                    +image(image, 'c-post__image')
+                a(href= link aria-label='See the Process')
+                    +image(image, 'c-post__image', title + ' Thumbnail')
         .row
             .col-12.col-sm-9.order-1.order-sm-0
                 h3.c-post__title= title
