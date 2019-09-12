@@ -1,5 +1,4 @@
 const toAnimate = document.querySelectorAll('.js-animate');
-let animated = 0;
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
