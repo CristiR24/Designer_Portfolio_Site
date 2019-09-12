@@ -1,4 +1,4 @@
-/* global arrows arrowsRev animateArrows animateReverseArrows */
+/* global Modernizr arrows arrowsRev animateArrows animateReverseArrows */
 
 if (arrows.length > 0) {
     animateArrows({ realPixelsBtn: true });
@@ -58,9 +58,10 @@ handle.addEventListener('touchstart', (e) => {
         slider.removeEventListener('touchmove', updateSlider);
         slider.removeEventListener('touchend', end);
     };
-    slider.addEventListener('touchmove', updateSlider);
+    slider.addEventListener('touchmove', updateSlider,
+        Modernizr ? { passive: true } : false);
     slider.addEventListener('touchend', end);
-});
+}, Modernizr ? { passive: true } : false);
 
 slider.addEventListener('click', (event) => {
     event.preventDefault();
