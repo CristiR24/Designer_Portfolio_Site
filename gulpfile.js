@@ -23,7 +23,8 @@ const paths = {
         dest: 'app',
     },
     pug: {
-        src: ['src/pug/**/*.pug', '!src/pug/**/_*.pug'],
+        src: 'src/pug/**/*.pug',
+        pages: ['src/pug/**/*.pug', '!src/pug/**/_*.pug'],
         dest: 'src',
     },
     images: {
@@ -83,7 +84,7 @@ function html() {
 }
 
 function pugCompile() {
-    return src(paths.pug.src)
+    return src(paths.pug.pages)
         .pipe(pug())
         .pipe(dest(paths.pug.dest));
 }
