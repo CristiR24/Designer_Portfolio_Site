@@ -17,10 +17,6 @@ const observer = new IntersectionObserver((entries) => {
                 entry.target.classList.add('o-reveal');
             }
             observer.unobserve(entry.target);
-            animated += 1;
-            if (animated === toAnimate.length) {
-                observer.disconnect();
-            }
         }
     });
 });
