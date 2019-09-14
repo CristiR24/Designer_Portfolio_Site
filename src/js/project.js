@@ -59,9 +59,9 @@ handle.addEventListener('touchstart', (e) => {
         slider.removeEventListener('touchend', end);
     };
     slider.addEventListener('touchmove', updateSlider,
-        Modernizr ? { passive: true } : false);
+        Modernizr.passiveeventlisteners ? { passive: true } : false);
     slider.addEventListener('touchend', end);
-}, Modernizr ? { passive: true } : false);
+}, Modernizr.passiveeventlisteners ? { passive: true } : false);
 
 slider.addEventListener('click', (event) => {
     event.preventDefault();
