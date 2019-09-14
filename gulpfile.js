@@ -40,8 +40,8 @@ const paths = {
         dest: 'app/css',
     },
     js: {
-        src: 'src/js/**/*.js',
-        dest: 'app/js',
+        src: 'src/**/*.js',
+        dest: 'app',
     },
     toDel: {
         src: ['app/*', 'src/css/*.css', 'src/**/*.html'],
@@ -55,7 +55,7 @@ const paths = {
         dest: 'app',
     },
     revision: {
-        src: 'app/**',
+        src: ['app/**/*', '!app/website.zip'],
         dest: 'app',
     },
 };
@@ -147,8 +147,8 @@ function zipSite() {
 function revision() {
     return src(paths.revision.src)
         .pipe(revAll.revision({
-            dontRenameFile: ['images/icon/favicon.png', '.html'],
-            dontUpdateReference: ['images/icon/favicon.png', '.html'],
+            dontRenameFile: ['images/icon/favicon.png', '.html', 'sw.js'],
+            dontUpdateReference: ['images/icon/favicon.png', '.html', 'sw.js'],
         }))
         .pipe(dest(paths.revision.dest));
 }

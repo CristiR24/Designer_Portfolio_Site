@@ -149,6 +149,10 @@ block content
     include partials/_footer
 
 append scripts
+    script.
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js');
+        }
     script(src = "/js/type.js")
     script(src = "/js/reveal.js")
     script(src = "/js/homepage.js")
