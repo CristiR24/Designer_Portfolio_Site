@@ -1,0 +1,14 @@
+extends layouts/_err-page
+
+block err-meta
+    title Offline Page
+
+block err-image
+    .container.c-err__img-cont
+        img.c-err__img(src='/images/icon/offline.svg', alt='Cloud Disconnected by Trevor Dsouza from the Noun Project')
+
+block err-title
+    | You are offline.
+
+block err-message
+    | The resource you requested has not been cached. It is not viewable offline. Check your connection or try again.

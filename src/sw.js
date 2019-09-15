@@ -4,19 +4,21 @@ const filesToCache = [
     '/',
     'index.html',
     '404.html',
+    'offline.html',
     'css/homepage.css',
-    'css/404-page.css',
+    'css/err-page.css',
     'js/main.js',
     'js/homepage.js',
-    'js/404-page.js',
+    'js/err-page.js',
     'js/modernizr-webp.js',
     'js/type.js',
     'js/reveal.js',
     'images/icon/behance.svg',
     'images/icon/dribbble.svg',
     'images/icon/telegram.svg',
+    'images/icon/offline.svg',
 ];
-const version = 1;
+const version = 2;
 const staticCacheName = `site-cache-v${version}`;
 
 self.addEventListener('install', (event) => {
@@ -43,7 +45,7 @@ self.addEventListener('fetch', (event) => {
                         return resp;
                     });
                 });
-            }).catch(() => caches.match('/404.html')),
+            }).catch(() => caches.match('/offline.html')),
     );
 });
 

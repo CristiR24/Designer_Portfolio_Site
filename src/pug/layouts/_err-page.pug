@@ -1,0 +1,44 @@
+extends _layout
+
+block variables
+    - var backHomepageNav = false
+    - var outerNav = true
+    - var hideNavMobile = false
+    - var mobileLinksNav = false
+    - var smTabletFooter = true
+    - var hideFooterLinksUpMobile = true
+
+append meta
+    block err-meta
+
+append styles
+    link(rel="stylesheet", href="/css/err-page.css")
+
+block content
+    .o-full-screen.o-full-height
+        .o-full-height__elem.c-err.u-flex-space__between.u-flex-dir__col
+            include ../partials/_nav
+
+            block err-image
+
+            .container.c-err__section
+                .c-err__card
+                .row
+                    .col-12
+                        h3.c-err__title
+                            block err-title
+
+                .row
+                    .col-12.col-sm-7.col-md-5.u-mg-t__20
+                        p.c-err__message
+                            block err-message
+
+                    .col-12.col-md.c-err__link
+                        a.c-link.c-link__arrow.c-link__arrow--reverse(href = '/')
+                            include ../partials/_arrow-reverse
+                            span Back to Homepage
+
+            include ../partials/_footer
+
+append scripts
+    script(src="/js/err-page.js")
