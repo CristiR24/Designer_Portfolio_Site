@@ -10,7 +10,7 @@ const filesToCache = [
     'js/main.js',
     'js/homepage.js',
     'js/err-page.js',
-    'js/modernizr-webp.js',
+    'js/modernizr.js',
     'js/type.js',
     'js/reveal.js',
     'images/icon/behance.svg',
@@ -18,7 +18,7 @@ const filesToCache = [
     'images/icon/telegram.svg',
     'images/icon/offline.svg',
 ];
-const version = 2;
+const version = 3;
 const staticCacheName = `site-cache-v${version}`;
 
 self.addEventListener('install', (event) => {
