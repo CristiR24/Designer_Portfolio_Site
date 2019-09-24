@@ -12,13 +12,22 @@ const observer = new IntersectionObserver((entries) => {
                 } else {
                     entry.target.classList.add('o-appear', 'o-appear--bottom');
                 }
-            } else {
+            } else if (!entry.target.classList.contains('o-appear')) {
                 entry.target.classList.add('o-reveal');
             }
             observer.unobserve(entry.target);
+            setTimeout(() => {
+                observer.observe(entry.target);
+            }, 900);
+        }
+        if (entry.intersectionRatio === 0) {
+            entry.target.classList.remove(
+                'o-appear', 'o-appear--left', 'o-appear--mixed',
+                'o-appear--bottom', 'o-reveal',
+            );
         }
     });
-});
+}, { threshold: 0 });
 
 toAnimate.forEach((elem) => {
     observer.observe(elem);
