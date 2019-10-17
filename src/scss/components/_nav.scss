@@ -7,15 +7,15 @@
 
 	&__mail {
 		@extend p;
-		color: $black;
-    }
+    color: $black;
+  }
 
 	&__link {
-        @extend h5;
-        font-weight: 400;
+    @extend h5;
+    font-weight: 400;
 
-        &--back {
-            font-weight: 700;
-        }
+    &--back {
+      font-weight: 700;
+    }
 	}
 }

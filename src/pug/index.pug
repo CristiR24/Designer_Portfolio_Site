@@ -27,45 +27,44 @@ append styles
 
 block content
     .o-full-height.c-hero
-        .o-full-height.o-full-height__elem
-            .container.o-full-height__elem.u-flex-space__between.u-flex-dir__col
+        .container.o-full-height__elem.u-flex-space__between.u-flex-dir__col
 
-                include partials/_nav
+            include partials/_nav
 
-                .c-hero__introduction
-                    .row
-                        .col-11.col-sm-5.col-md-7.col-xl-12
-                            .c-hero__heading
-                                .row.u-flex-dir__col
-                                    .col-12
-                                        h1
-                                            | Hey.
-                                            br
-                                            | My name is Dragos Sargu.
-                                    .col-12
-                                        h1.o-type__placeholder= "I'm a freelance "
-                                            span(class="u-hyphen--manual@down-sm") user experi&shy;ence|
+            .c-hero__introduction
+                .row
+                    .col-11.col-sm-5.col-md-7.col-xl-12
+                        .c-hero__heading
+                            .row.u-flex-dir__col
+                                .col-12
+                                    h1
+                                        | Hey.
+                                        br
+                                        | My name is Dragos Sargu.
+                                .col-12
+                                    h1.o-type__placeholder= "I'm a freelance "
+                                        span(class="u-hyphen--manual@down-sm") user experi&shy;ence|
+                                        = " designer from Moldova."
+                                    h1.o-type__container
+                                            = "I'm a freelance "
+                                            span.o-type__write(data-period="3000", data-type=`["product", "user inter&shy;face", "user experi&shy;ence"]`)
+                                            span.o-type__cursor |
                                             = " designer from Moldova."
-                                        h1.o-type__container
-                                                = "I'm a freelance "
-                                                span.o-type__write(data-period="3000", data-type=`["product", "user inter&shy;face", "user experi&shy;ence"]`)
-                                                span.o-type__cursor |
-                                                = " designer from Moldova."
-                        .col-12.col-sm-5.col-md-12.offset-sm-2.offset-md-0.u-flex-space__evenly.u-flex-dir__col
-                            .c-info.c-hero__info
-                                .row
-                                    .col-12.col-md-4.c-info__block
-                                        h5.c-info__title Experience
-                                        p.c-info__content.
-                                            I have been working for the last 3 years in agencies, startups and as a freelancer. I have designed apps, landing pages, websites, for a wide range of clients.
-                                    .col-12.col-md-4.c-info__block
-                                        h5.c-info__title Availability
-                                        p.c-info__content.
-                                            I am currently available to work with you. I am taking fixed rate projects. Flexible schedule is a preference. With my current life rhythm, I am not able to attend a full time post.
-                                    .col-12.col-md-4.c-info__block
-                                        h5.c-info__title Process
-                                        p.c-info__content.
-                                            I always start with some research, then dip in to sketching. The next step is wireframing, and after we set up the feel of the product, I move on to the user interface.
+                    .col-12.col-sm-5.col-md-12.offset-sm-2.offset-md-0.u-flex-space__evenly.u-flex-dir__col
+                        .c-info.c-hero__info
+                            .row
+                                .col-12.col-md-4.c-info__block
+                                    h5.c-info__title Experience
+                                    p.c-info__content.
+                                        I have been working for the last 3 years in agencies, startups and as a freelancer. I have designed apps, landing pages, websites, for a wide range of clients.
+                                .col-12.col-md-4.c-info__block
+                                    h5.c-info__title Availability
+                                    p.c-info__content.
+                                        I am currently available to work with you. I am taking fixed rate projects. Flexible schedule is a preference. With my current life rhythm, I am not able to attend a full time post.
+                                .col-12.col-md-4.c-info__block
+                                    h5.c-info__title Process
+                                    p.c-info__content.
+                                        I always start with some research, then dip in to sketching. The next step is wireframing, and after we set up the feel of the product, I move on to the user interface.
     .c-work
         .container
             .o-heading--pushed
@@ -84,7 +83,7 @@ block content
                 h2.c-heading.c-about__heading About
         .container.c-card.c-about__card.js-animate
             .row
-                .col-sm-7.col-md-6.o-full-height
+                .col-sm-7.col-md-6
                     p.c-about__description.
                         I am a fresh thinking designer, starting my journey 4 years ago as a graphic designer. Because I enjoy creating working mechanisms, I moved my professional activity to the domain of web and mobile design. I have worked with both small and big design and development teams, start-ups, and local businesses.
                     .c-about__jobs

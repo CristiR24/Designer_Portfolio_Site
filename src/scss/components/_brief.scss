@@ -20,7 +20,7 @@
         padding-bottom: 120px;
 
         &::before {
-            left: calc(-1 * ((100vw - 100%) / 4) + 1px);
+            left: calc(-1 * ((100vw - 100%) / 4) + 11px);
             @include media-breakpoint-down(lg) {
                 left: 0;
             }

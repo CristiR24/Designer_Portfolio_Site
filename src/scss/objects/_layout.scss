@@ -60,9 +60,10 @@
 
 		// rotates the heading 90 deg
 		// and positions it to the left in the middle of
-        // the blank space near the section
-		transform: translateX(-50%) rotateZ(-90deg) translateX(-40%);
-        left: calc(-1 * ((100vw - 100%) / 4));
+    // the blank space near the section
+    transform-origin: 0% 0%;
+		transform: rotateZ(-90deg) translateX(-100%);
+    left: calc((-1 * (100vw - 100%) / 4) - 5px);
 	}
 }
 
