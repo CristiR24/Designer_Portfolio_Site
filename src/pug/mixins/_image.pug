@@ -4,7 +4,7 @@ mixin image(path, classes, alt)
     - var ext = path.match(/\.\w+/)[0];
 
     picture
-        source(media='(max-width: 450px)', srcset= noExt + '_w450.webp')
-        source(srcset= noExt + '.webp')
+        source(media='(max-width: 450px)', srcset= noExt + '_w450.webp', type='image/webp')
+        source(srcset= noExt + '.webp', type='image/webp')
         source(media='(max-width: 450px)', srcset= noExt + '_450' + ext)
         img(src= path, class= classes, alt= alt)

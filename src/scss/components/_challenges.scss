@@ -31,8 +31,18 @@
 
     &__title {
         margin-bottom: 20px;
+        width: 66.666%;
+
+        @include media-breakpoint-down(md) {
+          width: 83.333%;
+        }
+
+        @include media-breakpoint-down(sm) {
+          width: 85.714%;
+        }
 
         @include media-breakpoint-down(xs) {
+            width: 100%;
             margin-top: 20px;
             text-align: center;
         }
