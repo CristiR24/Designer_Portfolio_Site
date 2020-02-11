@@ -18,7 +18,7 @@ const filesToCache = [
     'images/icon/telegram.svg',
     'images/icon/offline.svg',
 ];
-const version = 8;
+const version = 13;
 const staticCacheName = `site-cache-v${version}`;
 
 self.addEventListener('install', (event) => {

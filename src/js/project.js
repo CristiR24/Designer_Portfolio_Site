@@ -17,11 +17,13 @@ let sliderWidth = slider.getBoundingClientRect().width;
 const getPos = event => event.pageX - leftOffset;
 
 function slide(pos, transition) {
-    if (pos < sliderWidth) {
+    if (pos > 0 && pos < sliderWidth) {
         const percent = pos / sliderWidth * 100;
-        overlay.style.clipPath = `
+        const path = `
             polygon(0% 0%, ${percent}% 0%, ${percent}% 100%, 0% 100%)
         `;
+        overlay.style.clipPath = path;
+        overlay.style['-webkit-clip-path'] = path;
         separator.style.left = `${percent}%`;
         handle.style.left = `${percent}%`;
 

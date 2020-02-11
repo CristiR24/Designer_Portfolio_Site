@@ -16,9 +16,6 @@ const observer = new IntersectionObserver((entries) => {
                 entry.target.classList.add('o-reveal');
             }
             observer.unobserve(entry.target);
-            setTimeout(() => {
-                observer.observe(entry.target);
-            }, 900);
         }
         if (entry.intersectionRatio === 0) {
             entry.target.classList.remove(

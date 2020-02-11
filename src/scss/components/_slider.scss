@@ -12,6 +12,7 @@
 .c-slider {
     position: relative;
     cursor: pointer;
+    touch-action: none;
     -webkit-tap-highlight-color: transparent;
 
     &__img {

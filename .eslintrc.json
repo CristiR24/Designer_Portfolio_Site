@@ -14,7 +14,10 @@
     },
     "rules": {
         "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
-        "max-len": ["error", { "ignoreComments": true, "ignoreStrings": true }],
+        "max-len": ["error", {
+            "ignoreComments": true,
+            "ignoreStrings": true
+        }],
         "no-console": 0,
         "no-restricted-syntax": "off",
         "no-param-reassign": "off",
